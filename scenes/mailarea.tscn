@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://de3tijif3sseg" path="res://scenes/main.tscn" id="2_sdrrl"]
 [ext_resource type="PackedScene" uid="uid://covu8flaxo3ij" path="res://scenes/mails.tscn" id="3_e38b3"]
 
-[node name="prototype" type="Node2D"]
+[node name="mailarea" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1158.0
