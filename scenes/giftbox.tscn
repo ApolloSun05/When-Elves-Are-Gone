@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7l5f5sksu05w"]
+
+[ext_resource type="Script" uid="uid://du637yrxpde5y" path="res://scripts/toys.gd" id="1_8vt4o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ffei"]
+size = Vector2(128, 128.5)
+
+[node name="giftbox" type="StaticBody2D" groups=["dropable"]]
+script = ExtResource("1_8vt4o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_5ffei")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0

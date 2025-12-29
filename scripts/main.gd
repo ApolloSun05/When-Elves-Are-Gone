@@ -4,7 +4,8 @@ extends CanvasLayer
 var children = RandomNumberGenerator.new()
 var nchildren: int = 0
 var x: int = 0
-	
+
+var is_dragging = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	children.randomize()

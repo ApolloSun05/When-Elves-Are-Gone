@@ -19,6 +19,13 @@ config/icon="res://icon.svg"
 
 Global="*res://scripts/main.gd"
 
+[input]
+
+click={
+"deadzone": 0.2,
+"events": []
+}
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://c44ngvowp8cfx"]
+[gd_scene load_steps=9 format=3 uid="uid://c44ngvowp8cfx"]
 
 [ext_resource type="PackedScene" uid="uid://gygjhdi7wq14" path="res://scenes/item.tscn" id="1_fb7gv"]
 [ext_resource type="Texture2D" uid="uid://ksych6y15v2" path="res://assets/wrappingstation temporary.jpg" id="1_q7okb"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://gk2yuhvas8pv" path="res://assets/pixelcar.jpg" id="4_60vld"]
 [ext_resource type="Texture2D" uid="uid://55yao8r66hw1" path="res://assets/pixeldoll.jpg" id="5_usxlg"]
 [ext_resource type="Texture2D" uid="uid://dso8thd3r7ah6" path="res://assets/pixelball.jpg" id="6_1ehr8"]
+[ext_resource type="PackedScene" uid="uid://b7l5f5sksu05w" path="res://scenes/giftbox.tscn" id="7_1ehr8"]
+[ext_resource type="PackedScene" uid="uid://dnssbnipprn72" path="res://scenes/gifts.tscn" id="8_a2xsj"]
 
 [node name="packing" type="Node2D"]
 
@@ -51,3 +53,9 @@ offset_top = 101.0
 offset_right = 967.0
 offset_bottom = 201.0
 texture = ExtResource("6_1ehr8")
+
+[node name="giftbox" parent="." instance=ExtResource("7_1ehr8")]
+position = Vector2(356, 537)
+
+[node name="gifts" parent="." instance=ExtResource("8_a2xsj")]
+position = Vector2(233, 342)
