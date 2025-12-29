@@ -1,0 +1,113 @@
+[gd_scene load_steps=7 format=3 uid="uid://covu8flaxo3ij"]
+
+[ext_resource type="Texture2D" uid="uid://craux3vynot5l" path="res://assets/PC _ Computer - Stardew Valley - Miscellaneous - Clock.png" id="1_5stsx"]
+[ext_resource type="Script" uid="uid://cfeogje0ajumq" path="res://scripts/mails.gd" id="1_o2nin"]
+[ext_resource type="FontFile" uid="uid://bndsjh1qpflf2" path="res://assets/StardewValley.ttf" id="2_o2nin"]
+[ext_resource type="Texture2D" uid="uid://b53amdi2kinsk" path="res://assets/PC _ Computer - Stardew Valley - Miscellaneous - Special Orders.png" id="4_yhwig"]
+[ext_resource type="FontFile" uid="uid://dfijd3vvyu7ph" path="res://assets/LittleKidsHandwriting-Regular.otf" id="5_14e2d"]
+[ext_resource type="Texture2D" uid="uid://de04oks6p4rq3" path="res://assets/PC _ Computer - Stardew Valley - Miscellaneous - Text Emojis.png" id="5_kkyhv"]
+
+[node name="Mails" type="CanvasLayer"]
+script = ExtResource("1_o2nin")
+
+[node name="Mail Open" type="MarginContainer" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -69.0
+offset_right = 211.0
+grow_vertical = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Mail Open"]
+position = Vector2(104.5, 33.749996)
+scale = Vector2(4.3541665, 4.8928566)
+texture = ExtResource("1_5stsx")
+region_enabled = true
+region_rect = Rect2(23, 26, 48, 14)
+
+[node name="Open" type="Button" parent="Mail Open"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_o2nin")
+theme_override_font_sizes/font_size = 36
+text = "Mail"
+flat = true
+
+[node name="Actual Mail" type="MarginContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -212.125
+offset_top = -236.25
+offset_right = 212.125
+offset_bottom = 236.25
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Actual Mail"]
+position = Vector2(212.625, 236.25)
+scale = Vector2(2.8716216, 2.878049)
+texture = ExtResource("4_yhwig")
+region_enabled = true
+region_rect = Rect2(175, 18, 148, 164)
+
+[node name="mail" type="Button" parent="Actual Mail"]
+layout_mode = 2
+flat = true
+
+[node name="MarginContainer" type="MarginContainer" parent="Actual Mail"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="DearSanta" type="Label" parent="Actual Mail/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_14e2d")
+theme_override_font_sizes/font_size = 50
+text = "Dear Santa"
+
+[node name="sample" type="Label" parent="Actual Mail/MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_14e2d")
+theme_override_font_sizes/font_size = 29
+text = "A quick brown fox jumped over the lazy brown dog
+"
+vertical_alignment = 3
+autowrap_mode = 3
+
+[node name="childname" type="Label" parent="Actual Mail/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_14e2d")
+theme_override_font_sizes/font_size = 24
+text = "From Joms"
+
+[node name="Exit" type="MarginContainer" parent="."]
+offset_left = 747.0
+offset_top = 87.0
+offset_right = 787.0
+offset_bottom = 127.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Exit"]
+position = Vector2(20.000011, 20)
+scale = Vector2(4.4444475, 4.4444447)
+texture = ExtResource("5_kkyhv")
+region_enabled = true
+region_rect = Rect2(45, 81, 9, 9)
+
+[node name="Exitbutton" type="Button" parent="Exit"]
+layout_mode = 2
+flat = true
+
+[connection signal="pressed" from="Mail Open/Open" to="." method="_on_open_pressed"]
+[connection signal="pressed" from="Actual Mail/mail" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Exit/Exitbutton" to="." method="_on_exitbutton_pressed"]

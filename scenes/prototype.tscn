@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cwif5nm1haqm8"]
+
+[ext_resource type="Texture2D" uid="uid://4t12bf5jd47i" path="res://assets/CH015D-Santas-Workshop-2B.jpg" id="1_nhfup"]
+[ext_resource type="PackedScene" uid="uid://de3tijif3sseg" path="res://scenes/main.tscn" id="2_sdrrl"]
+[ext_resource type="PackedScene" uid="uid://covu8flaxo3ij" path="res://scenes/mails.tscn" id="3_e38b3"]
+
+[node name="prototype" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1158.0
+offset_bottom = 646.0
+texture = ExtResource("1_nhfup")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(583, 324)
+
+[node name="no_ofchildren" parent="." instance=ExtResource("2_sdrrl")]
+
+[node name="Mails" parent="." instance=ExtResource("3_e38b3")]

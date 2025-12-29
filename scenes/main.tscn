@@ -1,0 +1,67 @@
+[gd_scene load_steps=6 format=3 uid="uid://de3tijif3sseg"]
+
+[ext_resource type="Script" uid="uid://d0jpwi0vr2jm2" path="res://scripts/main.gd" id="1_gflrx"]
+[ext_resource type="Texture2D" uid="uid://b53amdi2kinsk" path="res://assets/PC _ Computer - Stardew Valley - Miscellaneous - Special Orders.png" id="2_534cd"]
+[ext_resource type="FontFile" uid="uid://bndsjh1qpflf2" path="res://assets/StardewValley.ttf" id="3_4bodp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gflrx"]
+bg_color = Color(0.84705883, 0.6, 0.6, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7rmxp"]
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[node name="main" type="CanvasLayer"]
+script = ExtResource("1_gflrx")
+
+[node name="textbox" type="MarginContainer" parent="."]
+offset_right = 169.0
+offset_bottom = 200.0
+
+[node name="Sprite2D" type="Sprite2D" parent="textbox"]
+position = Vector2(84, 100)
+texture = ExtResource("2_534cd")
+region_enabled = true
+region_rect = Rect2(0, 0, 168, 199)
+
+[node name="MarginContainer" type="MarginContainer" parent="textbox"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 34
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 10
+
+[node name="Panel" type="Panel" parent="textbox/MarginContainer"]
+visible = false
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_gflrx")
+
+[node name=">" type="Label" parent="textbox/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_4bodp")
+theme_override_font_sizes/font_size = 19
+text = "Wishing Children: 
+"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="textbox/MarginContainer"]
+layout_mode = 2
+
+[node name="NoofChildren" type="Label" parent="textbox/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_4bodp")
+theme_override_font_sizes/font_size = 100
+text = "14"
+
+[node name="Panel" type="Panel" parent="textbox"]
+visible = false
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7rmxp")
