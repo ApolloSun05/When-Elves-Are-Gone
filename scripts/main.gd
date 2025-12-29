@@ -19,5 +19,6 @@ func _ready() -> void:
 func add_text(number):
 	print(number)
 	quota.text = str(number)
-	
+	# !!!!! Pahelp, iba ung printed number sa UI and dun sa variable x. !!!!!
+	# !!!!! we need that number para macode sa game how many children to serve !!!!!
 	
