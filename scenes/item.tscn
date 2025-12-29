@@ -1,5 +1,17 @@
-[gd_scene format=3 uid="uid://gygjhdi7wq14"]
+[gd_scene load_steps=2 format=3 uid="uid://gygjhdi7wq14"]
+
+[ext_resource type="Script" uid="uid://sb8jm2afp30s" path="res://scripts/item.gd" id="2_6muww"]
 
 [node name="item" type="TextureRect"]
+custom_minimum_size = Vector2(40, 40)
 offset_right = 40.0
 offset_bottom = 40.0
+expand_mode = 1
+script = ExtResource("2_6muww")
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
