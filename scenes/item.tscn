@@ -4,14 +4,14 @@
 
 [node name="item" type="TextureRect"]
 custom_minimum_size = Vector2(40, 40)
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 100.0
+offset_bottom = 100.0
 expand_mode = 1
 script = ExtResource("2_6muww")
 
 [node name="Panel" type="Panel" parent="."]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 100.0
+offset_bottom = 100.0
 mouse_filter = 2
