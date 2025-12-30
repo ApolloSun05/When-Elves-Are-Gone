@@ -33,13 +33,13 @@ func _on_area_2d_mouse_shape_exited(shape_idx: int) -> void:
 		scale = Vector2(1, 1)
 
 func _on_area_2d_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
-	if body.is_in_group('droppable'):
+	if body.is_in_group('dropable'):
 		is_inside_giftbox = true
 		body.modulate = Color(Color.AQUA, 1)
 		body_ref = body
 
 func _on_area_2d_body_shape_exited(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
-	if body.is_in_group('droppable'):
+	if body.is_in_group('dropable'):
 		is_inside_giftbox = false
 		body.modulate = Color(Color.HOT_PINK, 0.7)
 		body_ref = body
