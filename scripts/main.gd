@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-@onready var quota = $textbox/MarginContainer/HBoxContainer/NoofChildren
+@onready var quota: Label = $textbox/MarginContainer/HBoxContainer/NoofChildren
 var children = RandomNumberGenerator.new()
 var nchildren: int = 0
 var x: int = 0
