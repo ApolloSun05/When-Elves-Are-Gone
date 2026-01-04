@@ -1,5 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://c44ngvowp8cfx"]
+[gd_scene load_steps=10 format=3 uid="uid://c44ngvowp8cfx"]
 
+[ext_resource type="PackedScene" uid="uid://dnxe4s0b88ijk" path="res://scenes/godeliver.tscn" id="1_a2xsj"]
 [ext_resource type="PackedScene" uid="uid://gygjhdi7wq14" path="res://scenes/item.tscn" id="1_fb7gv"]
 [ext_resource type="Texture2D" uid="uid://ksych6y15v2" path="res://assets/wrappingstation temporary.jpg" id="1_q7okb"]
 [ext_resource type="Texture2D" uid="uid://c5cnkpqf6os7p" path="res://assets/pixelbear.png" id="2_q7okb"]
@@ -10,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://dnssbnipprn72" path="res://scenes/gifts.tscn" id="8_a2xsj"]
 
 [node name="packing" type="Node2D"]
+
+[node name="godeliver" parent="." instance=ExtResource("1_a2xsj")]
 
 [node name="background" type="TextureRect" parent="."]
 offset_right = 5616.0

@@ -24,7 +24,7 @@ func _physics_process(delta: float) -> void:
 script = SubResource("GDScript_pp874")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.036764707, 0.042016804)
+scale = Vector2(0.1, 0.114)
 texture = ExtResource("1_pp874")
 flip_h = true
 region_enabled = true
@@ -34,3 +34,7 @@ region_rect = Rect2(34, 69, 544, 476)
 shape = SubResource("RectangleShape2D_h4iex")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+limit_left = 0
+limit_top = 0
+limit_right = 1920
+limit_bottom = 1760

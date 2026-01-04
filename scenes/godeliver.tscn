@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://dnxe4s0b88ijk"]
+
+[ext_resource type="Script" uid="uid://ciqgfmpundfrt" path="res://scripts/godeliver.gd" id="1_sd3eg"]
+[ext_resource type="Texture2D" uid="uid://craux3vynot5l" path="res://assets/PC _ Computer - Stardew Valley - Miscellaneous - Clock.png" id="2_d7406"]
+[ext_resource type="FontFile" uid="uid://bndsjh1qpflf2" path="res://assets/StardewValley.ttf" id="3_oy2vq"]
+
+[node name="godeliver" type="CanvasLayer"]
+script = ExtResource("1_sd3eg")
+
+[node name="next" type="MarginContainer" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="next"]
+position = Vector2(49.5, 21.25)
+scale = Vector2(2.0625, 3.1)
+texture = ExtResource("2_d7406")
+region_enabled = true
+region_rect = Rect2(23, 0, 48, 15)
+
+[node name="deliver" type="Button" parent="next"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_oy2vq")
+theme_override_font_sizes/font_size = 36
+text = "Deliver"
+flat = true
+
+[connection signal="pressed" from="next/deliver" to="." method="_on_deliver_pressed"]
