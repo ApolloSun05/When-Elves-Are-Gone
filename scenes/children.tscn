@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://de3tijif3sseg"]
 
-[ext_resource type="Script" uid="uid://d0jpwi0vr2jm2" path="res://scripts/main.gd" id="1_gflrx"]
+[ext_resource type="Script" uid="uid://d0jpwi0vr2jm2" path="res://scripts/children.gd" id="1_gflrx"]
 [ext_resource type="Texture2D" uid="uid://b53amdi2kinsk" path="res://assets/PC _ Computer - Stardew Valley - Miscellaneous - Special Orders.png" id="2_534cd"]
 [ext_resource type="FontFile" uid="uid://bndsjh1qpflf2" path="res://assets/StardewValley.ttf" id="3_4bodp"]
 

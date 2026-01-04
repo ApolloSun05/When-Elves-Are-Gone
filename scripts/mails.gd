@@ -25,41 +25,48 @@ var toys = {
 	1: "Teddy Bear",
 	2: "Toy Car",
 	3: "Doll",
-	4: "Lego Set",
-	5: "Action Figure",
-	6: "Rubber Duck",
-	7: "Yo-Yo",
-	8: "Puzzle",
-	9: "Stuffed Bunny",
-	10: "Train Set",
-	11: "Toy Robot",
-	12: "Building Blocks",
-	13: "Ball",
-	14: "Remote Control Car",
-	15: "Mini Dinosaur"
+	4: "Ball",
+	5: "Toy Robot",
+	6: "Mini Dinosaur",
+	7: "Remote Control Car",
+	8: "Toy Robot"
 }
-var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+var wishlists = {}
+var listofwishers = []
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Open.visible = true
 	Mails.visible = false
 	exit.visible = false
-	wisher.randomize()
-	
-	test(Global.x)
-	var n = wisher.randi_range(1,10)
-	toyno.randomize()
-	var x = toyno.randi_range(1, 15)
-	mailprinter(n, x)
-
-func test(number):
-	var i:int = 0
-	print(number)
-	print("the random number is (Mails)" + str(number))
-	while i != number:
-		print(arr[i])
+	var i: int = 0
+	print("there should be atleast " + str(Global.nchildren) + " children")
+	while i < Global.nchildren:
+		wisher.randomize()
+		var name = wisher.randi_range(1, 10)
+		add(names[name])
 		i += 1
-		
+	mailprinter()
+	
+func add(name) -> void:
+	listofwishers.append(name)
+	var array = []
+	
+	var x = RandomNumberGenerator.new()
+	x.randomize()
+	var no_of_toys = x.randi_range(1, 5)
+	
+	print("for " + name + " there are " + str(no_of_toys) + " of toys")
+	
+	var j:int = 0
+	
+	while j < no_of_toys:
+		toyno.randomize()
+		var toy = toyno.randi_range(1, 8)
+		array.append(toys[toy])
+		j += 1
+		wishlists[name] = array
+
 func _on_open_pressed() -> void:
 	Open.visible = false
 	Mails.visible = true
@@ -71,8 +78,10 @@ func _on_exitbutton_pressed() -> void:
 	exit.visible = false
 
 func _on_mail_pressed() -> void:
-	pass # Replace with function body.
+	mailprinter()
 
-func mailprinter(n, x):
-	letter.text = "I want " + toys[x] + " for Christmas Please"
-	from.text = "From " + names[n]
+func mailprinter():
+	print(wishlists)
+	var x:int = 0
+	letter.text = "I want " + str(wishlists[listofwishers[x]]) + " for Christmas Please"
+	from.text = "From " + str(listofwishers[x])
