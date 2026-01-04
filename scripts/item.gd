@@ -1,6 +1,6 @@
 extends TextureRect
 
-func _get_drag_data(at_position):
+func _get_drag_data(_at_position):
 	var preview_texture = TextureRect.new()
 	
 	preview_texture.texture = texture
@@ -13,9 +13,9 @@ func _get_drag_data(at_position):
 	set_drag_preview(preview)
 	return preview_texture.texture
 
-func _can_drop_data(at_position, data):
+func _can_drop_data(_at_position, data):
 	return data is Texture2D
 	
-func _drop_data(at_position, data):
+func _drop_data(_at_position, data):
 	texture = data
 	

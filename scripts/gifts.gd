@@ -8,7 +8,7 @@ var body_ref
 var offset: Vector2
 var initialPos: Vector2
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 	#if draggable:
 		#if Input.is_action_just_pressed("click"):
@@ -27,11 +27,13 @@ func _process(delta: float) -> void:
 	
 func _on_area_2d_mouse_shape_entered(_shape_idx: int) -> void:
 	if not Global.is_dragging:
+		print("can drag")
 		drag.draggable = true
 		scale = Vector2(1.05, 1.05)
 
 func _on_area_2d_mouse_shape_exited(_shape_idx: int) -> void:
 	if not Global.is_dragging:
+		print("cant drag")
 		drag.draggable = false
 		scale = Vector2(1, 1)
 
