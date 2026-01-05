@@ -8,4 +8,4 @@ func _process(_delta: float) -> void:
 	pass
 
 func _on_deliver_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/delivery.tscn")
+	get_tree().change_scene_to_file("res://scenes/main scenes/delivery.tscn")

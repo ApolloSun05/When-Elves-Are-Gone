@@ -11,4 +11,4 @@ func _process(_delta: float) -> void:
 
 
 func _on_wrap_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/giftwrapping.tscn")
+	get_tree().change_scene_to_file("res://scenes/main scenes/giftwrapping.tscn")

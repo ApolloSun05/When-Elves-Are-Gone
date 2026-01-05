@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://cwif5nm1haqm8"]
+
+[ext_resource type="Script" uid="uid://c62ncaxa0gf8m" path="res://scripts/global.gd" id="1_af822"]
+[ext_resource type="Texture2D" uid="uid://4t12bf5jd47i" path="res://assets/CH015D-Santas-Workshop-2B.jpg" id="2_klmp1"]
+[ext_resource type="PackedScene" uid="uid://de3tijif3sseg" path="res://scenes/canvas scenes/children.tscn" id="3_lm4p5"]
+[ext_resource type="PackedScene" uid="uid://covu8flaxo3ij" path="res://scenes/canvas scenes/mails.tscn" id="4_l881h"]
+[ext_resource type="PackedScene" uid="uid://c7n3ky6t0chxg" path="res://scenes/canvas scenes/gotowrap.tscn" id="5_bokdc"]
+
+[node name="mailarea" type="Node2D"]
+script = ExtResource("1_af822")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1158.0
+offset_bottom = 646.0
+texture = ExtResource("2_klmp1")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(583, 324)
+
+[node name="no_ofchildren" parent="." instance=ExtResource("3_lm4p5")]
+
+[node name="Mails" parent="." instance=ExtResource("4_l881h")]
+
+[node name="gotowrap" parent="." instance=ExtResource("5_bokdc")]
