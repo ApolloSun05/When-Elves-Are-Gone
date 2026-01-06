@@ -1,0 +1,107 @@
+[gd_scene load_steps=6 format=3 uid="uid://bhhr7pef25djb"]
+
+[ext_resource type="Script" uid="uid://q53d10tggbw3" path="res://scripts/kid.gd" id="1_844vu"]
+[ext_resource type="Texture2D" uid="uid://b53amdi2kinsk" path="res://assets/PC _ Computer - Stardew Valley - Miscellaneous - Special Orders.png" id="2_umm34"]
+[ext_resource type="Texture2D" uid="uid://craux3vynot5l" path="res://assets/PC _ Computer - Stardew Valley - Miscellaneous - Clock.png" id="3_kry1o"]
+[ext_resource type="FontFile" uid="uid://bndsjh1qpflf2" path="res://assets/StardewValley.ttf" id="4_mnfw6"]
+[ext_resource type="Texture2D" uid="uid://de04oks6p4rq3" path="res://assets/PC _ Computer - Stardew Valley - Miscellaneous - Text Emojis.png" id="5_mnfw6"]
+
+[node name="kid" type="Node2D"]
+position = Vector2(579, 326)
+script = ExtResource("1_844vu")
+
+[node name="Mail Open" type="MarginContainer" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -575.0
+offset_top = 254.0
+offset_right = -364.0
+offset_bottom = 323.0
+grow_vertical = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Mail Open"]
+position = Vector2(104.5, 33.749996)
+scale = Vector2(4.3541665, 4.8928566)
+texture = ExtResource("3_kry1o")
+region_enabled = true
+region_rect = Rect2(23, 26, 48, 14)
+
+[node name="Open" type="Button" parent="Mail Open"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_mnfw6")
+theme_override_font_sizes/font_size = 36
+text = "Mail"
+flat = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="kidmail" type="MarginContainer" parent="."]
+offset_left = -223.0
+offset_top = -244.0
+offset_right = 224.0
+offset_bottom = 254.0
+
+[node name="Sprite2D" type="Sprite2D" parent="kidmail"]
+position = Vector2(219.99998, 248)
+scale = Vector2(3, 3)
+texture = ExtResource("2_umm34")
+region_enabled = true
+region_rect = Rect2(174, 18, 149, 166)
+
+[node name="Button" type="Button" parent="kidmail"]
+layout_mode = 2
+flat = true
+
+[node name="MarginContainer" type="MarginContainer" parent="kidmail"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="top" type="Label" parent="kidmail/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_mnfw6")
+theme_override_font_sizes/font_size = 36
+text = "Dear Santa,"
+
+[node name="wish" type="Label" parent="kidmail/MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_mnfw6")
+theme_override_font_sizes/font_size = 36
+text = "a quick brown fox jumps over the lazy dog"
+autowrap_mode = 2
+
+[node name="bottom" type="Label" parent="kidmail/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_mnfw6")
+theme_override_font_sizes/font_size = 36
+text = "From Nian the Nerd"
+autowrap_mode = 1
+
+[node name="Exit" type="MarginContainer" parent="."]
+offset_left = 176.0
+offset_top = -242.0
+offset_right = 216.0
+offset_bottom = -202.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Exit"]
+position = Vector2(20.000011, 20)
+scale = Vector2(4.4444475, 4.4444447)
+texture = ExtResource("5_mnfw6")
+region_enabled = true
+region_rect = Rect2(45, 81, 9, 9)
+
+[node name="Exitbutton" type="Button" parent="Exit"]
+layout_mode = 2
+flat = true
+
+[connection signal="pressed" from="Mail Open/Open" to="." method="_on_open_pressed"]
+[connection signal="pressed" from="Exit/Exitbutton" to="." method="_on_exitbutton_pressed"]
