@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dabixjwcdymff" path="res://scripts/gifts.gd" id="1_k2biq"]
 [ext_resource type="Texture2D" uid="uid://c5cnkpqf6os7p" path="res://assets/pixelbear.png" id="2_x4ge6"]
-[ext_resource type="Script" uid="uid://bu0r3bs76axlg" path="res://scripts/drag.gd" id="3_dyt1e"]
+[ext_resource type="Script" path="res://scripts/drag.gd" id="3_dyt1e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_56tqj"]
 
@@ -11,15 +11,17 @@ script = ExtResource("1_k2biq")
 
 [node name="Drag" type="Node" parent="."]
 script = ExtResource("3_dyt1e")
-metadata/_custom_type_script = "uid://bu0r3bs76axlg"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(3.8146973e-06, -0.5000086)
+scale = Vector2(0.50416666, 0.5125)
 texture = ExtResource("2_x4ge6")
 
 [node name="Area2D" type="Area2D" parent="."]
 scale = Vector2(3, 3)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_56tqj")
 
 [connection signal="body_shape_entered" from="Area2D" to="." method="_on_area_2d_body_shape_entered"]

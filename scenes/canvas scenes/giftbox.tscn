@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://b7l5f5sksu05w"]
+[gd_scene load_steps=4 format=3 uid="uid://b7l5f5sksu05w"]
 
 [ext_resource type="Script" uid="uid://du637yrxpde5y" path="res://scripts/toys.gd" id="1_8vt4o"]
+[ext_resource type="Texture2D" uid="uid://ycr81424ydey" path="res://assets/pixel-art-christmas-or-birthday-gift-red-and-gold-box-8bit-game-item-on-white-background-vector.jpg" id="2_ort1p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5ffei"]
 size = Vector2(128, 128.5)
@@ -8,11 +9,9 @@ size = Vector2(128, 128.5)
 [node name="giftbox" type="StaticBody2D" groups=["dropable"]]
 script = ExtResource("1_8vt4o")
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("2_ort1p")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_5ffei")
-
-[node name="Panel" type="Panel" parent="."]
-offset_left = -64.0
-offset_top = -64.0
-offset_right = 64.0
-offset_bottom = 64.0

@@ -75,7 +75,8 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_mnfw6")
 theme_override_font_sizes/font_size = 36
 text = "a quick brown fox jumps over the lazy dog"
-autowrap_mode = 2
+autowrap_mode = 1
+justification_flags = 139
 
 [node name="bottom" type="Label" parent="kidmail/MarginContainer"]
 layout_mode = 2
@@ -84,7 +85,6 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_mnfw6")
 theme_override_font_sizes/font_size = 36
 text = "From Nian the Nerd"
-autowrap_mode = 1
 
 [node name="Exit" type="MarginContainer" parent="."]
 offset_left = 176.0

@@ -1,14 +1,14 @@
 extends Node2D
 
-@export var kid_name = ""
-@export var wishlist = ""
+@export var kid_name: String = ""
+@export var wishlist: String = ""
 @export var is_naughty = ""
 
 @onready var Open = $"Mail Open"
 @onready var kid = $kidmail
 @onready var exit = $Exit
-@onready var from = $"Actual Mail/MarginContainer/childname"
-@onready var letter = $"Actual Mail/MarginContainer/sample"
+@onready var from = $kidmail/MarginContainer/bottom
+@onready var letter = $kidmail/MarginContainer/wish
 var wisher = RandomNumberGenerator.new()
 var toyno = RandomNumberGenerator.new()
 
@@ -52,7 +52,7 @@ func _ready():
 	#mailprinter()
 	
 func add(name) -> void:
-	listofwishers.append(name)
+	kid_name = name
 	var array = []
 	
 	var x = RandomNumberGenerator.new()
@@ -68,7 +68,7 @@ func add(name) -> void:
 		var toy = toyno.randi_range(1, 8)
 		array.append(toys[toy])
 		j += 1
-		wishlists[name] = array
+		wishlist = str(array)
 
 func _on_open_pressed() -> void:
 	Open.visible = false
@@ -82,11 +82,10 @@ func _on_exitbutton_pressed() -> void:
 	exit.visible = false
 
 func _on_mail_pressed() -> void:
-	pass
-#	mailprinter()
+	mailprinter()
 
-#func mailprinter():
-#	print(wishlists)
-#	var x:int = 0
-#	letter.text = "I want " + str(wishlists[listofwishers[x]]) + " for Christmas Please"
-#	from.text = "From " + str(listofwishers[x])
+func mailprinter():
+	print(wishlists)
+	var x:int = 0
+	letter.text = "I want " + str(wishlists) + " for Christmas Please"
+	from.text = "From " + str(kid_name)

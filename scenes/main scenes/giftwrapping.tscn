@@ -1,12 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://c44ngvowp8cfx"]
+[gd_scene load_steps=5 format=3 uid="uid://c44ngvowp8cfx"]
 
 [ext_resource type="PackedScene" uid="uid://dnxe4s0b88ijk" path="res://scenes/canvas scenes/godeliver.tscn" id="1_a2xsj"]
-[ext_resource type="PackedScene" uid="uid://gygjhdi7wq14" path="res://scenes/item.tscn" id="1_fb7gv"]
 [ext_resource type="Texture2D" uid="uid://ksych6y15v2" path="res://assets/wrappingstation temporary.jpg" id="1_q7okb"]
-[ext_resource type="Texture2D" uid="uid://c5cnkpqf6os7p" path="res://assets/pixelbear.png" id="2_q7okb"]
-[ext_resource type="Texture2D" uid="uid://gk2yuhvas8pv" path="res://assets/pixelcar.jpg" id="4_60vld"]
-[ext_resource type="Texture2D" uid="uid://55yao8r66hw1" path="res://assets/pixeldoll.jpg" id="5_usxlg"]
-[ext_resource type="Texture2D" uid="uid://dso8thd3r7ah6" path="res://assets/pixelball.jpg" id="6_1ehr8"]
 [ext_resource type="PackedScene" uid="uid://b7l5f5sksu05w" path="res://scenes/canvas scenes/giftbox.tscn" id="7_1ehr8"]
 [ext_resource type="PackedScene" uid="uid://dnssbnipprn72" path="res://scenes/canvas scenes/gifts.tscn" id="8_a2xsj"]
 
@@ -23,42 +18,14 @@ texture = ExtResource("1_q7okb")
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(578, 322)
 
-[node name="bear" parent="." instance=ExtResource("1_fb7gv")]
-offset_left = 247.0
-offset_top = 100.0
-offset_right = 347.0
-offset_bottom = 200.0
-texture = ExtResource("2_q7okb")
-
-[node name="box" parent="." instance=ExtResource("1_fb7gv")]
-offset_left = 567.0
-offset_top = 504.0
-offset_right = 667.0
-offset_bottom = 604.0
-
-[node name="car" parent="." instance=ExtResource("1_fb7gv")]
-offset_left = 442.0
-offset_top = 101.0
-offset_right = 542.0
-offset_bottom = 201.0
-texture = ExtResource("4_60vld")
-
-[node name="doll" parent="." instance=ExtResource("1_fb7gv")]
-offset_left = 666.0
-offset_top = 100.0
-offset_right = 766.0
-offset_bottom = 200.0
-texture = ExtResource("5_usxlg")
-
-[node name="ball" parent="." instance=ExtResource("1_fb7gv")]
-offset_left = 867.0
-offset_top = 101.0
-offset_right = 967.0
-offset_bottom = 201.0
-texture = ExtResource("6_1ehr8")
-
 [node name="giftbox" parent="." instance=ExtResource("7_1ehr8")]
-position = Vector2(356, 537)
+position = Vector2(598, 582)
 
-[node name="gifts" parent="." instance=ExtResource("8_a2xsj")]
-position = Vector2(233, 342)
+[node name="bear" parent="." instance=ExtResource("8_a2xsj")]
+position = Vector2(308, 178)
+
+[node name="doll" parent="." instance=ExtResource("8_a2xsj")]
+position = Vector2(693, 179)
+
+[node name="ball" parent="." instance=ExtResource("8_a2xsj")]
+position = Vector2(494, 178)
