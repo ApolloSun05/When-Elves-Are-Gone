@@ -32,9 +32,3 @@ region_rect = Rect2(34, 69, 544, 476)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_h4iex")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-limit_left = 0
-limit_top = 0
-limit_right = 1920
-limit_bottom = 1760

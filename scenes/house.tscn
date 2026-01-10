@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://c80r1j8ys1f6a"]
+
+[ext_resource type="Script" uid="uid://bjgj42rr12vg8" path="res://scripts/house.gd" id="1_d7po0"]
+[ext_resource type="FontFile" uid="uid://bndsjh1qpflf2" path="res://assets/StardewValley.ttf" id="2_qtlar"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x8wvn"]
+size = Vector2(42, 41)
+
+[node name="house" type="Node2D"]
+script = ExtResource("1_d7po0")
+
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2(1.9256958, 1.9256958)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_x8wvn")
+
+[node name="DeliverPanel" type="MarginContainer" parent="."]
+offset_left = -111.0
+offset_top = 40.0
+offset_right = 117.0
+offset_bottom = 89.0
+
+[node name="Panel" type="Panel" parent="DeliverPanel"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="DeliverPanel"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_qtlar")
+theme_override_font_sizes/font_size = 34
+text = "Press F to Deliver"
+
+[connection signal="area_shape_entered" from="Area2D" to="." method="_on_area_2d_area_shape_entered"]
+[connection signal="area_shape_exited" from="Area2D" to="." method="_on_area_2d_area_shape_exited"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://c44ngvowp8cfx"]
+[gd_scene load_steps=4 format=3 uid="uid://c44ngvowp8cfx"]
 
 [ext_resource type="PackedScene" uid="uid://dnxe4s0b88ijk" path="res://scenes/canvas scenes/godeliver.tscn" id="1_a2xsj"]
 [ext_resource type="Texture2D" uid="uid://ksych6y15v2" path="res://assets/wrappingstation temporary.jpg" id="1_q7okb"]
+[ext_resource type="Texture2D" uid="uid://k6wxlsglgaf2" path="res://assets/611328579_1264917285661295_3532460334713804113_n.png" id="3_bogg1"]
 
 [node name="packing" type="Node2D"]
 
@@ -12,6 +13,11 @@ offset_right = 5616.0
 offset_bottom = 3744.0
 scale = Vector2(0.22, 0.22)
 texture = ExtResource("1_q7okb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(578.94226, 322.0467)
+scale = Vector2(0.6031851, 0.6017654)
+texture = ExtResource("3_bogg1")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(578, 322)
