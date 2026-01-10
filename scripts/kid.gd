@@ -7,8 +7,8 @@ extends Node2D
 @onready var Open = $"Mail Open"
 @onready var kid = $kidmail
 @onready var exit = $Exit
-@onready var from = $kidmail/MarginContainer/bottom
-@onready var letter = $kidmail/MarginContainer/wish
+@onready var letter_wishlist = $kidmail/mail/wish
+@onready var from_name =$kidmail/mail/bottom
 var wisher = RandomNumberGenerator.new()
 var toyno = RandomNumberGenerator.new()
 
@@ -49,17 +49,19 @@ func _ready():
 		var name = wisher.randi_range(1, 10)
 		add(names[name])
 		i += 1
-	#mailprinter()
+	mailprinter()
 	
 func add(name) -> void:
+	print("The Kid Name Is:")
 	kid_name = name
+	print(kid_name)
 	var array = []
 	
 	var x = RandomNumberGenerator.new()
 	x.randomize()
 	var no_of_toys = x.randi_range(1, 5)
 	
-	print("for " + name + " there are " + str(no_of_toys) + " of toys")
+	#print("for " + name + " there are " + str(no_of_toys) + " of toys")
 	
 	var j:int = 0
 	
@@ -69,6 +71,8 @@ func add(name) -> void:
 		array.append(toys[toy])
 		j += 1
 		wishlist = str(array)
+	print("The Wishlist is: ")
+	print(wishlist)
 
 func _on_open_pressed() -> void:
 	Open.visible = false
@@ -76,7 +80,6 @@ func _on_open_pressed() -> void:
 	exit.visible = true
 
 func _on_exitbutton_pressed() -> void:
-	print("naclick namn")
 	Open.visible = true
 	kid.visible = false
 	exit.visible = false
@@ -85,7 +88,5 @@ func _on_mail_pressed() -> void:
 	mailprinter()
 
 func mailprinter():
-	print(wishlists)
-	var x:int = 0
-	letter.text = "I want " + str(wishlists) + " for Christmas Please"
-	from.text = "From " + str(kid_name)
+	letter_wishlist.text = "I want " + wishlist + " for Christmas Please"
+	from_name.text = "From " + str(kid_name)

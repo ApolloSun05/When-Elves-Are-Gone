@@ -1,9 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://c44ngvowp8cfx"]
+[gd_scene load_steps=3 format=3 uid="uid://c44ngvowp8cfx"]
 
 [ext_resource type="PackedScene" uid="uid://dnxe4s0b88ijk" path="res://scenes/canvas scenes/godeliver.tscn" id="1_a2xsj"]
 [ext_resource type="Texture2D" uid="uid://ksych6y15v2" path="res://assets/wrappingstation temporary.jpg" id="1_q7okb"]
-[ext_resource type="PackedScene" uid="uid://b7l5f5sksu05w" path="res://scenes/canvas scenes/giftbox.tscn" id="7_1ehr8"]
-[ext_resource type="PackedScene" uid="uid://dnssbnipprn72" path="res://scenes/canvas scenes/gifts.tscn" id="8_a2xsj"]
 
 [node name="packing" type="Node2D"]
 
@@ -17,15 +15,3 @@ texture = ExtResource("1_q7okb")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(578, 322)
-
-[node name="giftbox" parent="." instance=ExtResource("7_1ehr8")]
-position = Vector2(598, 582)
-
-[node name="bear" parent="." instance=ExtResource("8_a2xsj")]
-position = Vector2(308, 178)
-
-[node name="doll" parent="." instance=ExtResource("8_a2xsj")]
-position = Vector2(693, 179)
-
-[node name="ball" parent="." instance=ExtResource("8_a2xsj")]
-position = Vector2(494, 178)

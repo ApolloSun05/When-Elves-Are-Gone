@@ -54,14 +54,14 @@ region_rect = Rect2(174, 18, 149, 166)
 layout_mode = 2
 flat = true
 
-[node name="MarginContainer" type="MarginContainer" parent="kidmail"]
+[node name="mail" type="MarginContainer" parent="kidmail"]
 layout_mode = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="top" type="Label" parent="kidmail/MarginContainer"]
+[node name="top" type="Label" parent="kidmail/mail"]
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -69,16 +69,16 @@ theme_override_fonts/font = ExtResource("4_mnfw6")
 theme_override_font_sizes/font_size = 36
 text = "Dear Santa,"
 
-[node name="wish" type="Label" parent="kidmail/MarginContainer"]
+[node name="wish" type="Label" parent="kidmail/mail"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_mnfw6")
 theme_override_font_sizes/font_size = 36
 text = "a quick brown fox jumps over the lazy dog"
-autowrap_mode = 1
+autowrap_mode = 2
 justification_flags = 139
 
-[node name="bottom" type="Label" parent="kidmail/MarginContainer"]
+[node name="bottom" type="Label" parent="kidmail/mail"]
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_colors/font_color = Color(0, 0, 0, 1)
