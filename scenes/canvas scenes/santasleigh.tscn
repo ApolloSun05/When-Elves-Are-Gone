@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://5nsx44k1bct1"]
 
-[ext_resource type="Texture2D" uid="uid://cd38f1o7dikif" path="res://assets/santa.jpg" id="1_pp874"]
+[ext_resource type="Texture2D" uid="uid://bji4jcero8osx" path="res://assets/599477699_1245052980825196_8806119332654126535_n.png" id="1_jci2s"]
 
 [sub_resource type="GDScript" id="GDScript_pp874"]
 resource_name = "santasleigh"
@@ -24,11 +24,11 @@ func _physics_process(delta: float) -> void:
 script = SubResource("GDScript_pp874")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.1, 0.114)
-texture = ExtResource("1_pp874")
-flip_h = true
+position = Vector2(75, 0)
+scale = Vector2(0.25, 0.285)
+texture = ExtResource("1_jci2s")
 region_enabled = true
-region_rect = Rect2(34, 69, 544, 476)
+region_rect = Rect2(34, 248, 868, 185)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_h4iex")

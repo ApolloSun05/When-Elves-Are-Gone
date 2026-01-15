@@ -2,13 +2,23 @@ extends Node2D
 
 @onready var drag: Drag = $Drag
 
+@export var toy_name = ""
+@export var toy_texture: Texture2D
+@onready var icon_sprite = $Sprite2D
+
 var draggable = false
 var is_inside_giftbox = false
-var body_ref
+var body_ref = []
 var offset: Vector2
 var initialPos: Vector2
 
+func _ready() -> void:
+	if not Engine.is_editor_hint():
+		icon_sprite.texture = toy_texture
+	
 func _process(_delta: float) -> void:
+	if Engine.is_editor_hint():
+		icon_sprite.texture = toy_texture
 	pass
 	#if draggable:
 		#if Input.is_action_just_pressed("click"):
@@ -37,16 +47,16 @@ func _on_area_2d_mouse_shape_exited(_shape_idx: int) -> void:
 		drag.draggable = false
 		scale = Vector2(1, 1)
 
-func _on_area_2d_body_shape_entered(_body_rid: RID, body: Node2D, _body_shape_index: int, _local_shape_index: int) -> void:
-	if body.is_in_group('dropable'):
+@onready var giftbox = $"../giftbox"
+func _on_area_2d_body_shape_entered(body: Node2D) -> void:
+	if body.is_in_group("dropable"):
+		print("im here")
 		is_inside_giftbox = true
-		body.modulate = Color(Color.AQUA, 1)
-		body_ref = body
+		print(body.toy_name)
+		print(body_ref)
+#		giftbox.get_data.connect(body_ref)
 
 func _on_area_2d_body_shape_exited(_body_rid: RID, body: Node2D, _body_shape_index: int, _local_shape_index: int) -> void:
-	if body.is_in_group('dropable'):
+	if not body.is_in_group("dropable"):
 		is_inside_giftbox = false
-		body.modulate = Color(Color.HOT_PINK, 0.7)
 		body_ref = body
-
-# HELP AGAIN!! I found a better yt kasi na may drop area and draggable item, the dragging dont ork
