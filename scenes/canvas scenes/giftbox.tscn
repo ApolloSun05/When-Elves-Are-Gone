@@ -22,5 +22,3 @@ offset_top = -66.0
 offset_right = 64.0
 offset_bottom = 64.0
 color = Color(0.8047426, 0.80474263, 0.8047426, 1)
-
-[connection signal="child_entered_tree" from="CollisionShape2D" to="." method="_on_collision_shape_2d_child_entered_tree"]

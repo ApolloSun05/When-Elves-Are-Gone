@@ -1,3 +1,4 @@
+class_name Kid
 extends Node2D
 
 @export var kid_name: String = ""
@@ -11,6 +12,7 @@ extends Node2D
 @onready var from_name =$kidmail/mail/bottom
 var wisher = RandomNumberGenerator.new()
 var toyno = RandomNumberGenerator.new()
+var wish_index: int = 0
 
 var names = {
 	1: "Joms",
@@ -36,8 +38,6 @@ var toys = {
 	8: "Toy Robot"
 }
 
-var wishlists = {}
-var listofwishers = []
 func _ready():
 	Open.visible = true
 	kid.visible = false
@@ -49,9 +49,9 @@ func _ready():
 		var name = wisher.randi_range(1, 10)
 		add(names[name])
 		i += 1
-	mailprinter()
+	#mailprinter()
 	
-func add(name) -> void:
+func add(name: String) -> void:
 	print("The Kid Name Is:")
 	kid_name = name
 	print(kid_name)
@@ -73,11 +73,13 @@ func add(name) -> void:
 		wishlist = str(array)
 	print("The Wishlist is: ")
 	print(wishlist)
+	Global.wishlists[kid_name] = array
 
 func _on_open_pressed() -> void:
 	Open.visible = false
 	kid.visible = true
 	exit.visible = true
+	mailprinter()
 
 func _on_exitbutton_pressed() -> void:
 	Open.visible = true
@@ -88,5 +90,24 @@ func _on_mail_pressed() -> void:
 	mailprinter()
 
 func mailprinter():
-	letter_wishlist.text = "I want " + wishlist + " for Christmas Please"
-	from_name.text = "From " + str(kid_name)
+	
+	if wish_index == 0: $"Previous Wish".disabled = true
+	else: $"Previous Wish".disabled = false
+	if wish_index == len(Global.wishlists): $"Next Wish".disabled = true
+	else: $"Next Wish".disabled = false
+	
+	print("opening mail")
+	var kid = Global.wishlists.keys()[wish_index]
+	var wishes = PackedStringArray(Global.wishlists[kid])
+	print(kid)
+	print(wishes)
+	letter_wishlist.text = "I want " + ", ".join(wishes) + " for Christmas Please"
+	from_name.text = "From " + str(kid)
+
+
+func _on_cycle_wish_pressed(num: int) -> void:
+	var index = wish_index + num
+	if index < 0 or index > len(Global.wishlists): return
+	
+	wish_index = index
+	mailprinter()

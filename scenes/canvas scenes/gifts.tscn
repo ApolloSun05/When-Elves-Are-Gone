@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dnssbnipprn72"]
 
 [ext_resource type="Script" uid="uid://dabixjwcdymff" path="res://scripts/gifts.gd" id="1_k2biq"]
-[ext_resource type="Script" path="res://scripts/drag.gd" id="3_dyt1e"]
+[ext_resource type="Script" uid="uid://bu0r3bs76axlg" path="res://scripts/drag.gd" id="3_dyt1e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_56tqj"]
 
@@ -22,8 +22,7 @@ scale = Vector2(3, 3)
 scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_56tqj")
 
-[connection signal="body_shape_entered" from="Area2D" to="." method="_on_area_2d_body_shape_entered"]
-[connection signal="body_shape_exited" from="Area2D" to="." method="_on_area_2d_body_shape_exited"]
-[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
 [connection signal="mouse_shape_entered" from="Area2D" to="." method="_on_area_2d_mouse_shape_entered"]
 [connection signal="mouse_shape_exited" from="Area2D" to="." method="_on_area_2d_mouse_shape_exited"]

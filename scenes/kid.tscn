@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://de04oks6p4rq3" path="res://assets/PC _ Computer - Stardew Valley - Miscellaneous - Text Emojis.png" id="5_mnfw6"]
 
 [node name="kid" type="Node2D"]
-position = Vector2(579, 326)
 script = ExtResource("1_844vu")
 
 [node name="kidmail" type="MarginContainer" parent="."]
@@ -90,16 +89,32 @@ offset_top = -238.0
 offset_right = 338.0
 offset_bottom = -198.0
 
-[node name="Sprite2D" type="Sprite2D" parent="Exit"]
-position = Vector2(20.000011, 20)
+[node name="Exitbutton" type="Button" parent="Exit"]
+layout_mode = 2
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Exit/Exitbutton"]
+position = Vector2(20, 20)
 scale = Vector2(4.4444475, 4.4444447)
 texture = ExtResource("5_mnfw6")
 region_enabled = true
 region_rect = Rect2(45, 81, 9, 9)
 
-[node name="Exitbutton" type="Button" parent="Exit"]
-layout_mode = 2
-flat = true
+[node name="Next Wish" type="Button" parent="."]
+offset_left = 421.0
+offset_top = -119.0
+offset_right = 494.0
+offset_bottom = -26.0
+text = "next"
+
+[node name="Previous Wish" type="Button" parent="."]
+offset_left = -496.0
+offset_top = -130.0
+offset_right = -421.0
+offset_bottom = -38.0
+text = "prev"
 
 [connection signal="pressed" from="Mail Open/Open" to="." method="_on_open_pressed"]
 [connection signal="pressed" from="Exit/Exitbutton" to="." method="_on_exitbutton_pressed"]
+[connection signal="pressed" from="Next Wish" to="." method="_on_cycle_wish_pressed" binds= [1]]
+[connection signal="pressed" from="Previous Wish" to="." method="_on_cycle_wish_pressed" binds= [-1]]

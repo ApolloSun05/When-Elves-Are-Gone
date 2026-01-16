@@ -47,4 +47,14 @@ position = Vector2(439, 210)
 toy_name = "Bear"
 toy_texture = ExtResource("7_pth88")
 
+[node name="gifts2" parent="." instance=ExtResource("6_spqqv")]
+position = Vector2(645, 209)
+toy_name = "Bear"
+toy_texture = ExtResource("7_pth88")
+
+[node name="gifts3" parent="." instance=ExtResource("6_spqqv")]
+position = Vector2(858, 216)
+toy_name = "Bear"
+toy_texture = ExtResource("7_pth88")
+
 [connection signal="child_entered_tree" from="giftbox" to="giftbox" method="_on_child_entered_tree"]

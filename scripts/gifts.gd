@@ -1,10 +1,14 @@
+class_name Gift
 extends Node2D
+
+signal wrapped(toy_name: String)
 
 @onready var drag: Drag = $Drag
 
 @export var toy_name = ""
 @export var toy_texture: Texture2D
 @onready var icon_sprite = $Sprite2D
+@onready var orig_position = position
 
 var draggable = false
 var is_inside_giftbox = false
@@ -13,6 +17,7 @@ var offset: Vector2
 var initialPos: Vector2
 
 func _ready() -> void:
+	drag.released.connect(_drag_released)
 	if not Engine.is_editor_hint():
 		icon_sprite.texture = toy_texture
 	
@@ -47,16 +52,21 @@ func _on_area_2d_mouse_shape_exited(_shape_idx: int) -> void:
 		drag.draggable = false
 		scale = Vector2(1, 1)
 
-@onready var giftbox = $"../giftbox"
-func _on_area_2d_body_shape_entered(body: Node2D) -> void:
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	print(body)
 	if body.is_in_group("dropable"):
 		print("im here")
 		is_inside_giftbox = true
-		print(body.toy_name)
-		print(body_ref)
-#		giftbox.get_data.connect(body_ref)
+		#print(body.toy_name)
 
-func _on_area_2d_body_shape_exited(_body_rid: RID, body: Node2D, _body_shape_index: int, _local_shape_index: int) -> void:
+func _on_area_2d_body_exited(body: Node2D) -> void:
 	if not body.is_in_group("dropable"):
 		is_inside_giftbox = false
 		body_ref = body
+
+func _drag_released():
+	print()
+	if is_inside_giftbox:
+		wrapped.emit(self.toy_name)
+		prints(toy_name, "has been put in the gift box")
+		position = orig_position

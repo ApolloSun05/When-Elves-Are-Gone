@@ -20,6 +20,9 @@ func get_data(node):
 	child_name.append(node.name)
 	gifts_inserted.append(node.array)
 	print("I guess it worked??")
-	
-func _on_child_entered_tree(node: Node) -> void:
-	print("bro wtfff!!")
+
+#func _on_area_entered(area: Area2D) -> void:
+	#var item = area.get_parent()
+	#if is_instance_of(item, Gift):
+		#print(item.toy_name)
+	#pass # Replace with function body.

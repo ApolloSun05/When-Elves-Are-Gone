@@ -1,6 +1,8 @@
 class_name Drag
 extends Node
 
+signal released
+
 var draggable: bool = false
 var is_dragged: bool = false
 
@@ -22,6 +24,7 @@ func _process(_delta: float) -> void:
 			print("released")
 			is_dragged= false
 			Global.is_dragging = false
+			released.emit()
 			# get_parent().linear_velocity = Vector2.ZERO
 			#get_parent().freeze = false
 			#var impulse = (get_parent().get_global_mouse_position() - get_parent().global_transform.origin) * 5
