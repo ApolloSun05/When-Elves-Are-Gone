@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://c44ngvowp8cfx"]
+[gd_scene load_steps=8 format=3 uid="uid://c44ngvowp8cfx"]
 
 [ext_resource type="PackedScene" uid="uid://dnxe4s0b88ijk" path="res://scenes/canvas scenes/godeliver.tscn" id="1_a2xsj"]
 [ext_resource type="Texture2D" uid="uid://cevvgjieofa6s" path="res://assets/workbench.png" id="2_bogg1"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b7l5f5sksu05w" path="res://scenes/canvas scenes/giftbox.tscn" id="5_iovqx"]
 [ext_resource type="PackedScene" uid="uid://dnssbnipprn72" path="res://scenes/canvas scenes/gifts.tscn" id="6_spqqv"]
 [ext_resource type="Texture2D" uid="uid://r862tq00iy25" path="res://assets/bear.png" id="7_pth88"]
+[ext_resource type="PackedScene" uid="uid://de3tijif3sseg" path="res://scenes/canvas scenes/children.tscn" id="7_spqqv"]
 
 [node name="packing" type="Node2D"]
 
@@ -56,5 +57,7 @@ toy_texture = ExtResource("7_pth88")
 position = Vector2(858, 216)
 toy_name = "Bear"
 toy_texture = ExtResource("7_pth88")
+
+[node name="children" parent="." instance=ExtResource("7_spqqv")]
 
 [connection signal="child_entered_tree" from="giftbox" to="giftbox" method="_on_child_entered_tree"]
