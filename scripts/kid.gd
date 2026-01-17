@@ -13,8 +13,7 @@ extends Node2D
 @onready var Prev_wish = $"Previous Wish"
 @onready var Next_wish = $"Next Wish"
 @onready var Make_wish = $"Make Wish"
-@onready var check_wish = $check_wish
-@onready var chosen_wish = $chosen_wish
+@onready var check_wish = $"../Chosen_UI/check_wish"
 var wisher = RandomNumberGenerator.new()
 var toyno = RandomNumberGenerator.new()
 var wish_index: int = 0
@@ -59,9 +58,7 @@ func _ready():
 		add(names[name])
 		i += 1
 	#mailprinter()
-	if Global.kid_temp == "" and Global.wishes_temp == []:
-		check_wish.visible = false
-		chosen_wish.visible = false
+	
 	
 func add(name: String) -> void:
 	print("The Kid Name Is:")
@@ -128,7 +125,7 @@ func mailprinter():
 func _on_cycle_wish_pressed(num: int) -> void:
 	var index = wish_index + num
 	if index < 0 or index > len(Global.wishlists): return
-	
+
 	wish_index = index
 	mailprinter()
 
@@ -142,20 +139,6 @@ func _on_make_wish_pressed() -> void: #it should be put in the
 	Prev_wish.visible = false
 	Next_wish.visible = false
 	Make_wish.visible = false
-	
+
 	print(Global.kid_temp)
 	print(Global.wishes_temp)
-
-@onready var chosenkid_text = $chosen_wish/MarginContainer/chosen_kid 
-@onready var chosenarray_text = $chosen_wish/MarginContainer/chosen_array
-
-func _on_checkchosenwish_pressed() -> void:
-	chosenkid_text.text = "Kid: " + Global.kid_temp
-	chosenarray_text.text = "Checklist: \n> " + "\n> ".join(Global.wishes_temp)
-	check_wish.visible = false
-	chosen_wish.visible = true
-	
-	
-func _on_close_chosenwish_pressed() -> void:
-	check_wish.visible = true
-	chosen_wish.visible = false

@@ -14,6 +14,8 @@ var inventory: Dictionary[String, Array] = {}
 var kid_temp: String # to be used in a fcuntion
 var wishes_temp: Array
 
+@onready var slot_scene = preload("res://scenes/canvas scenes/inventory_slot.tscn")
+
 func _ready() -> void:
 	children.randomize()
 	if nights < 3:

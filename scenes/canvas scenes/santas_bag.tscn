@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbw7erohnxnpk"]
+
+[ext_resource type="Script" uid="uid://chrsf4j4am81" path="res://scripts/santas_bag.gd" id="1_7ycu3"]
+[ext_resource type="Texture2D" uid="uid://ydwkghle3n0" path="res://assets/santabag.jpg" id="2_wtt1m"]
+
+[node name="Santas_Bag" type="CanvasLayer"]
+script = ExtResource("1_7ycu3")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -106.0
+offset_top = -122.0
+offset_right = 140.0
+offset_bottom = 130.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Open_Bag" type="Button" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer"]
+position = Vector2(124, 125)
+scale = Vector2(0.395, 0.395)
+texture = ExtResource("2_wtt1m")
+
+[connection signal="pressed" from="MarginContainer/Open_Bag" to="." method="_on_open_bag_pressed"]

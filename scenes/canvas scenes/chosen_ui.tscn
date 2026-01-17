@@ -1,0 +1,75 @@
+[gd_scene load_steps=4 format=3 uid="uid://dvclbkpy7o2vw"]
+
+[ext_resource type="Script" uid="uid://ddgwrxcehbp2d" path="res://scripts/chosen_ui.gd" id="1_s7o7r"]
+[ext_resource type="Texture2D" uid="uid://bcbrocj40fuwm" path="res://assets/Wishlist Paper.png" id="2_paw5w"]
+[ext_resource type="FontFile" uid="uid://bndsjh1qpflf2" path="res://assets/StardewValley.ttf" id="3_pbww7"]
+
+[node name="Chosen_UI" type="CanvasLayer"]
+script = ExtResource("1_s7o7r")
+
+[node name="check_wish" type="MarginContainer" parent="."]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -94.0
+offset_top = -127.0
+offset_right = 104.0
+offset_bottom = 120.0
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="check_wish"]
+position = Vector2(99.000015, 122.99999)
+scale = Vector2(0.22602743, 0.22592594)
+texture = ExtResource("2_paw5w")
+
+[node name="checkchosenwish" type="Button" parent="check_wish"]
+layout_mode = 2
+flat = true
+
+[node name="chosen_wish" type="MarginContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -211.5
+offset_top = -251.0
+offset_right = 211.5
+offset_bottom = 251.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="chosen_wish"]
+position = Vector2(206, 254)
+scale = Vector2(0.52, 0.52)
+texture = ExtResource("2_paw5w")
+
+[node name="MarginContainer" type="MarginContainer" parent="chosen_wish"]
+layout_mode = 2
+theme_override_constants/margin_left = 62
+theme_override_constants/margin_top = 122
+theme_override_constants/margin_right = 93
+theme_override_constants/margin_bottom = 113
+
+[node name="chosen_kid" type="Label" parent="chosen_wish/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.5882353, 0.29411766, 0, 1)
+theme_override_fonts/font = ExtResource("3_pbww7")
+theme_override_font_sizes/font_size = 32
+text = "fjasdh"
+
+[node name="chosen_array" type="Label" parent="chosen_wish/MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5882353, 0.29411766, 0, 1)
+theme_override_fonts/font = ExtResource("3_pbww7")
+theme_override_font_sizes/font_size = 24
+text = "wishes type shit"
+autowrap_mode = 2
+
+[node name="close_chosenwish" type="Button" parent="chosen_wish/MarginContainer"]
+layout_mode = 2
+flat = true
+
+[connection signal="pressed" from="check_wish/checkchosenwish" to="." method="_on_checkchosenwish_pressed"]
+[connection signal="pressed" from="chosen_wish/MarginContainer/close_chosenwish" to="." method="_on_close_chosenwish_pressed"]

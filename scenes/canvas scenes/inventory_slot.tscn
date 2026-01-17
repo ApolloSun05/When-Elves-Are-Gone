@@ -1,0 +1,66 @@
+[gd_scene load_steps=2 format=3 uid="uid://c7h7gxaieqok7"]
+
+[ext_resource type="Script" uid="uid://bkjioiksnbskv" path="res://scripts/inventory_slot.gd" id="1_gsdo5"]
+
+[node name="Inventory_slot" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -942.0
+offset_bottom = -438.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gsdo5")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 200.0
+
+[node name="Panel" type="Panel" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = -146
+
+[node name="Label" type="Label" parent="MarginContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Child Name
+"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 201.0
+offset_bottom = 200.0
+
+[node name="Gift_Desc" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 209.0
+offset_top = 1.0
+offset_right = 513.0
+offset_bottom = 198.0
+
+[node name="Panel" type="Panel" parent="Gift_Desc"]
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="Gift_Desc"]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 20
+
+[node name="Label" type="Label" parent="Gift_Desc/Margin"]
+layout_mode = 2
+size_flags_vertical = 1
+
+[node name="Panel" type="Panel" parent="Gift_Desc/Margin"]
+layout_mode = 2
+
+[connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]
