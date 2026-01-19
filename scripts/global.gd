@@ -1,5 +1,8 @@
 extends Node2D
 
+signal inventory_opened
+signal inventory_updated
+
 var children = RandomNumberGenerator.new()
 var nchildren: int
 

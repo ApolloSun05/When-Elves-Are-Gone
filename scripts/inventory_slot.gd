@@ -1,11 +1,10 @@
 extends Control
 
 @onready var Gift_Desc = $Gift_Desc
-@onready var Gift_list = $Gift_Desc/Margin/Label
+@onready var gift_details: Label = $"Gift_Desc/Margin/Gift Details"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Gift_Desc.visible = false
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -13,11 +12,14 @@ func _process(delta: float) -> void:
 
 func _on_button_mouse_entered() -> void:
 	Gift_Desc.visible = true
-	Gift_list.text = "> " + "\n> ".join(Global.wishes_temp)
+	#gift_details.text = "> " + "\n> ".join(Global.wishes_temp)
 	
 func _on_button_mouse_exited() -> void:
 	Gift_Desc.visible = false
 
 func set_empty():
-	Gift_list.text = ""
-	
+	gift_details.text = ""
+
+func set_item(toys: Array) -> void:
+	prints("[LOG] Toys in slot:", toys)
+	gift_details.text = ", ".join(PackedStringArray(toys))

@@ -13,6 +13,8 @@ offset_right = -942.0
 offset_bottom = -438.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 script = ExtResource("1_gsdo5")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
@@ -39,6 +41,7 @@ offset_right = 201.0
 offset_bottom = 200.0
 
 [node name="Gift_Desc" type="MarginContainer" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 209.0
 offset_top = 1.0
@@ -55,7 +58,7 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 12
 theme_override_constants/margin_bottom = 20
 
-[node name="Label" type="Label" parent="Gift_Desc/Margin"]
+[node name="Gift Details" type="Label" parent="Gift_Desc/Margin"]
 layout_mode = 2
 size_flags_vertical = 1
 

@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 @onready var Bag = $MarginContainer
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -13,3 +14,4 @@ func _process(delta: float) -> void:
 
 func _on_open_bag_pressed() -> void:
 	Bag.visible = false
+	Global.inventory_opened.emit()
