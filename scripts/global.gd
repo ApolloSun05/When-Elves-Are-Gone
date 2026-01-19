@@ -8,11 +8,9 @@ var nights: int = 1
 
 var wishlists: Dictionary[String, Array]
 var current_child: String
-var current_toys: Array[String]
+var current_toys: Array
 var inventory: Dictionary[String, Array] = {}
 
-var kid_temp: String # to be used in a fcuntion
-var wishes_temp: Array
 
 @onready var slot_scene = preload("res://scenes/canvas scenes/inventory_slot.tscn")
 

@@ -7,8 +7,8 @@ extends CanvasLayer
 @onready var chosenarray_text = $chosen_wish/MarginContainer/chosen_array
 
 func _on_checkchosenwish_pressed() -> void:
-	chosenkid_text.text = "Kid: " + Global.kid_temp
-	chosenarray_text.text = "Checklist: \n> " + "\n> ".join(Global.wishes_temp)
+	chosenkid_text.text = "Kid: " + Global.current_child
+	chosenarray_text.text = "Checklist: \n> " + "\n> ".join(Global.current_toys)
 	check_wish.visible = false
 	chosen_wish.visible = true
 	
@@ -19,7 +19,7 @@ func _on_close_chosenwish_pressed() -> void:
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	chosen_wish.visible = false
-	if Global.kid_temp == "" and Global.wishes_temp == []:
+	if Global.current_child == "" and Global.current_toys == []:
 		check_wish.visible = false
 
 

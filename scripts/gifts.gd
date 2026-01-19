@@ -42,13 +42,13 @@ func _process(_delta: float) -> void:
 	
 func _on_area_2d_mouse_shape_entered(_shape_idx: int) -> void:
 	if not Global.is_dragging:
-		print("can drag")
+		#print("can drag")
 		drag.draggable = true
 		scale = Vector2(1.05, 1.05)
 
 func _on_area_2d_mouse_shape_exited(_shape_idx: int) -> void:
 	if not Global.is_dragging:
-		print("cant drag")
+		#print("cant drag")
 		drag.draggable = false
 		scale = Vector2(1, 1)
 
@@ -65,7 +65,6 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 		body_ref = body
 
 func _drag_released():
-	print()
 	if is_inside_giftbox:
 		wrapped.emit(self.toy_name)
 		prints(toy_name, "has been put in the gift box")
