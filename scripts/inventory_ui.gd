@@ -7,6 +7,7 @@ func _ready() -> void:
 		self.visible = true
 		print("[LOG] Inventory Opened"))
 	Global.inventory_updated.connect(_on_inventory_updated)
+	_on_inventory_updated()
 
 func _process(delta: float) -> void:
 	pass
