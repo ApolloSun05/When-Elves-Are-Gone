@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://b7l5f5sksu05w"]
+[gd_scene load_steps=5 format=3 uid="uid://b7l5f5sksu05w"]
 
 [ext_resource type="Script" uid="uid://du637yrxpde5y" path="res://scripts/giftbox.gd" id="1_8vt4o"]
 [ext_resource type="Texture2D" uid="uid://8fogulmfu82m" path="res://assets/close box.png" id="2_ort1p"]
+[ext_resource type="Texture2D" uid="uid://c0sppx8il80uf" path="res://assets/insidebox.png" id="3_cx0d5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5ffei"]
 size = Vector2(128, 128.5)
@@ -23,5 +24,19 @@ offset_right = 65.0
 offset_bottom = 65.0
 flat = true
 
+[node name="inside_box" type="Sprite2D" parent="."]
+position = Vector2(0, -250)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_cx0d5")
+
+[node name="exit" type="Button" parent="inside_box"]
+offset_left = 582.2783
+offset_top = -787.30164
+offset_right = 782.2783
+offset_bottom = -587.30164
+theme_override_font_sizes/font_size = 45
+text = "Close"
+
 [connection signal="wrapped" from="." to="." method="_on_wrapped"]
 [connection signal="pressed" from="Check_Wrapped_Toys" to="." method="_on_check_wrapped_toys_pressed"]
+[connection signal="pressed" from="inside_box/exit" to="." method="_on_exit_pressed"]

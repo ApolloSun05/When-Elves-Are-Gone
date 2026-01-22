@@ -46,9 +46,6 @@ rotation = 1.40691
 texture = ExtResource("3_bogg1")
 flip_h = true
 
-[node name="giftbox" parent="." instance=ExtResource("5_iovqx")]
-position = Vector2(602, 600)
-
 [node name="bear" parent="." instance=ExtResource("6_spqqv")]
 position = Vector2(439, 210)
 toy_name = "Bear"
@@ -76,5 +73,8 @@ toy_texture = ExtResource("8_us1pg")
 
 [node name="Inventory_UI" parent="Inven" instance=ExtResource("11_7knws")]
 
-[connection signal="child_entered_tree" from="giftbox" to="giftbox" method="_on_child_entered_tree"]
+[node name="giftbox" parent="." instance=ExtResource("5_iovqx")]
+position = Vector2(602, 600)
+
 [connection signal="wrapped" from="bear" to="giftbox" method="_on_gifts_wrapped"]
+[connection signal="child_entered_tree" from="giftbox" to="giftbox" method="_on_child_entered_tree"]

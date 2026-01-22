@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbdi7tvch3w7l"]
+
+[ext_resource type="Texture2D" uid="uid://r862tq00iy25" path="res://assets/bear.png" id="1_g2676"]
+
+[node name="show_gift_scene" type="Sprite2D"]
+texture = ExtResource("1_g2676")
