@@ -12,6 +12,7 @@ var nights: int = 1
 var wishlists: Dictionary[String, Array]
 var current_child: String
 var current_toys: Array
+var wrapped_toys: Array
 var inventory: Dictionary[String, Array] = {}
 
 

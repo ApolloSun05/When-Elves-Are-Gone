@@ -67,8 +67,8 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 func _drag_released():
 	if is_inside_giftbox:
 		wrapped.emit(self.toy_name)
-		Global.current_toys.append(toy_name)
-		Global.inventory[Global.current_child] = Global.current_toys
+		Global.wrapped_toys.append(toy_name)
+		Global.inventory[Global.current_child] = Global.wrapped_toys
 		prints("[LOG] Inventory updated:", Global.inventory)
 		Global.inventory_updated.emit()
 		prints(toy_name, "has been put in the gift box")

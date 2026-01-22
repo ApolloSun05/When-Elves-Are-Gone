@@ -1,13 +1,15 @@
-[gd_scene load_steps=12 format=3 uid="uid://c44ngvowp8cfx"]
+[gd_scene load_steps=14 format=3 uid="uid://c44ngvowp8cfx"]
 
 [ext_resource type="PackedScene" uid="uid://dnxe4s0b88ijk" path="res://scenes/canvas scenes/godeliver.tscn" id="1_a2xsj"]
 [ext_resource type="Texture2D" uid="uid://cevvgjieofa6s" path="res://assets/workbench.png" id="2_bogg1"]
 [ext_resource type="Texture2D" uid="uid://lt4lopbcdjnj" path="res://assets/64.png" id="3_bogg1"]
 [ext_resource type="PackedScene" uid="uid://b7l5f5sksu05w" path="res://scenes/canvas scenes/giftbox.tscn" id="5_iovqx"]
 [ext_resource type="PackedScene" uid="uid://dnssbnipprn72" path="res://scenes/canvas scenes/gifts.tscn" id="6_spqqv"]
+[ext_resource type="Texture2D" uid="uid://dso8thd3r7ah6" path="res://assets/pixelball.jpg" id="7_b2trm"]
 [ext_resource type="Texture2D" uid="uid://r862tq00iy25" path="res://assets/bear.png" id="7_pth88"]
 [ext_resource type="PackedScene" uid="uid://de3tijif3sseg" path="res://scenes/canvas scenes/children.tscn" id="7_spqqv"]
 [ext_resource type="PackedScene" uid="uid://dvclbkpy7o2vw" path="res://scenes/canvas scenes/chosen_ui.tscn" id="8_pth88"]
+[ext_resource type="Texture2D" uid="uid://55yao8r66hw1" path="res://assets/pixeldoll.jpg" id="8_us1pg"]
 [ext_resource type="PackedScene" uid="uid://blxbw46ksqxnf" path="res://scenes/canvas scenes/back_to_mails.tscn" id="9_eexhd"]
 [ext_resource type="PackedScene" uid="uid://cbw7erohnxnpk" path="res://scenes/canvas scenes/santas_bag.tscn" id="10_6nylu"]
 [ext_resource type="PackedScene" uid="uid://cnlmkcw38umd3" path="res://scenes/canvas scenes/inventory_ui.tscn" id="11_7knws"]
@@ -47,20 +49,20 @@ flip_h = true
 [node name="giftbox" parent="." instance=ExtResource("5_iovqx")]
 position = Vector2(602, 600)
 
-[node name="gifts" parent="." instance=ExtResource("6_spqqv")]
+[node name="bear" parent="." instance=ExtResource("6_spqqv")]
 position = Vector2(439, 210)
 toy_name = "Bear"
 toy_texture = ExtResource("7_pth88")
 
-[node name="gifts2" parent="." instance=ExtResource("6_spqqv")]
+[node name="ball" parent="." instance=ExtResource("6_spqqv")]
 position = Vector2(645, 209)
-toy_name = "Bear"
-toy_texture = ExtResource("7_pth88")
+toy_name = "Ball"
+toy_texture = ExtResource("7_b2trm")
 
-[node name="gifts3" parent="." instance=ExtResource("6_spqqv")]
+[node name="doll" parent="." instance=ExtResource("6_spqqv")]
 position = Vector2(858, 216)
-toy_name = "Bear"
-toy_texture = ExtResource("7_pth88")
+toy_name = "Doll"
+toy_texture = ExtResource("8_us1pg")
 
 [node name="children" parent="." instance=ExtResource("7_spqqv")]
 
@@ -75,4 +77,4 @@ toy_texture = ExtResource("7_pth88")
 [node name="Inventory_UI" parent="Inven" instance=ExtResource("11_7knws")]
 
 [connection signal="child_entered_tree" from="giftbox" to="giftbox" method="_on_child_entered_tree"]
-[connection signal="wrapped" from="gifts" to="giftbox" method="_on_gifts_wrapped"]
+[connection signal="wrapped" from="bear" to="giftbox" method="_on_gifts_wrapped"]

@@ -29,7 +29,7 @@ layout_mode = 2
 layout_mode = 2
 theme_override_constants/margin_top = -146
 
-[node name="Label" type="Label" parent="MarginContainer/MarginContainer"]
+[node name="Child_Name" type="Label" parent="MarginContainer/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Child Name

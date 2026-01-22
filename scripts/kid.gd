@@ -14,33 +14,12 @@ extends Node2D
 @onready var Next_wish = $"Next Wish"
 @onready var Make_wish = $"Make Wish"
 @onready var check_wish = $"../Chosen_UI/check_wish"
-var wisher = RandomNumberGenerator.new()
 var toyno = RandomNumberGenerator.new()
 var wish_index: int = 0
 
-var names = {
-	1: "Joms",
-	2: "Nian",
-	3: "Andrea",
-	4: "Joshua",
-	5: "Sonny",
-	6: "Renz",
-	7: "Bujoi",
-	8: "Wheelson",
-	9: "Marc",
-	10: "Adrian"
-}
+var names = ["Joms", "Nian", "Andrea", "Joshua", "Sonny", "Renz", "Bujoi", "Wheelson", "Marc", "Adrian" ]
 
-var toys = {
-	1: "Teddy Bear",
-	2: "Toy Car",
-	3: "Doll",
-	4: "Ball",
-	5: "Toy Robot",
-	6: "Mini Dinosaur",
-	7: "Remote Control Car",
-	8: "Toy Robot"
-}
+var toys = [ "Teddy Bear", "Toy Car", "Doll", "Ball", "Toy Robot", "Mini Dinosaur", "Remote Control Car", "Toy Robot" ]
 
 
 func _ready():
@@ -53,9 +32,8 @@ func _ready():
 	var i: int = 0
 	print("there should be atleast " + str(Global.nchildren) + " children")
 	while i < Global.nchildren:
-		wisher.randomize()
-		var name = wisher.randi_range(1, 10)
-		add(names[name])
+		var name = names.pick_random()
+		add(name)
 		i += 1
 	#mailprinter()
 	
@@ -75,9 +53,8 @@ func add(name: String) -> void:
 	var j:int = 0
 	
 	while j < no_of_toys:
-		toyno.randomize()
-		var toy = toyno.randi_range(1, 8)
-		array.append(toys[toy])
+		var toy = toys.pick_random()
+		array.append(toy)
 		j += 1
 		wishlist = str(array)
 	print("The Wishlist is: ")
