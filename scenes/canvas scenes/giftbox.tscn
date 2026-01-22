@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b7l5f5sksu05w"]
 
 [ext_resource type="Script" uid="uid://du637yrxpde5y" path="res://scripts/giftbox.gd" id="1_8vt4o"]
-[ext_resource type="Texture2D" uid="uid://ycr81424ydey" path="res://assets/pixel-art-christmas-or-birthday-gift-red-and-gold-box-8bit-game-item-on-white-background-vector.jpg" id="2_ort1p"]
+[ext_resource type="Texture2D" uid="uid://8fogulmfu82m" path="res://assets/close box.png" id="2_ort1p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5ffei"]
 size = Vector2(128, 128.5)
@@ -10,18 +10,11 @@ size = Vector2(128, 128.5)
 script = ExtResource("1_8vt4o")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.15, 0.15)
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_ort1p")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_5ffei")
-
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -65.0
-offset_top = -66.0
-offset_right = 64.0
-offset_bottom = 64.0
-color = Color(0.8047426, 0.80474263, 0.8047426, 1)
 
 [node name="Check_Wrapped_Toys" type="Button" parent="."]
 offset_left = -65.0

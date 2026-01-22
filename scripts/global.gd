@@ -2,6 +2,8 @@ extends Node2D
 
 signal inventory_opened
 signal inventory_updated
+signal drag_started
+signal drag_ended
 
 var children = RandomNumberGenerator.new()
 var nchildren: int

@@ -72,4 +72,5 @@ func _drag_released():
 		prints("[LOG] Inventory updated:", Global.inventory)
 		Global.inventory_updated.emit()
 		prints(toy_name, "has been put in the gift box")
-		position = orig_position
+	position = orig_position
+	Global.drag_ended.emit()
