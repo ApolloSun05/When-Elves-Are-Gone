@@ -1,6 +1,7 @@
 extends StaticBody2D
 
 @onready var panel = $ColorRect
+@onready var Check = $Check_Wrapped_Toys
 signal wrapped(toy_name: String)
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -17,14 +18,13 @@ func _process(_delta: float) -> void:
 var child_name: String
 var gifts_inserted = []
 
-	
 
-#func _on_area_entered(area: Area2D) -> void:
-	#var item = area.get_parent()
-	#if is_instance_of(item, Gift):
-		#print(item.toy_name)
-	#pass # Replace with function body.
 	
 func _on_gifts_wrapped(toy_name: String) -> void:
 	print("WTFFF")
 	Global.current_toys.append(toy_name)
+
+
+func _on_check_wrapped_toys_pressed() -> void:
+	print("clicked")
+	

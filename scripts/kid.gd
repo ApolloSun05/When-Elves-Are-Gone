@@ -71,6 +71,7 @@ func _on_open_pressed() -> void:
 	mailprinter()
 
 func _on_exitbutton_pressed() -> void:
+	print("titie")
 	Open.visible = true
 	kid.visible = false
 	exit.visible = false

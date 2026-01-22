@@ -1,6 +1,7 @@
 extends Control
 
 @onready var Grid = $GridContainer
+@onready var Santa_bag = $"../../Santas_Bag/MarginContainer"
 
 func _ready() -> void:
 	Global.inventory_opened.connect(func ():
@@ -25,8 +26,12 @@ func _on_inventory_updated():
 			#pass
 		else:
 			slot.set_empty()
-		print("[LOG] Slot added to inventory")
+		#print("[LOG] Slot added to inventory")
 	
 func clear_grid_container():
 	for child in Grid.get_children():
 		child.queue_free()
+
+func _on_close_bag_pressed() -> void:
+	self.visible = false
+	Santa_bag.visible = true

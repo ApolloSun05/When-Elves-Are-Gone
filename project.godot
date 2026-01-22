@@ -22,6 +22,7 @@ Global="*res://scripts/global.gd"
 [display]
 
 mouse_cursor/custom_image="uid://lt4lopbcdjnj"
+mouse_cursor/tooltip_position_offset=Vector2(0, 0)
 
 [input]
 

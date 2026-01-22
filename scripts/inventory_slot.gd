@@ -3,6 +3,13 @@ extends Control
 @onready var Gift_Desc = $Gift_Desc
 @onready var child_name = $MarginContainer/MarginContainer/Child_Name
 @onready var gift_details: Label = $"Gift_Desc/Margin/Gift Details"
+@onready var gift_style = $MarginContainer/Sprite2D
+@onready var textures = [
+	preload("res://assets/gift wrapper.png"),
+	preload("res://assets/gift wrapper (violet_green_2).png"),
+	preload("res://assets/gift wrapper (violet_green).png"),
+	preload("res://assets/gift wrapper (red_blue).png")
+]
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Gift_Desc.visible = false
@@ -23,5 +30,6 @@ func set_empty():
 
 func set_item(toys: Array) -> void:
 	prints("[LOG] Toys in slot:", toys)
+	gift_style.texture = textures.pick_random()
 	child_name.text = Global.current_child
 	gift_details.text = ", ".join(PackedStringArray(Global.wrapped_toys))

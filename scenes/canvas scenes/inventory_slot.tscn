@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://c7h7gxaieqok7"]
+[gd_scene load_steps=3 format=3 uid="uid://c7h7gxaieqok7"]
 
 [ext_resource type="Script" uid="uid://bkjioiksnbskv" path="res://scripts/inventory_slot.gd" id="1_gsdo5"]
+[ext_resource type="Texture2D" uid="uid://clwgrsmmf1krq" path="res://assets/gift wrapper.png" id="2_lqx2r"]
 
 [node name="Inventory_slot" type="Control"]
 layout_mode = 3
@@ -19,15 +20,17 @@ script = ExtResource("1_gsdo5")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_right = 200.0
-offset_bottom = 200.0
+offset_right = 150.0
+offset_bottom = 150.0
 
-[node name="Panel" type="Panel" parent="MarginContainer"]
-layout_mode = 2
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer"]
+position = Vector2(79, 67)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("2_lqx2r")
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer"]
 layout_mode = 2
-theme_override_constants/margin_top = -146
+theme_override_constants/margin_top = -108
 
 [node name="Child_Name" type="Label" parent="MarginContainer/MarginContainer"]
 layout_mode = 2
@@ -37,8 +40,8 @@ text = "Child Name
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_right = 201.0
-offset_bottom = 200.0
+offset_right = 150.0
+offset_bottom = 150.0
 
 [node name="Gift_Desc" type="MarginContainer" parent="."]
 visible = false

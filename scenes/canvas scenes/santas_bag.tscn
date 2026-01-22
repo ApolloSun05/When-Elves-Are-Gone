@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cbw7erohnxnpk"]
 
 [ext_resource type="Script" uid="uid://chrsf4j4am81" path="res://scripts/santas_bag.gd" id="1_7ycu3"]
-[ext_resource type="Texture2D" uid="uid://ydwkghle3n0" path="res://assets/santabag.jpg" id="2_wtt1m"]
+[ext_resource type="Texture2D" uid="uid://6ow6rnt7yiq2" path="res://assets/inventory bag.png" id="2_7ycu3"]
 
 [node name="Santas_Bag" type="CanvasLayer"]
 script = ExtResource("1_7ycu3")
@@ -21,10 +21,11 @@ grow_vertical = 2
 
 [node name="Open_Bag" type="Button" parent="MarginContainer"]
 layout_mode = 2
+flat = true
 
 [node name="Sprite2D" type="Sprite2D" parent="MarginContainer"]
 position = Vector2(124, 125)
-scale = Vector2(0.395, 0.395)
-texture = ExtResource("2_wtt1m")
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("2_7ycu3")
 
 [connection signal="pressed" from="MarginContainer/Open_Bag" to="." method="_on_open_bag_pressed"]

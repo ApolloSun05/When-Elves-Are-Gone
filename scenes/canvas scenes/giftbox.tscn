@@ -23,4 +23,12 @@ offset_right = 64.0
 offset_bottom = 64.0
 color = Color(0.8047426, 0.80474263, 0.8047426, 1)
 
+[node name="Check_Wrapped_Toys" type="Button" parent="."]
+offset_left = -65.0
+offset_top = -67.0
+offset_right = 65.0
+offset_bottom = 65.0
+flat = true
+
 [connection signal="wrapped" from="." to="." method="_on_wrapped"]
+[connection signal="pressed" from="Check_Wrapped_Toys" to="." method="_on_check_wrapped_toys_pressed"]
