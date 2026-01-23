@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://55yao8r66hw1"
-path="res://.godot/imported/pixeldoll.jpg-a6ad549ab5bc5eaa3ab9079b5d3ccc17.ctex"
+uid="uid://cylxsnkr1vm0j"
+path="res://.godot/imported/basketball.jpg-7f9eb8bc5c4932a2a02b2c9e952f6893.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pixeldoll.jpg"
-dest_files=["res://.godot/imported/pixeldoll.jpg-a6ad549ab5bc5eaa3ab9079b5d3ccc17.ctex"]
+source_file="res://assets/basketball.jpg"
+dest_files=["res://.godot/imported/basketball.jpg-7f9eb8bc5c4932a2a02b2c9e952f6893.ctex"]
 
 [params]
 

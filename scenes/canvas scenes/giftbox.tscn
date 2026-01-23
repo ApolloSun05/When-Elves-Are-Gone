@@ -26,7 +26,7 @@ flat = true
 
 [node name="inside_box" type="Sprite2D" parent="."]
 position = Vector2(0, -250)
-scale = Vector2(0.25, 0.25)
+scale = Vector2(0.4, 0.4)
 texture = ExtResource("3_cx0d5")
 
 [node name="exit" type="Button" parent="inside_box"]

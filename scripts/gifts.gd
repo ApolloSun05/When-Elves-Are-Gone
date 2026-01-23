@@ -55,7 +55,7 @@ func _on_area_2d_mouse_shape_exited(_shape_idx: int) -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	print(body)
 	if body.is_in_group("dropable"):
-		print("im here")
+		#print("im here")
 		is_inside_giftbox = true
 		#print(body.toy_name)
 
@@ -69,8 +69,8 @@ func _drag_released():
 		wrapped.emit(self.toy_name)
 		Global.wrapped_toys.append(toy_name)
 		Global.inventory[Global.current_child] = Global.wrapped_toys
-		prints("[LOG] Inventory updated:", Global.inventory)
+		#prints("[LOG] Inventory updated:", Global.inventory)
 		Global.inventory_updated.emit()
-		prints(toy_name, "has been put in the gift box")
+		#prints(toy_name, "has been put in the gift box")
 	position = orig_position
 	Global.drag_ended.emit()

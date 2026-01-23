@@ -7,11 +7,12 @@ extends StaticBody2D
 var gift_spawn = preload("res://scenes/show_gift_scene.tscn")
 signal wrapped(toy_name: String)
 
-var spawnarea = Rect2(Vector2(-143, -391), Vector2(147, -104))
+var spawnarea = Rect2(Vector2(-120, -370), Vector2(111, -137))
 var gift_texture = {
 	"Bear": preload("res://assets/bear.png"),
-	"Doll": preload("res://assets/pixeldoll.jpg"),
-	"Ball": preload("res://assets/pixelball.jpg")
+	"Baseball": preload("res://assets/baseball.png"),
+	"Crayons": preload("res://assets/crayons.png"),
+	"Basketball": preload("res://assets/basketball.jpg")
 }
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -31,6 +32,7 @@ func _on_check_wrapped_toys_pressed() -> void:
 	print("clicked")
 	inside.visible = true
 	box.visible = false
+	show_gift()
 	
 
 @onready var pic = $Sprite2D
@@ -44,8 +46,12 @@ func _on_drag_ended() -> void:
 func show_gift():
 	for toy in Global.wrapped_toys:
 		var spawn = gift_spawn.instantiate()
-		spawn.position =  Vector2(randf_range(spawnarea.x, spawnarea.x),randf_range(spawnarea.y, spawnarea.y))
+		spawn.position =  Vector2(randf_range(spawnarea.position.x, spawnarea.position.x + spawnarea.size.x),randf_range(spawnarea.position.y, spawnarea.position.y + spawnarea.size.y))
+		print(spawn.position)
+		spawn.scale = Vector2(0.09, 0.09)
+		spawn.texture = gift_texture[toy]
 		add_child(spawn)
+
 
 func _on_exit_pressed() -> void:
 	inside.visible = false

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dso8thd3r7ah6"
-path="res://.godot/imported/pixelball.jpg-65b53ced97971d20e0934b7ee0cc666a.ctex"
+uid="uid://sn44bf7ypxnt"
+path="res://.godot/imported/610912888_1422740222547258_9195818438686645898_n.png-574444109e5060c6e9127afd84d4b54b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pixelball.jpg"
-dest_files=["res://.godot/imported/pixelball.jpg-65b53ced97971d20e0934b7ee0cc666a.ctex"]
+source_file="res://assets/610912888_1422740222547258_9195818438686645898_n.png"
+dest_files=["res://.godot/imported/610912888_1422740222547258_9195818438686645898_n.png-574444109e5060c6e9127afd84d4b54b.ctex"]
 
 [params]
 
