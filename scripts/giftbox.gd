@@ -4,6 +4,8 @@ extends StaticBody2D
 @onready var Check = $Check_Wrapped_Toys
 @onready var inside = $inside_box
 @onready var box = $Sprite2D
+@onready var finishbutton = $Finish_wish
+var spawned_objs: Array[Sprite2D] = []
 var gift_spawn = preload("res://scenes/show_gift_scene.tscn")
 signal wrapped(toy_name: String)
 
@@ -12,11 +14,12 @@ var gift_texture = {
 	"Bear": preload("res://assets/bear.png"),
 	"Baseball": preload("res://assets/baseball.png"),
 	"Crayons": preload("res://assets/crayons.png"),
-	"Basketball": preload("res://assets/basketball.jpg")
+	"Basketball": preload("res://assets/basketball.png")
 }
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	inside.visible = false
+	finishbutton.visible = false
 	Global.drag_started.connect(_on_drag_started)
 	Global.drag_ended.connect(_on_drag_ended)
 
@@ -29,8 +32,8 @@ var child_name: String
 var gifts_inserted = []
 
 func _on_check_wrapped_toys_pressed() -> void:
-	print("clicked")
 	inside.visible = true
+	finishbutton.visible = true
 	box.visible = false
 	show_gift()
 	
@@ -50,9 +53,22 @@ func show_gift():
 		print(spawn.position)
 		spawn.scale = Vector2(0.09, 0.09)
 		spawn.texture = gift_texture[toy]
+		spawned_objs.append(spawn)
 		add_child(spawn)
 
-
+func kill_child():
+	for child in spawned_objs:
+		child.queue_free()
+	spawned_objs = []
 func _on_exit_pressed() -> void:
+	kill_child()
+	finishbutton.visible = false
+	inside.visible = false
+	box.visible = true
+
+func _on_finish_wish_pressed() -> void:
+	Global.inventory[Global.current_child] = Global.wrapped_toys
+	kill_child()
+	finishbutton.visible = false
 	inside.visible = false
 	box.visible = true

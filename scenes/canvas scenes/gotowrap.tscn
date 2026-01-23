@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://c7n3ky6t0chxg"]
 
 [ext_resource type="Script" uid="uid://cu2l5x5psc05m" path="res://scripts/gotowrap.gd" id="1_t22gv"]
-[ext_resource type="Texture2D" uid="uid://craux3vynot5l" path="res://assets/PC _ Computer - Stardew Valley - Miscellaneous - Clock.png" id="2_rgcck"]
+[ext_resource type="Texture2D" uid="uid://dmyhwncrppjnw" path="res://assets/button (1).png" id="2_xlagy"]
 [ext_resource type="FontFile" uid="uid://bndsjh1qpflf2" path="res://assets/StardewValley.ttf" id="3_sxep7"]
 
 [node name="gotowrap" type="CanvasLayer"]
@@ -13,17 +13,18 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -211.0
-offset_top = -69.0
+offset_left = -206.0
+offset_top = -64.0
+offset_right = 5.0
+offset_bottom = 5.0
 grow_horizontal = 0
 grow_vertical = 0
 
 [node name="Sprite2D" type="Sprite2D" parent="Go"]
-position = Vector2(104.999985, 34.500023)
-scale = Vector2(4.333333, 4.6000032)
-texture = ExtResource("2_rgcck")
-region_enabled = true
-region_rect = Rect2(23, 0, 48, 15)
+position = Vector2(106.999954, 37.000008)
+scale = Vector2(0.11, 0.07)
+texture = ExtResource("2_xlagy")
+region_rect = Rect2(44, 33, 184, 368)
 
 [node name="Wrap" type="Button" parent="Go"]
 layout_mode = 2

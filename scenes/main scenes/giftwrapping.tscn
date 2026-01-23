@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://de3tijif3sseg" path="res://scenes/canvas scenes/children.tscn" id="7_spqqv"]
 [ext_resource type="Texture2D" uid="uid://bptpx0ela1n03" path="res://assets/crayons.png" id="7_us1pg"]
 [ext_resource type="PackedScene" uid="uid://dvclbkpy7o2vw" path="res://scenes/canvas scenes/chosen_ui.tscn" id="8_pth88"]
-[ext_resource type="Texture2D" uid="uid://cylxsnkr1vm0j" path="res://assets/basketball.jpg" id="8_us1pg"]
+[ext_resource type="Texture2D" uid="uid://brhmjiph0xhlv" path="res://assets/basketball.png" id="8_us1pg"]
 [ext_resource type="PackedScene" uid="uid://blxbw46ksqxnf" path="res://scenes/canvas scenes/back_to_mails.tscn" id="9_eexhd"]
 [ext_resource type="PackedScene" uid="uid://cbw7erohnxnpk" path="res://scenes/canvas scenes/santas_bag.tscn" id="10_6nylu"]
 [ext_resource type="PackedScene" uid="uid://cnlmkcw38umd3" path="res://scenes/canvas scenes/inventory_ui.tscn" id="11_7knws"]

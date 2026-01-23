@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://q53d10tggbw3" path="res://scripts/kid.gd" id="1_844vu"]
 [ext_resource type="Texture2D" uid="uid://c1w78paxojvw7" path="res://assets/mail_hands.png" id="4_5xe0b"]
-[ext_resource type="Texture2D" uid="uid://cn6y5ui3q0ppm" path="res://assets/ui button scratch.png" id="4_hsv3e"]
+[ext_resource type="Texture2D" uid="uid://dmyhwncrppjnw" path="res://assets/button (1).png" id="4_hsv3e"]
 [ext_resource type="FontFile" uid="uid://bndsjh1qpflf2" path="res://assets/StardewValley.ttf" id="4_mnfw6"]
 [ext_resource type="Texture2D" uid="uid://de04oks6p4rq3" path="res://assets/PC _ Computer - Stardew Valley - Miscellaneous - Text Emojis.png" id="5_mnfw6"]
 
@@ -60,27 +60,23 @@ text = "From Nian the Nerd"
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = -575.0
-offset_top = 237.0
-offset_right = -342.0
-offset_bottom = 323.0
+offset_left = -595.0
+offset_top = 253.0
+offset_right = -362.0
+offset_bottom = 339.0
 grow_vertical = 0
-
-[node name="Panel" type="Panel" parent="Mail Open"]
-layout_mode = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Mail Open"]
 position = Vector2(117, 43)
-scale = Vector2(0.2, 0.2)
+scale = Vector2(0.11, 0.07)
 texture = ExtResource("4_hsv3e")
-region_enabled = true
 region_rect = Rect2(195, 431, 1165, 434)
 
 [node name="Open" type="Button" parent="Mail Open"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_mnfw6")
-theme_override_font_sizes/font_size = 64
+theme_override_font_sizes/font_size = 48
 text = "Mail"
 flat = true
 

@@ -68,7 +68,6 @@ func _drag_released():
 	if is_inside_giftbox:
 		wrapped.emit(self.toy_name)
 		Global.wrapped_toys.append(toy_name)
-		Global.inventory[Global.current_child] = Global.wrapped_toys
 		#prints("[LOG] Inventory updated:", Global.inventory)
 		Global.inventory_updated.emit()
 		#prints(toy_name, "has been put in the gift box")
