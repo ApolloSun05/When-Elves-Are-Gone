@@ -10,9 +10,9 @@ extends Node2D
 @onready var exit = $Exit
 @onready var letter_wishlist = $kidmail/mail/wish
 @onready var from_name =$kidmail/mail/bottom
-@onready var Prev_wish = $"Previous Wish"
-@onready var Next_wish = $"Next Wish"
-@onready var Make_wish = $"Make Wish"
+@onready var Prev_wish = $PrevWishContainter
+@onready var Next_wish = $NextWishContainer
+@onready var Make_wish = $MakeWishContainer
 @onready var check_wish = $"../Chosen_UI/check_wish"
 var toyno = RandomNumberGenerator.new()
 var wish_index: int = 0
@@ -84,10 +84,10 @@ func _on_mail_pressed() -> void:
 
 func mailprinter():
 	
-	if wish_index == 0: $"Previous Wish".disabled = true
-	else: $"Previous Wish".disabled = false
-	if wish_index == len(Global.wishlists)-1: $"Next Wish".disabled = true
-	else: $"Next Wish".disabled = false
+	if wish_index == 0: $"PrevWishContainter/Previous Wish".disabled = true
+	else: $"PrevWishContainter/Previous Wish".disabled = false
+	if wish_index == len(Global.wishlists)-1: $"NextWishContainer/Next Wish".disabled = true
+	else: $"NextWishContainer/Next Wish".disabled = false
 	
 	print("opening mail")
 	var kid = Global.wishlists.keys()[wish_index]

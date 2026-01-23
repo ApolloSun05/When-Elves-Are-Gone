@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://cnlmkcw38umd3"]
+[gd_scene load_steps=5 format=3 uid="uid://cnlmkcw38umd3"]
 
 [ext_resource type="Script" uid="uid://bo14lxmttb6dv" path="res://scripts/inventory_ui.gd" id="1_fbykx"]
 [ext_resource type="PackedScene" uid="uid://c7h7gxaieqok7" path="res://scenes/canvas scenes/inventory_slot.tscn" id="2_h45xa"]
+[ext_resource type="Texture2D" uid="uid://dmyhwncrppjnw" path="res://assets/button (1).png" id="2_ikqce"]
+[ext_resource type="Texture2D" uid="uid://buvpqqni6q0w5" path="res://assets/exit.png" id="4_fcso0"]
 
 [node name="Inventory_UI" type="Control"]
 visible = false
@@ -19,6 +21,11 @@ offset_bottom = 250.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_fbykx")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(476, 221)
+scale = Vector2(0.63860685, 0.7590278)
+texture = ExtResource("2_ikqce")
 
 [node name="GridContainer" type="GridContainer" parent="."]
 layout_mode = 1
@@ -61,12 +68,17 @@ layout_mode = 2
 [node name="Inventory_slot10" parent="GridContainer" instance=ExtResource("2_h45xa")]
 layout_mode = 2
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(999, -33)
+scale = Vector2(0.025, 0.024999999)
+texture = ExtResource("4_fcso0")
+
 [node name="Close_Bag" type="Button" parent="."]
 layout_mode = 0
 offset_left = 974.0
 offset_top = -57.0
 offset_right = 1024.0
 offset_bottom = -7.0
-text = "Close"
+flat = true
 
 [connection signal="pressed" from="Close_Bag" to="." method="_on_close_bag_pressed"]

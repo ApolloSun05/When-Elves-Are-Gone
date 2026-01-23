@@ -70,7 +70,6 @@ toy_texture = ExtResource("8_us1pg")
 [node name="children" parent="." instance=ExtResource("7_spqqv")]
 
 [node name="Chosen_UI" parent="." instance=ExtResource("8_pth88")]
-visible = false
 
 [node name="Back_to_Mails" parent="." instance=ExtResource("9_eexhd")]
 

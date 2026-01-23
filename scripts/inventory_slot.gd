@@ -4,6 +4,7 @@ extends Control
 @onready var child_name = $MarginContainer/MarginContainer/Child_Name
 @onready var gift_details: Label = $"Gift_Desc/Margin/Gift Details"
 @onready var gift_style = $MarginContainer/Sprite2D
+@onready var empty_box = preload("res://assets/close box.png")
 @onready var textures = [
 	preload("res://assets/gift wrapper.png"),
 	preload("res://assets/gift wrapper (violet_green_2).png"),
@@ -26,6 +27,8 @@ func _on_button_mouse_exited() -> void:
 	Gift_Desc.visible = false
 
 func set_empty():
+	gift_style.texture = empty_box
+	child_name.text = ""
 	gift_details.text = ""
 
 func set_item(toys: Array) -> void:

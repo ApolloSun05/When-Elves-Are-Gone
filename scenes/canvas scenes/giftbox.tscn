@@ -1,8 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://b7l5f5sksu05w"]
+[gd_scene load_steps=8 format=3 uid="uid://b7l5f5sksu05w"]
 
 [ext_resource type="Script" uid="uid://du637yrxpde5y" path="res://scripts/giftbox.gd" id="1_8vt4o"]
 [ext_resource type="Texture2D" uid="uid://8fogulmfu82m" path="res://assets/close box.png" id="2_ort1p"]
 [ext_resource type="Texture2D" uid="uid://c0sppx8il80uf" path="res://assets/insidebox.png" id="3_cx0d5"]
+[ext_resource type="Texture2D" uid="uid://buvpqqni6q0w5" path="res://assets/exit.png" id="4_43sw3"]
+[ext_resource type="Texture2D" uid="uid://dmyhwncrppjnw" path="res://assets/button (1).png" id="5_ygooa"]
+[ext_resource type="FontFile" uid="uid://bndsjh1qpflf2" path="res://assets/StardewValley.ttf" id="6_rf1uw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5ffei"]
 size = Vector2(128, 128.5)
@@ -26,31 +29,46 @@ flat = true
 
 [node name="inside_box" type="Sprite2D" parent="."]
 position = Vector2(0, -250)
-scale = Vector2(0.4, 0.4)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("3_cx0d5")
 
 [node name="exit" type="Button" parent="inside_box"]
-offset_left = 582.2783
-offset_top = -787.30164
-offset_right = 782.2783
-offset_bottom = -587.30164
+offset_left = 587.5
+offset_top = -767.5
+offset_right = 787.5
+offset_bottom = -567.5
 theme_override_font_sizes/font_size = 45
-text = "Close"
+flat = true
 
-[node name="Finish_wish" type="Button" parent="."]
-anchors_preset = 8
+[node name="Sprite2D" type="Sprite2D" parent="inside_box/exit"]
+position = Vector2(100.22165, 99.8016)
+scale = Vector2(0.09999998, 0.09999996)
+texture = ExtResource("4_43sw3")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 5
 anchor_left = 0.5
-anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -127.0
-offset_right = 129.0
-offset_bottom = 60.0
+offset_left = -68.0
+offset_top = -113.0
+offset_right = 79.0
+offset_bottom = -72.0
 grow_horizontal = 2
-grow_vertical = 2
+
+[node name="Sprite2D2" type="Sprite2D" parent="MarginContainer"]
+position = Vector2(70, 21)
+scale = Vector2(0.11, 0.07)
+texture = ExtResource("5_ygooa")
+
+[node name="Finish_wish" type="Button" parent="MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_rf1uw")
+theme_override_font_sizes/font_size = 32
 text = "Finish Wish!"
+flat = true
 
 [connection signal="wrapped" from="." to="." method="_on_wrapped"]
 [connection signal="pressed" from="Check_Wrapped_Toys" to="." method="_on_check_wrapped_toys_pressed"]
 [connection signal="pressed" from="inside_box/exit" to="." method="_on_exit_pressed"]
-[connection signal="pressed" from="Finish_wish" to="." method="_on_finish_wish_pressed"]
+[connection signal="pressed" from="MarginContainer/Finish_wish" to="." method="_on_finish_wish_pressed"]

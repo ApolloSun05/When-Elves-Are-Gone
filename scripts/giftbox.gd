@@ -4,7 +4,7 @@ extends StaticBody2D
 @onready var Check = $Check_Wrapped_Toys
 @onready var inside = $inside_box
 @onready var box = $Sprite2D
-@onready var finishbutton = $Finish_wish
+@onready var finishbutton = $MarginContainer
 var spawned_objs: Array[Sprite2D] = []
 var gift_spawn = preload("res://scenes/show_gift_scene.tscn")
 signal wrapped(toy_name: String)
@@ -60,6 +60,7 @@ func kill_child():
 	for child in spawned_objs:
 		child.queue_free()
 	spawned_objs = []
+
 func _on_exit_pressed() -> void:
 	kill_child()
 	finishbutton.visible = false
@@ -69,6 +70,9 @@ func _on_exit_pressed() -> void:
 func _on_finish_wish_pressed() -> void:
 	Global.inventory[Global.current_child] = Global.wrapped_toys
 	kill_child()
+	Global.current_child = ""
+	Global.current_toys = []
+	Global.wrapped_toys = []
 	finishbutton.visible = false
 	inside.visible = false
 	box.visible = true

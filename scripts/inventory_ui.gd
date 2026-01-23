@@ -21,11 +21,14 @@ func _on_inventory_updated():
 		prints("[LOG] adding gift", Global.inventory[child])
 		var slot = Global.slot_scene.instantiate()
 		var gift = Global.inventory[child]
+		print(Global.inventory[child])
 		Grid.add_child(slot)
 		if gift != null:
+			print("Hesitations never helps!")
 			slot.set_item(gift)
 			#pass
 		else:
+			print("All i long for is your touch!")
 			slot.set_empty()
 		#print("[LOG] Slot added to inventory")
 	
