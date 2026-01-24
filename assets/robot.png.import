@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4t12bf5jd47i"
-path="res://.godot/imported/CH015D-Santas-Workshop-2B.jpg-5e27f8910705f8a390194e048e8ee83f.ctex"
+uid="uid://dftue2cuyrg41"
+path="res://.godot/imported/robot.png-b6fddb60c90fb955abb72fff30db5342.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/CH015D-Santas-Workshop-2B.jpg"
-dest_files=["res://.godot/imported/CH015D-Santas-Workshop-2B.jpg-5e27f8910705f8a390194e048e8ee83f.ctex"]
+source_file="res://assets/robot.png"
+dest_files=["res://.godot/imported/robot.png-b6fddb60c90fb955abb72fff30db5342.ctex"]
 
 [params]
 

@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://c7h7gxaieqok7"]
+[gd_scene load_steps=4 format=3 uid="uid://c7h7gxaieqok7"]
 
 [ext_resource type="Script" uid="uid://bkjioiksnbskv" path="res://scripts/inventory_slot.gd" id="1_gsdo5"]
-[ext_resource type="Texture2D" uid="uid://clwgrsmmf1krq" path="res://assets/gift wrapper.png" id="2_lqx2r"]
+[ext_resource type="Texture2D" uid="uid://p411fvhamshv" path="res://assets/gift wrapper (blue).png" id="2_lqx2r"]
+[ext_resource type="Texture2D" uid="uid://dmyhwncrppjnw" path="res://assets/button (1).png" id="2_yplls"]
 
 [node name="Inventory_slot" type="Control"]
 layout_mode = 3
@@ -17,6 +18,36 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_gsdo5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(72.99999, 82.5)
+scale = Vector2(0.09270832, 0.2398148)
+texture = ExtResource("2_yplls")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 150.0
+offset_bottom = 150.0
+
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer"]
+position = Vector2(79, 82)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("2_lqx2r")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = -87
+
+[node name="Child_Name" type="Label" parent="MarginContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Child Name
+"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 150.0
+offset_bottom = 150.0
 
 [node name="Gift_Desc" type="MarginContainer" parent="."]
 visible = false
@@ -42,31 +73,6 @@ size_flags_vertical = 1
 
 [node name="Panel" type="Panel" parent="Gift_Desc/Margin"]
 layout_mode = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 0
-offset_right = 150.0
-offset_bottom = 150.0
-
-[node name="Sprite2D" type="Sprite2D" parent="MarginContainer"]
-position = Vector2(79, 67)
-scale = Vector2(0.08, 0.08)
-texture = ExtResource("2_lqx2r")
-
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer"]
-layout_mode = 2
-theme_override_constants/margin_top = -108
-
-[node name="Child_Name" type="Label" parent="MarginContainer/MarginContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-text = "Child Name
-"
-
-[node name="Button" type="Button" parent="."]
-layout_mode = 0
-offset_right = 150.0
-offset_bottom = 150.0
 
 [connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
 [connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]

@@ -1,19 +1,23 @@
-[gd_scene load_steps=15 format=3 uid="uid://c44ngvowp8cfx"]
+[gd_scene load_steps=19 format=3 uid="uid://c44ngvowp8cfx"]
 
 [ext_resource type="PackedScene" uid="uid://dnxe4s0b88ijk" path="res://scenes/canvas scenes/godeliver.tscn" id="1_a2xsj"]
 [ext_resource type="Texture2D" uid="uid://cevvgjieofa6s" path="res://assets/workbench.png" id="2_bogg1"]
 [ext_resource type="Texture2D" uid="uid://lt4lopbcdjnj" path="res://assets/64.png" id="3_bogg1"]
+[ext_resource type="Texture2D" uid="uid://1ladglu2vqqf" path="res://assets/grid.png" id="3_l3sa7"]
+[ext_resource type="Texture2D" uid="uid://ddp5kndmhjct0" path="res://assets/bear (1).png" id="5_g70a2"]
 [ext_resource type="PackedScene" uid="uid://b7l5f5sksu05w" path="res://scenes/canvas scenes/giftbox.tscn" id="5_iovqx"]
 [ext_resource type="Texture2D" uid="uid://b26ebvhp4kvlp" path="res://assets/baseball.png" id="6_b2trm"]
 [ext_resource type="PackedScene" uid="uid://dnssbnipprn72" path="res://scenes/canvas scenes/gifts.tscn" id="6_spqqv"]
-[ext_resource type="Texture2D" uid="uid://r862tq00iy25" path="res://assets/bear.png" id="7_pth88"]
 [ext_resource type="PackedScene" uid="uid://de3tijif3sseg" path="res://scenes/canvas scenes/children.tscn" id="7_spqqv"]
 [ext_resource type="Texture2D" uid="uid://bptpx0ela1n03" path="res://assets/crayons.png" id="7_us1pg"]
 [ext_resource type="PackedScene" uid="uid://dvclbkpy7o2vw" path="res://scenes/canvas scenes/chosen_ui.tscn" id="8_pth88"]
-[ext_resource type="Texture2D" uid="uid://brhmjiph0xhlv" path="res://assets/basketball.png" id="8_us1pg"]
+[ext_resource type="Texture2D" uid="uid://ox0flh5lw4bv" path="res://assets/basketball (1).png" id="8_qfk44"]
 [ext_resource type="PackedScene" uid="uid://blxbw46ksqxnf" path="res://scenes/canvas scenes/back_to_mails.tscn" id="9_eexhd"]
+[ext_resource type="Texture2D" uid="uid://dmowsvil6qak8" path="res://assets/dice (1).png" id="9_l3sa7"]
 [ext_resource type="PackedScene" uid="uid://cbw7erohnxnpk" path="res://scenes/canvas scenes/santas_bag.tscn" id="10_6nylu"]
+[ext_resource type="Texture2D" uid="uid://dftue2cuyrg41" path="res://assets/robot.png" id="10_qfk44"]
 [ext_resource type="PackedScene" uid="uid://cnlmkcw38umd3" path="res://scenes/canvas scenes/inventory_ui.tscn" id="11_7knws"]
+[ext_resource type="Texture2D" uid="uid://3yffb1b64gyi" path="res://assets/coal.png" id="12_6ks6j"]
 
 [node name="packing" type="Node2D"]
 
@@ -24,6 +28,20 @@ offset_right = 1154.0
 offset_bottom = 644.0
 texture = ExtResource("2_bogg1")
 expand_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(578, 282)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_l3sa7")
+region_enabled = true
+region_rect = Rect2(168, 274, 1290, 544)
+
+[node name="coal" type="Sprite2D" parent="."]
+position = Vector2(866, 546)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_l3sa7")
+region_enabled = true
+region_rect = Rect2(168, 274, 330, 281)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(578, 322)
@@ -48,28 +66,54 @@ texture = ExtResource("3_bogg1")
 flip_h = true
 
 [node name="bear" parent="." instance=ExtResource("6_spqqv")]
-position = Vector2(268, 234)
+position = Vector2(295, 197)
 toy_name = "Bear"
-toy_texture = ExtResource("7_pth88")
+toy_texture = ExtResource("5_g70a2")
 
 [node name="baseball" parent="." instance=ExtResource("6_spqqv")]
-position = Vector2(486, 234)
+position = Vector2(481, 199)
 toy_name = "Baseball"
 toy_texture = ExtResource("6_b2trm")
 
 [node name="crayons" parent="." instance=ExtResource("6_spqqv")]
-position = Vector2(894, 234)
+position = Vector2(866, 197)
 toy_name = "Crayons"
 toy_texture = ExtResource("7_us1pg")
 
 [node name="basketball" parent="." instance=ExtResource("6_spqqv")]
-position = Vector2(680, 234)
+position = Vector2(675, 199)
 toy_name = "Basketball"
-toy_texture = ExtResource("8_us1pg")
+toy_texture = ExtResource("8_qfk44")
+
+[node name="dice" parent="." instance=ExtResource("6_spqqv")]
+position = Vector2(295, 362)
+toy_name = "Dice"
+toy_texture = ExtResource("9_l3sa7")
+
+[node name="robot" parent="." instance=ExtResource("6_spqqv")]
+position = Vector2(481, 362)
+toy_name = "Robot"
+toy_texture = ExtResource("10_qfk44")
+
+[node name="doll" parent="." instance=ExtResource("6_spqqv")]
+position = Vector2(866, 362)
+toy_name = "Dice"
+toy_texture = ExtResource("9_l3sa7")
+
+[node name="dino" parent="." instance=ExtResource("6_spqqv")]
+position = Vector2(675, 362)
+toy_name = "Dice"
+toy_texture = ExtResource("9_l3sa7")
+
+[node name="Coal" parent="." instance=ExtResource("6_spqqv")]
+position = Vector2(866, 546)
+toy_name = "Coal"
+toy_texture = ExtResource("12_6ks6j")
 
 [node name="children" parent="." instance=ExtResource("7_spqqv")]
 
 [node name="Chosen_UI" parent="." instance=ExtResource("8_pth88")]
+visible = false
 
 [node name="Back_to_Mails" parent="." instance=ExtResource("9_eexhd")]
 

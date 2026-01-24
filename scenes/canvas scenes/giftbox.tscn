@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://b7l5f5sksu05w"]
 
 [ext_resource type="Script" uid="uid://du637yrxpde5y" path="res://scripts/giftbox.gd" id="1_8vt4o"]
-[ext_resource type="Texture2D" uid="uid://8fogulmfu82m" path="res://assets/close box.png" id="2_ort1p"]
+[ext_resource type="Texture2D" uid="uid://b5lra08okdcwb" path="res://assets/gift wrapper (gray).png" id="2_ygooa"]
 [ext_resource type="Texture2D" uid="uid://c0sppx8il80uf" path="res://assets/insidebox.png" id="3_cx0d5"]
 [ext_resource type="Texture2D" uid="uid://buvpqqni6q0w5" path="res://assets/exit.png" id="4_43sw3"]
 [ext_resource type="Texture2D" uid="uid://dmyhwncrppjnw" path="res://assets/button (1).png" id="5_ygooa"]
@@ -15,7 +15,7 @@ script = ExtResource("1_8vt4o")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("2_ort1p")
+texture = ExtResource("2_ygooa")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_5ffei")

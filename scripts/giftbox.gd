@@ -11,10 +11,13 @@ signal wrapped(toy_name: String)
 
 var spawnarea = Rect2(Vector2(-120, -370), Vector2(111, -137))
 var gift_texture = {
-	"Bear": preload("res://assets/bear.png"),
+	"Bear": preload("res://assets/bear (1).png"),
 	"Baseball": preload("res://assets/baseball.png"),
 	"Crayons": preload("res://assets/crayons.png"),
-	"Basketball": preload("res://assets/basketball.png")
+	"Basketball": preload("res://assets/basketball (1).png"),
+	"Dice": preload("res://assets/dice (1).png"),
+	"Robot": preload("res://assets/robot.png"),
+	"Coal": preload("res://assets/coal.png")
 }
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -41,10 +44,10 @@ func _on_check_wrapped_toys_pressed() -> void:
 @onready var pic = $Sprite2D
 
 func _on_drag_started() -> void:
-	pic.texture = preload("uid://d0dmpae27i5lc")
+	pic.texture = preload("res://assets/gift wrapper (open with box).png")
 	
 func _on_drag_ended() -> void:
-	pic.texture = preload("uid://8fogulmfu82m")
+	pic.texture = preload("res://assets/gift wrapper (gray).png")
 	
 func show_gift():
 	for toy in Global.wrapped_toys:

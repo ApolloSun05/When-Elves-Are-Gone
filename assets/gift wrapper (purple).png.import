@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cn6y5ui3q0ppm"
-path="res://.godot/imported/ui button scratch.png-301b5f694da73f0a629494d88e2ad0af.ctex"
+uid="uid://b4epw8ftf06l2"
+path="res://.godot/imported/gift wrapper (purple).png-06daf68a8cf090c74a596d87067c2e09.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui button scratch.png"
-dest_files=["res://.godot/imported/ui button scratch.png-301b5f694da73f0a629494d88e2ad0af.ctex"]
+source_file="res://assets/gift wrapper (purple).png"
+dest_files=["res://.godot/imported/gift wrapper (purple).png-06daf68a8cf090c74a596d87067c2e09.ctex"]
 
 [params]
 
