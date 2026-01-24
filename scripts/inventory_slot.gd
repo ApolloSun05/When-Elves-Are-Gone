@@ -21,7 +21,13 @@ func _on_button_mouse_exited() -> void:
 func set_empty():
 	gift_details.text = ""
 
-func set_item(toys: Array) -> void:
+func set_item(toys: Array, kid: String) -> void:
 	prints("[LOG] Toys in slot:", toys)
-	child_name.text = Global.current_child
+	child_name.text = kid
 	gift_details.text = ", ".join(PackedStringArray(Global.wrapped_toys))
+
+func _on_button_pressed() -> void:
+	if get_parent().get_parent().get_parent().get_parent().name == "delivery":
+		print("tite")
+		Global.deliver(child_name.text)
+	pass # Replace with function body.

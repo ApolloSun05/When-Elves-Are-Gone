@@ -22,7 +22,7 @@ func _on_inventory_updated():
 		var gift = Global.inventory[child]
 		Grid.add_child(slot)
 		if gift != null:
-			slot.set_item(gift)
+			slot.set_item(gift, child)
 			#pass
 		else:
 			slot.set_empty()
