@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bhhr7pef25djb"]
+[gd_scene load_steps=7 format=3 uid="uid://bhhr7pef25djb"]
 
 [ext_resource type="Script" uid="uid://q53d10tggbw3" path="res://scripts/kid.gd" id="1_844vu"]
 [ext_resource type="Texture2D" uid="uid://c1w78paxojvw7" path="res://assets/mail_hands.png" id="4_5xe0b"]
-[ext_resource type="Texture2D" uid="uid://cn6y5ui3q0ppm" path="res://assets/ui button scratch.png" id="4_hsv3e"]
+[ext_resource type="Texture2D" uid="uid://dmyhwncrppjnw" path="res://assets/button (1).png" id="4_hsv3e"]
 [ext_resource type="FontFile" uid="uid://bndsjh1qpflf2" path="res://assets/StardewValley.ttf" id="4_mnfw6"]
-[ext_resource type="Texture2D" uid="uid://de04oks6p4rq3" path="res://assets/PC _ Computer - Stardew Valley - Miscellaneous - Text Emojis.png" id="5_mnfw6"]
+[ext_resource type="Texture2D" uid="uid://buvpqqni6q0w5" path="res://assets/exit.png" id="5_5xe0b"]
+[ext_resource type="Texture2D" uid="uid://cc6rakyj2ur68" path="res://assets/arrow button.png" id="6_5xe0b"]
 
 [node name="kid" type="Node2D"]
 script = ExtResource("1_844vu")
@@ -60,80 +61,103 @@ text = "From Nian the Nerd"
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = -575.0
-offset_top = 237.0
-offset_right = -342.0
-offset_bottom = 323.0
+offset_left = -595.0
+offset_top = 253.0
+offset_right = -362.0
+offset_bottom = 339.0
 grow_vertical = 0
-
-[node name="Panel" type="Panel" parent="Mail Open"]
-layout_mode = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Mail Open"]
 position = Vector2(117, 43)
-scale = Vector2(0.2, 0.2)
+scale = Vector2(0.11, 0.07)
 texture = ExtResource("4_hsv3e")
-region_enabled = true
 region_rect = Rect2(195, 431, 1165, 434)
 
 [node name="Open" type="Button" parent="Mail Open"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_mnfw6")
-theme_override_font_sizes/font_size = 64
+theme_override_font_sizes/font_size = 48
 text = "Mail"
 flat = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Exit" type="MarginContainer" parent="."]
-offset_left = 297.0
+offset_left = 284.0
 offset_top = -235.0
-offset_right = 337.0
-offset_bottom = -195.0
+offset_right = 334.0
+offset_bottom = -185.0
 
 [node name="Exitbutton" type="Button" parent="Exit"]
 layout_mode = 2
 flat = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Exit/Exitbutton"]
-position = Vector2(20, 20)
-scale = Vector2(4.4444475, 4.4444447)
-texture = ExtResource("5_mnfw6")
-region_enabled = true
+position = Vector2(25.000006, 24.999992)
+scale = Vector2(0.024999993, 0.025000002)
+texture = ExtResource("5_5xe0b")
 region_rect = Rect2(45, 81, 9, 9)
 
-[node name="Previous Wish" type="Button" parent="."]
-offset_left = -405.0
-offset_top = -89.0
-offset_right = -330.0
-offset_bottom = 3.0
-text = "prev"
-
-[node name="Next Wish" type="Button" parent="."]
-offset_left = 327.0
-offset_top = -85.0
-offset_right = 400.0
-offset_bottom = 8.0
-text = "next"
-
-[node name="Make Wish" type="Button" parent="."]
-anchors_preset = 7
+[node name="MakeWishContainer" type="MarginContainer" parent="."]
+anchors_preset = 8
 anchor_left = 0.5
-anchor_top = 1.0
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -107.0
-offset_top = 169.0
-offset_right = 107.0
-offset_bottom = 241.0
+anchor_bottom = 0.5
+offset_left = -70.0
+offset_top = 175.0
+offset_right = 70.0
+offset_bottom = 220.0
 grow_horizontal = 2
-grow_vertical = 0
-theme_override_font_sizes/font_size = 24
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="MakeWishContainer"]
+position = Vector2(68.99999, 23)
+scale = Vector2(0.11, 0.07)
+texture = ExtResource("4_hsv3e")
+
+[node name="Make Wish" type="Button" parent="MakeWishContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_mnfw6")
+theme_override_font_sizes/font_size = 36
 text = "Make Wish"
+flat = true
+
+[node name="NextWishContainer" type="MarginContainer" parent="."]
+offset_left = 321.0
+offset_top = -42.0
+offset_right = 395.0
+offset_bottom = -2.0
+
+[node name="rightarrow" type="Sprite2D" parent="NextWishContainer"]
+position = Vector2(36, 25)
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("6_5xe0b")
+
+[node name="Next Wish" type="Button" parent="NextWishContainer"]
+layout_mode = 2
+flat = true
+
+[node name="PrevWishContainter" type="MarginContainer" parent="."]
+offset_left = -372.0
+offset_top = -46.0
+offset_right = -306.0
+offset_bottom = -6.0
+
+[node name="left arrow" type="Sprite2D" parent="PrevWishContainter"]
+position = Vector2(22.999998, 24.000002)
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("6_5xe0b")
+flip_h = true
+
+[node name="Previous Wish" type="Button" parent="PrevWishContainter"]
+layout_mode = 2
+flat = true
 
 [connection signal="pressed" from="Mail Open/Open" to="." method="_on_open_pressed"]
 [connection signal="pressed" from="Exit/Exitbutton" to="." method="_on_exitbutton_pressed"]
-[connection signal="pressed" from="Previous Wish" to="." method="_on_cycle_wish_pressed" binds= [-1]]
-[connection signal="pressed" from="Next Wish" to="." method="_on_cycle_wish_pressed" binds= [1]]
-[connection signal="pressed" from="Make Wish" to="." method="_on_make_wish_pressed"]
+[connection signal="pressed" from="MakeWishContainer/Make Wish" to="." method="_on_make_wish_pressed"]
+[connection signal="pressed" from="NextWishContainer/Next Wish" to="." method="_on_cycle_wish_pressed" binds= [1]]
+[connection signal="pressed" from="PrevWishContainter/Previous Wish" to="." method="_on_cycle_wish_pressed" binds= [-1]]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ksych6y15v2"
-path="res://.godot/imported/wrappingstation temporary.jpg-bd8f2d8081418a3b17e8e09d86aa7547.ctex"
+uid="uid://d0dmpae27i5lc"
+path="res://.godot/imported/openbox.png-feca8056acf768c52e44bf0d0a1175b5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/wrappingstation temporary.jpg"
-dest_files=["res://.godot/imported/wrappingstation temporary.jpg-bd8f2d8081418a3b17e8e09d86aa7547.ctex"]
+source_file="res://assets/openbox.png"
+dest_files=["res://.godot/imported/openbox.png-feca8056acf768c52e44bf0d0a1175b5.ctex"]
 
 [params]
 

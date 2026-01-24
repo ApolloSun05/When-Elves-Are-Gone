@@ -1,30 +1,78 @@
 extends StaticBody2D
 
-@onready var panel = $ColorRect
+#@onready var panel = $ColorRect
+@onready var Check = $Check_Wrapped_Toys
+@onready var inside = $inside_box
+@onready var box = $Sprite2D
+@onready var finishbutton = $MarginContainer
+var spawned_objs: Array[Sprite2D] = []
+var gift_spawn = preload("res://scenes/show_gift_scene.tscn")
 signal wrapped(toy_name: String)
+
+var spawnarea = Rect2(Vector2(-120, -370), Vector2(111, -137))
+var gift_texture = {
+	"Bear": preload("res://assets/bear.png"),
+	"Baseball": preload("res://assets/baseball.png"),
+	"Crayons": preload("res://assets/crayons.png"),
+	"Basketball": preload("res://assets/basketball.png")
+}
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	inside.visible = false
+	finishbutton.visible = false
+	Global.drag_started.connect(_on_drag_started)
+	Global.drag_ended.connect(_on_drag_ended)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	if Global.is_dragging:
-		panel.visible = true
-	else:
-		panel.visible = false
+	pass
 
 var child_name: String
 var gifts_inserted = []
 
+func _on_check_wrapped_toys_pressed() -> void:
+	inside.visible = true
+	finishbutton.visible = true
+	box.visible = false
+	show_gift()
 	
 
-#func _on_area_entered(area: Area2D) -> void:
-	#var item = area.get_parent()
-	#if is_instance_of(item, Gift):
-		#print(item.toy_name)
-	#pass # Replace with function body.
+@onready var pic = $Sprite2D
+
+func _on_drag_started() -> void:
+	pic.texture = preload("uid://d0dmpae27i5lc")
 	
-func _on_gifts_wrapped(toy_name: String) -> void:
-	print("WTFFF")
-	Global.current_toys.append(toy_name)
+func _on_drag_ended() -> void:
+	pic.texture = preload("uid://8fogulmfu82m")
+	
+func show_gift():
+	for toy in Global.wrapped_toys:
+		var spawn = gift_spawn.instantiate()
+		spawn.position =  Vector2(randf_range(spawnarea.position.x, spawnarea.position.x + spawnarea.size.x),randf_range(spawnarea.position.y, spawnarea.position.y + spawnarea.size.y))
+		print(spawn.position)
+		spawn.scale = Vector2(0.09, 0.09)
+		spawn.texture = gift_texture[toy]
+		spawned_objs.append(spawn)
+		add_child(spawn)
+
+func kill_child():
+	for child in spawned_objs:
+		child.queue_free()
+	spawned_objs = []
+
+func _on_exit_pressed() -> void:
+	kill_child()
+	finishbutton.visible = false
+	inside.visible = false
+	box.visible = true
+
+func _on_finish_wish_pressed() -> void:
+	Global.inventory[Global.current_child] = Global.wrapped_toys
+	kill_child()
+	Global.current_child = ""
+	Global.current_toys = []
+	Global.wrapped_toys = []
+	finishbutton.visible = false
+	inside.visible = false
+	box.visible = true

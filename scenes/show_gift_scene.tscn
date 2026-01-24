@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbdi7tvch3w7l"]
+
+[ext_resource type="Texture2D" uid="uid://r862tq00iy25" path="res://assets/bear.png" id="1_g2676"]
+[ext_resource type="Script" uid="uid://dmgg7jfsaurg2" path="res://scenes/show_gift_scene.gd" id="2_8s3me"]
+
+[node name="show_gift_scene" type="Sprite2D"]
+texture = ExtResource("1_g2676")
+script = ExtResource("2_8s3me")

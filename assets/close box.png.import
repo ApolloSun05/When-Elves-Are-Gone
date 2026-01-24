@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://55yao8r66hw1"
-path="res://.godot/imported/pixeldoll.jpg-a6ad549ab5bc5eaa3ab9079b5d3ccc17.ctex"
+uid="uid://8fogulmfu82m"
+path="res://.godot/imported/close box.png-91342d585bf57c5de298e7b7d0fbbe4b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pixeldoll.jpg"
-dest_files=["res://.godot/imported/pixeldoll.jpg-a6ad549ab5bc5eaa3ab9079b5d3ccc17.ctex"]
+source_file="res://assets/close box.png"
+dest_files=["res://.godot/imported/close box.png-91342d585bf57c5de298e7b7d0fbbe4b.ctex"]
 
 [params]
 

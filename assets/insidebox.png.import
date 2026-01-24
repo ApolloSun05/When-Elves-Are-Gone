@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dso8thd3r7ah6"
-path="res://.godot/imported/pixelball.jpg-65b53ced97971d20e0934b7ee0cc666a.ctex"
+uid="uid://c0sppx8il80uf"
+path="res://.godot/imported/insidebox.png-97a6030c67c584e6c00727af517fba03.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pixelball.jpg"
-dest_files=["res://.godot/imported/pixelball.jpg-65b53ced97971d20e0934b7ee0cc666a.ctex"]
+source_file="res://assets/insidebox.png"
+dest_files=["res://.godot/imported/insidebox.png-97a6030c67c584e6c00727af517fba03.ctex"]
 
 [params]
 

@@ -16,6 +16,7 @@ func _process(_delta: float) -> void:
 			#get_parent().z_index += 100
 			is_dragged= true
 			Global.is_dragging = true
+			Global.drag_started.emit()
 			#get_parent().freeze = true
 		if Input.is_action_pressed("click"):
 			get_parent().global_position = get_parent().get_global_mouse_position()

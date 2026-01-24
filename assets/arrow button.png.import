@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gk2yuhvas8pv"
-path="res://.godot/imported/pixelcar.jpg-fdb0fa734ab0bd5a64805a3b2f410957.ctex"
+uid="uid://cc6rakyj2ur68"
+path="res://.godot/imported/arrow button.png-04cec97d5852515d2705bf90bf02b338.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pixelcar.jpg"
-dest_files=["res://.godot/imported/pixelcar.jpg-fdb0fa734ab0bd5a64805a3b2f410957.ctex"]
+source_file="res://assets/arrow button.png"
+dest_files=["res://.godot/imported/arrow button.png-04cec97d5852515d2705bf90bf02b338.ctex"]
 
 [params]
 
