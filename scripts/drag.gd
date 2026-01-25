@@ -5,7 +5,6 @@ signal released
 
 var draggable: bool = false
 var is_dragged: bool = false
-
 var offset: Vector2
 var initial_pos: Vector2
 

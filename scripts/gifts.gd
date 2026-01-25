@@ -65,6 +65,7 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 		body_ref = body
 
 func _drag_released():
+	self.z_index = 0
 	if is_inside_giftbox:
 		wrapped.emit(self.toy_name)
 		Global.wrapped_toys.append(toy_name)

@@ -1,0 +1,68 @@
+[gd_scene load_steps=4 format=3 uid="uid://uebpagoquhsi"]
+
+[ext_resource type="Texture2D" uid="uid://dmyhwncrppjnw" path="res://assets/button (1).png" id="1_e8nuh"]
+[ext_resource type="Script" uid="uid://c48xgtux1y8sc" path="res://scripts/score_ui.gd" id="1_olldk"]
+[ext_resource type="FontFile" uid="uid://decmxlijh14pg" path="res://assets/fonts/MondayFeelings-7BD2l.ttf" id="2_0ii3j"]
+
+[node name="ScoreUI" type="CanvasLayer"]
+script = ExtResource("1_olldk")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -192.0
+offset_top = -197.5
+offset_right = 192.0
+offset_bottom = 197.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer"]
+position = Vector2(190, 229.00003)
+scale = Vector2(0.28281245, 0.79212964)
+texture = ExtResource("1_e8nuh")
+
+[node name="Score" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.5882353, 0.29411766, 0, 1)
+theme_override_fonts/font = ExtResource("2_0ii3j")
+theme_override_font_sizes/font_size = 59
+text = "Score Board"
+horizontal_alignment = 1
+
+[node name="Total" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.5882353, 0.29411766, 0, 1)
+theme_override_fonts/font = ExtResource("2_0ii3j")
+theme_override_font_sizes/font_size = 31
+text = "Total Faith:"
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 150
+theme_override_constants/margin_bottom = 150
+
+[node name="Children" type="Label" parent="MarginContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.5882353, 0.29411766, 0, 1)
+theme_override_fonts/font = ExtResource("2_0ii3j")
+theme_override_font_sizes/font_size = 32
+text = "Children:"
+
+[node name="Gifts" type="Label" parent="MarginContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.5882353, 0.29411766, 0, 1)
+theme_override_fonts/font = ExtResource("2_0ii3j")
+theme_override_font_sizes/font_size = 32
+text = "GIfts:"
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0

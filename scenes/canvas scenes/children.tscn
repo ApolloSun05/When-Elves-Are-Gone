@@ -39,7 +39,7 @@ layout_mode = 2
 [node name="NoofChildren" type="Label" parent="textbox/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 6
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.5882353, 0.29411766, 0, 1)
 theme_override_fonts/font = ExtResource("3_4bodp")
 theme_override_font_sizes/font_size = 100
 text = "14"
@@ -56,7 +56,7 @@ offset_right = 175.0
 offset_bottom = 74.0
 size_flags_horizontal = 4
 size_flags_vertical = 0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.5882353, 0.29411766, 0, 1)
 theme_override_fonts/font = ExtResource("3_4bodp")
 theme_override_font_sizes/font_size = 24
 text = "Wishing Children: 

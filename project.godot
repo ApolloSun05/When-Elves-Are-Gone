@@ -21,6 +21,7 @@ Global="*res://scripts/global.gd"
 
 [display]
 
+window/size/mode=3
 window/stretch/mode="viewport"
 mouse_cursor/custom_image="uid://ccsfj5lf4i0il"
 mouse_cursor/tooltip_position_offset=Vector2(0, 0)

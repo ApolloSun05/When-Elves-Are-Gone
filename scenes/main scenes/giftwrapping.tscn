@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://c44ngvowp8cfx"]
+[gd_scene load_steps=20 format=3 uid="uid://c44ngvowp8cfx"]
 
 [ext_resource type="PackedScene" uid="uid://dnxe4s0b88ijk" path="res://scenes/canvas scenes/godeliver.tscn" id="1_a2xsj"]
 [ext_resource type="Texture2D" uid="uid://cevvgjieofa6s" path="res://assets/workbench.png" id="2_bogg1"]
@@ -17,8 +17,8 @@
 [ext_resource type="PackedScene" uid="uid://cbw7erohnxnpk" path="res://scenes/canvas scenes/santas_bag.tscn" id="10_6nylu"]
 [ext_resource type="Texture2D" uid="uid://dftue2cuyrg41" path="res://assets/robot.png" id="10_qfk44"]
 [ext_resource type="PackedScene" uid="uid://cnlmkcw38umd3" path="res://scenes/canvas scenes/inventory_ui.tscn" id="11_7knws"]
-[ext_resource type="Script" uid="uid://b31qd3mtxmvk6" path="res://scripts/wrap_gift.gd" id="15_g70a2"]
 [ext_resource type="Texture2D" uid="uid://3yffb1b64gyi" path="res://assets/coal.png" id="12_6ks6j"]
+[ext_resource type="Script" uid="uid://b31qd3mtxmvk6" path="res://scripts/wrap_gift.gd" id="15_g70a2"]
 
 [node name="packing" type="Node2D"]
 
@@ -67,46 +67,55 @@ texture = ExtResource("3_bogg1")
 flip_h = true
 
 [node name="bear" parent="." instance=ExtResource("6_spqqv")]
+z_as_relative = false
 position = Vector2(295, 197)
 toy_name = "Bear"
 toy_texture = ExtResource("5_g70a2")
 
 [node name="baseball" parent="." instance=ExtResource("6_spqqv")]
+z_as_relative = false
 position = Vector2(481, 199)
 toy_name = "Baseball"
 toy_texture = ExtResource("6_b2trm")
 
 [node name="crayons" parent="." instance=ExtResource("6_spqqv")]
+z_as_relative = false
 position = Vector2(866, 197)
 toy_name = "Crayons"
 toy_texture = ExtResource("7_us1pg")
 
 [node name="basketball" parent="." instance=ExtResource("6_spqqv")]
+z_as_relative = false
 position = Vector2(675, 199)
 toy_name = "Basketball"
 toy_texture = ExtResource("8_qfk44")
 
 [node name="dice" parent="." instance=ExtResource("6_spqqv")]
+z_as_relative = false
 position = Vector2(295, 362)
 toy_name = "Dice"
 toy_texture = ExtResource("9_l3sa7")
 
 [node name="robot" parent="." instance=ExtResource("6_spqqv")]
+z_as_relative = false
 position = Vector2(481, 362)
 toy_name = "Robot"
 toy_texture = ExtResource("10_qfk44")
 
 [node name="doll" parent="." instance=ExtResource("6_spqqv")]
+z_as_relative = false
 position = Vector2(866, 362)
 toy_name = "Dice"
 toy_texture = ExtResource("9_l3sa7")
 
 [node name="dino" parent="." instance=ExtResource("6_spqqv")]
+z_as_relative = false
 position = Vector2(675, 362)
 toy_name = "Dice"
 toy_texture = ExtResource("9_l3sa7")
 
 [node name="Coal" parent="." instance=ExtResource("6_spqqv")]
+z_as_relative = false
 position = Vector2(866, 546)
 toy_name = "Coal"
 toy_texture = ExtResource("12_6ks6j")
@@ -114,7 +123,6 @@ toy_texture = ExtResource("12_6ks6j")
 [node name="children" parent="." instance=ExtResource("7_spqqv")]
 
 [node name="Chosen_UI" parent="." instance=ExtResource("8_pth88")]
-visible = false
 
 [node name="Back_to_Mails" parent="." instance=ExtResource("9_eexhd")]
 

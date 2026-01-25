@@ -14,12 +14,14 @@ extends Node2D
 @onready var Next_wish = $NextWishContainer
 @onready var Make_wish = $MakeWishContainer
 @onready var check_wish = $"../Chosen_UI/check_wish"
+
+@onready var paper = $AudioStreamPlayer2D
 var toyno = RandomNumberGenerator.new()
 var wish_index: int = 0
 
 var names = ["Joms", "Nian", "Andrea", "Joshua", "Sonny", "Renz", "Bujoi", "Wheelson", "Marc", "Adrian" ]
 
-var toys = [ "Teddy Bear", "Toy Car", "Doll", "Ball", "Toy Robot", "Mini Dinosaur", "Remote Control Car", "Toy Robot" ]
+var toys = [ "Bear", "Baseball", "Dice", "Basketball", "Robot", "Crayons"]
 
 
 func _ready():
@@ -62,6 +64,7 @@ func add(name: String) -> void:
 	Global.wishlists[kid_name] = array
 
 func _on_open_pressed() -> void:
+	paper.play()
 	Open.visible = false
 	kid.visible = true
 	exit.visible = true
@@ -71,6 +74,7 @@ func _on_open_pressed() -> void:
 	mailprinter()
 
 func _on_exitbutton_pressed() -> void:
+	paper.play()
 	print("titie")
 	Open.visible = true
 	kid.visible = false
@@ -83,7 +87,7 @@ func _on_mail_pressed() -> void:
 	mailprinter()
 
 func mailprinter():
-	
+	paper.play()
 	if wish_index == 0: $"PrevWishContainter/Previous Wish".disabled = true
 	else: $"PrevWishContainter/Previous Wish".disabled = false
 	if wish_index == len(Global.wishlists)-1: $"NextWishContainer/Next Wish".disabled = true
@@ -110,6 +114,7 @@ func _on_cycle_wish_pressed(num: int) -> void:
 var Check_wish: Dictionary[String, Array]
 
 func _on_make_wish_pressed() -> void: #it should be put in the 
+	paper.play()
 	check_wish.visible = true
 	Open.visible = true
 	kid.visible = false
