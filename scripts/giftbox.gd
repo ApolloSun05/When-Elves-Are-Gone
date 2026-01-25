@@ -1,13 +1,15 @@
 extends StaticBody2D
 
+signal wrapped(toy_name: String)
+
 #@onready var panel = $ColorRect
 @onready var Check = $Check_Wrapped_Toys
 @onready var inside = $inside_box
 @onready var box = $Sprite2D
 @onready var finishbutton = $MarginContainer
+@onready var control: Control = $Control
 var spawned_objs: Array[Sprite2D] = []
 var gift_spawn = preload("res://scenes/show_gift_scene.tscn")
-signal wrapped(toy_name: String)
 
 var spawnarea = Rect2(Vector2(-120, -370), Vector2(111, -137))
 var gift_texture = {
@@ -37,6 +39,7 @@ var child_name: String
 var gifts_inserted = []
 
 func _on_check_wrapped_toys_pressed() -> void:
+	control.visible = true
 	inside.visible = true
 	finishbutton.visible = true
 	box.visible = false
@@ -71,6 +74,7 @@ func _on_exit_pressed() -> void:
 	finishbutton.visible = false
 	inside.visible = false
 	box.visible = true
+	control.visible = false
 
 func _on_finish_wish_pressed() -> void:
 	Global.inventory[Global.current_child] = Global.wrapped_toys.duplicate_deep()

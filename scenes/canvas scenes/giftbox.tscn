@@ -13,6 +13,16 @@ size = Vector2(128, 128.5)
 [node name="giftbox" type="StaticBody2D" groups=["dropable"]]
 script = ExtResource("1_8vt4o")
 
+[node name="Control" type="Control" parent="."]
+visible = false
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = 20
 scale = Vector2(0.25, 0.25)
