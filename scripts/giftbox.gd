@@ -17,7 +17,9 @@ var gift_texture = {
 	"Basketball": preload("res://assets/basketball (1).png"),
 	"Dice": preload("res://assets/dice (1).png"),
 	"Robot": preload("res://assets/robot.png"),
-	"Coal": preload("res://assets/coal.png")
+	"Coal": preload("res://assets/coal.png"),
+	"Doll": preload("res://assets/claus plushie.png"),
+	"Dino": preload("res://assets/dino ver 4.png")
 }
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

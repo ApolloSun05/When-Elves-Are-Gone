@@ -22,7 +22,7 @@ var current_house: String
 var wrapped_toys: Array
 var inventory: Dictionary[String, Array] = {}
 
-var faith: int = 0
+var faith: int = 0 + (correct_children*100) + (correct_gifts*100)
 
 @onready var slot_scene = preload("res://scenes/canvas scenes/inventory_slot.tscn")
 
@@ -34,8 +34,12 @@ func _ready() -> void:
 		nchildren = children.randi_range(2,10)
 
 func deliver(key: String) -> void:
-	if current_house == key and Global.inventory[key] == Global.wishlists[key]: #wait lng
+	if current_house == key:
 		faith += 100
+		correct_children += 1
+		if Global.inventory[key] == Global.wishlists[key]:
+			correct_gifts += len(wishlists[key])
+			faith += 100
 	else:
 		faith -= 10
 	inventory.erase(key)
