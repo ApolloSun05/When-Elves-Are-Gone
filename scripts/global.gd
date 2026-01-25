@@ -2,6 +2,7 @@ extends Node2D
 
 signal inventory_opened
 signal inventory_updated
+signal time_updated
 signal drag_started
 signal drag_ended
 
@@ -24,6 +25,11 @@ var inventory: Dictionary[String, Array] = {}
 
 var faith: int = 0
 
+var current_time: float = 7
+var end_time: float = 12
+
+var timer: Timer
+
 @onready var slot_scene = preload("res://scenes/canvas scenes/inventory_slot.tscn")
 
 func _ready() -> void:
@@ -32,6 +38,12 @@ func _ready() -> void:
 		nchildren = children.randi_range(2,5)
 	else: 
 		nchildren = children.randi_range(2,10)
+	timer = Timer.new()
+	timer.autostart = false
+	timer.one_shot = false
+	timer.wait_time = 1
+	timer.timeout.connect(_start_timer)
+	add_child(timer)
 
 func deliver(key: String) -> void:
 	if current_house == key and Global.inventory[key] == Global.wishlists[key]: #wait lng
@@ -41,3 +53,16 @@ func deliver(key: String) -> void:
 	inventory.erase(key)
 	inventory_updated.emit()
 	print("DELIVERED")
+
+func start_game() -> void:
+	# reset stuff
+	timer.start()
+	pass
+	
+func _start_timer() -> void:
+	current_time += 1.0/60.0
+	time_updated.emit()
+	if current_time == end_time:
+		print("TITE")
+	pass
+	

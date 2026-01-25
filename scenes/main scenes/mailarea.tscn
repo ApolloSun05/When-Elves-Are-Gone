@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://cwif5nm1haqm8"]
 
-[ext_resource type="Script" uid="uid://c62ncaxa0gf8m" path="res://scripts/global.gd" id="1_af822"]
+[ext_resource type="Script" uid="uid://bxbr30qo6gcqf" path="res://scenes/main scenes/mailarea.gd" id="1_klmp1"]
 [ext_resource type="Texture2D" uid="uid://c4df31dxp5a11" path="res://assets/609499854_1448981699917056_8657447786853300422_n.jpg" id="2_af822"]
 [ext_resource type="PackedScene" uid="uid://de3tijif3sseg" path="res://scenes/canvas scenes/children.tscn" id="3_lm4p5"]
 [ext_resource type="PackedScene" uid="uid://bhhr7pef25djb" path="res://scenes/kid.tscn" id="5_af822"]
@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dvclbkpy7o2vw" path="res://scenes/canvas scenes/chosen_ui.tscn" id="6_klmp1"]
 
 [node name="mailarea" type="Node2D"]
-script = ExtResource("1_af822")
+script = ExtResource("1_klmp1")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1162.0
@@ -27,3 +27,14 @@ position = Vector2(585, 325)
 [node name="gotowrap" parent="." instance=ExtResource("5_bokdc")]
 
 [node name="Chosen_UI" parent="." instance=ExtResource("6_klmp1")]
+
+[node name="Timer" type="CanvasLayer" parent="."]
+
+[node name="Time Label" type="Label" parent="Timer"]
+offset_left = 940.0
+offset_top = 35.0
+offset_right = 1133.0
+offset_bottom = 99.0
+theme_override_font_sizes/font_size = 64
+text = "00:00 PM"
+horizontal_alignment = 2
