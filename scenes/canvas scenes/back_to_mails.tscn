@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bpreats5ob50s" path="res://scripts/back_to_mails.gd" id="1_yl1bo"]
 [ext_resource type="Texture2D" uid="uid://dmyhwncrppjnw" path="res://assets/button (1).png" id="2_o35cg"]
-[ext_resource type="FontFile" uid="uid://bndsjh1qpflf2" path="res://assets/StardewValley.ttf" id="3_062mb"]
+[ext_resource type="FontFile" uid="uid://b5ldnxio6sr28" path="res://assets/fonts/Chero.ttf" id="3_062mb"]
 
 [node name="Back_to_Mails" type="CanvasLayer"]
 script = ExtResource("1_yl1bo")
@@ -21,9 +21,9 @@ offset_top = -66.0
 offset_right = 228.0
 offset_bottom = 9.0
 grow_vertical = 0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.5882353, 0.29411766, 0, 1)
 theme_override_fonts/font = ExtResource("3_062mb")
-theme_override_font_sizes/font_size = 48
+theme_override_font_sizes/font_size = 42
 text = "Mails"
 flat = true
 

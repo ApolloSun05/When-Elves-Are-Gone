@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ddgwrxcehbp2d" path="res://scripts/chosen_ui.gd" id="1_s7o7r"]
 [ext_resource type="Texture2D" uid="uid://bcbrocj40fuwm" path="res://assets/Wishlist Paper.png" id="2_paw5w"]
-[ext_resource type="FontFile" uid="uid://bndsjh1qpflf2" path="res://assets/StardewValley.ttf" id="3_pbww7"]
+[ext_resource type="FontFile" uid="uid://b5ldnxio6sr28" path="res://assets/fonts/Chero.ttf" id="3_s7o7r"]
 
 [node name="Chosen_UI" type="CanvasLayer"]
 script = ExtResource("1_s7o7r")
@@ -55,14 +55,14 @@ theme_override_constants/margin_bottom = 113
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_colors/font_color = Color(0.5882353, 0.29411766, 0, 1)
-theme_override_fonts/font = ExtResource("3_pbww7")
+theme_override_fonts/font = ExtResource("3_s7o7r")
 theme_override_font_sizes/font_size = 32
 text = "fjasdh"
 
 [node name="chosen_array" type="Label" parent="chosen_wish/MarginContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.5882353, 0.29411766, 0, 1)
-theme_override_fonts/font = ExtResource("3_pbww7")
+theme_override_fonts/font = ExtResource("3_s7o7r")
 theme_override_font_sizes/font_size = 24
 text = "wishes type shit"
 autowrap_mode = 2

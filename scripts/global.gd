@@ -16,7 +16,9 @@ var nights: int = 1
 var wishlists: Dictionary[String, Array]
 var current_child: String
 var current_toys: Array
-var current_house: Dictionary[String, Array] = {"Joms": [], "Nian": [], "Andrea": [], "Joshua": [], "Sonny": [], "Renz": [], "Bujoi": [], "Wheelson": [], "Marc": [], "Adrian": []}
+var current_house: String
+
+#{"Joms": [], "Nian": [], "Andrea": [], "Joshua": [], "Sonny": [], "Renz": [], "Bujoi": [], "Wheelson": [], "Marc": [], "Adrian": []}
 var wrapped_toys: Array
 var inventory: Dictionary[String, Array] = {}
 
@@ -32,13 +34,14 @@ func _ready() -> void:
 		nchildren = children.randi_range(2,10)
 
 func deliver(key: String) -> void:
-	for gift in inventory[key]:
-		for item in current_house:
-			if key == current_house[key]: #wait lng
-				faith += 100
-			#gift = current_house[item]
-			else:
-				faith -= 10
+	if key == current_house: #wait lng
+		faith += 100
+		#gift = current_house[item]
+	else:
+		faith -= 10
+#	for gift in inventory[key]:
+#		for item in current_house:
+			
 	inventory.erase(key)
 	inventory_updated.emit()
 	print("DELIVERED")

@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dmyhwncrppjnw" path="res://assets/button (1).png" id="1_e8nuh"]
 [ext_resource type="Script" uid="uid://c48xgtux1y8sc" path="res://scripts/score_ui.gd" id="1_olldk"]
-[ext_resource type="FontFile" uid="uid://decmxlijh14pg" path="res://assets/fonts/MondayFeelings-7BD2l.ttf" id="2_0ii3j"]
+[ext_resource type="FontFile" uid="uid://b5ldnxio6sr28" path="res://assets/fonts/Chero.ttf" id="3_olldk"]
 
 [node name="ScoreUI" type="CanvasLayer"]
 script = ExtResource("1_olldk")
@@ -29,8 +29,8 @@ texture = ExtResource("1_e8nuh")
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_colors/font_color = Color(0.5882353, 0.29411766, 0, 1)
-theme_override_fonts/font = ExtResource("2_0ii3j")
-theme_override_font_sizes/font_size = 59
+theme_override_fonts/font = ExtResource("3_olldk")
+theme_override_font_sizes/font_size = 79
 text = "Score Board"
 horizontal_alignment = 1
 
@@ -38,29 +38,29 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_colors/font_color = Color(0.5882353, 0.29411766, 0, 1)
-theme_override_fonts/font = ExtResource("2_0ii3j")
-theme_override_font_sizes/font_size = 31
+theme_override_fonts/font = ExtResource("3_olldk")
+theme_override_font_sizes/font_size = 57
 text = "Total Faith:"
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer"]
 layout_mode = 2
-theme_override_constants/margin_top = 150
-theme_override_constants/margin_bottom = 150
+theme_override_constants/margin_top = 120
+theme_override_constants/margin_bottom = 120
 
 [node name="Children" type="Label" parent="MarginContainer/MarginContainer"]
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_colors/font_color = Color(0.5882353, 0.29411766, 0, 1)
-theme_override_fonts/font = ExtResource("2_0ii3j")
-theme_override_font_sizes/font_size = 32
+theme_override_fonts/font = ExtResource("3_olldk")
+theme_override_font_sizes/font_size = 47
 text = "Children:"
 
 [node name="Gifts" type="Label" parent="MarginContainer/MarginContainer"]
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_colors/font_color = Color(0.5882353, 0.29411766, 0, 1)
-theme_override_fonts/font = ExtResource("2_0ii3j")
-theme_override_font_sizes/font_size = 32
+theme_override_fonts/font = ExtResource("3_olldk")
+theme_override_font_sizes/font_size = 47
 text = "GIfts:"
 
 [node name="MarginContainer2" type="MarginContainer" parent="."]

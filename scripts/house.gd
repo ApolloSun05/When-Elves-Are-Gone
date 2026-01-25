@@ -2,7 +2,7 @@ extends Node2D
 
 @onready var DelPanel = $DeliverPanel
 @onready var inventory_ui: Control = $"../CanvasLayer/Inventory_UI"
-
+@export var child: String
 func _ready() -> void:
 	DelPanel.visible = false
 

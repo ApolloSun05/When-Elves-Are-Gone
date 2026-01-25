@@ -21,7 +21,7 @@ var wish_index: int = 0
 
 var names = ["Joms", "Nian", "Andrea", "Joshua", "Sonny", "Renz", "Bujoi", "Wheelson", "Marc", "Adrian" ]
 
-var toys = [ "Bear", "Baseball", "Dice", "Basketball", "Robot", "Crayons"]
+var toys = [ "Bear", "Baseball", "Dice", "Basketball", "Robot", "Crayons", "Dino", "Doll"]
 
 
 func _ready():
@@ -123,5 +123,5 @@ func _on_make_wish_pressed() -> void: #it should be put in the
 	Next_wish.visible = false
 	Make_wish.visible = false
 	Global.current_child = kid_name
-	print(Global.current_child)
-	print(Global.current_toys)
+	#print(Global.current_child)
+	#print(Global.current_toys)
