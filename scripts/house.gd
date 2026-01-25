@@ -13,10 +13,12 @@ func _input(event: InputEvent) -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	DelPanel.visible = true
+	Global.current_house = child
 	print("im in")
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	DelPanel.visible = false
+	Global.current_house = ""
 	print("im out")
 
 func _on_deliver_pressed() -> void:

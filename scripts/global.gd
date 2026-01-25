@@ -34,7 +34,7 @@ func _ready() -> void:
 		nchildren = children.randi_range(2,10)
 
 func deliver(key: String) -> void:
-	if Global.inventory[key] == Global.wishlists[key]: #wait lng
+	if current_house == key and Global.inventory[key] == Global.wishlists[key]: #wait lng
 		faith += 100
 	else:
 		faith -= 10

@@ -35,6 +35,8 @@ func _ready():
 	print("there should be atleast " + str(Global.nchildren) + " children")
 	while i < Global.nchildren:
 		var name = names.pick_random()
+		while Global.wishlists.keys().find(name) != -1:
+			name = names.pick_random()
 		add(name)
 		i += 1
 	#mailprinter()
