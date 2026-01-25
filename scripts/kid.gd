@@ -31,16 +31,16 @@ func _ready():
 	Prev_wish.visible = false
 	Next_wish.visible = false
 	Make_wish.visible = false
-	var i: int = 0
 	print("there should be atleast " + str(Global.nchildren) + " children")
-	while i < Global.nchildren:
+	Global.night_start.connect(_initialize)
+	#mailprinter()
+
+func _initialize() -> void:
+	for i in range(Global.nchildren):
 		var name = names.pick_random()
 		while Global.wishlists.keys().find(name) != -1:
 			name = names.pick_random()
 		add(name)
-		i += 1
-	#mailprinter()
-	
 	
 func add(name: String) -> void:
 	print("The Kid Name Is:")
@@ -51,6 +51,7 @@ func add(name: String) -> void:
 	var x = RandomNumberGenerator.new()
 	x.randomize()
 	var no_of_toys = x.randi_range(1, 5)
+	while no_of_toys > len(toys): no_of_toys = x.randi_range(1, 5)
 	
 	#print("for " + name + " there are " + str(no_of_toys) + " of toys")
 	
@@ -58,6 +59,10 @@ func add(name: String) -> void:
 	
 	while j < no_of_toys:
 		var toy = toys.pick_random()
+		
+		while array.find(toy) != -1:
+			toy = toys.pick_random()
+		
 		array.append(toy)
 		j += 1
 		wishlist = str(array)

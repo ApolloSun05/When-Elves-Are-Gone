@@ -5,6 +5,9 @@ signal inventory_updated
 signal time_updated
 signal drag_started
 signal drag_ended
+signal midnight
+signal night_end
+signal night_start
 
 var children = RandomNumberGenerator.new()
 var nchildren: int
@@ -23,7 +26,7 @@ var current_house: String
 var wrapped_toys: Array
 var inventory: Dictionary[String, Array] = {}
 
-var faith: int = 0 + (correct_children*100) + (correct_gifts*100)
+var faith: int = 0
 
 var current_time: float = 7
 var end_time: float = 12
@@ -33,16 +36,11 @@ var timer: Timer
 @onready var slot_scene = preload("res://scenes/canvas scenes/inventory_slot.tscn")
 
 func _ready() -> void:
-	children.randomize()
-	if nights < 3:
-		nchildren = children.randi_range(2,5)
-	else: 
-		nchildren = children.randi_range(2,10)
 	timer = Timer.new()
 	timer.autostart = false
 	timer.one_shot = false
 	timer.wait_time = 1
-	timer.timeout.connect(_start_timer)
+	timer.timeout.connect(_update_timer)
 	add_child(timer)
 
 func deliver(key: String) -> void:
@@ -60,13 +58,35 @@ func deliver(key: String) -> void:
 
 func start_game() -> void:
 	# reset stuff
+	timer.stop()
+	children.randomize()
+	if nights < 3:
+		nchildren = children.randi_range(2,5)
+		prints("NCHILDREN", nchildren)
+	else: 
+		nchildren = children.randi_range(2,10)
+	current_time = 7.0
+	end_time = 12.0
 	timer.start()
 	nights += 1
-	pass
+	wishlists.clear()
+	inventory.clear()
+	current_toys.clear()
+	wrapped_toys.clear()
+	current_child = ""
+	current_house = ""
+	correct_children = 0
+	correct_gifts = 0
+	night_start.emit()
+
+func end_game() -> void:
+	faith += (correct_children*100) + (correct_gifts*100)
+	night_end.emit()
 	
-func _start_timer() -> void:
+func _update_timer() -> void:
 	current_time += 1.0/60.0
 	time_updated.emit()
-	if current_time == end_time:
-		print("TITE")
-	pass
+	if current_time >= end_time:
+		timer.stop()
+		print("tigil na")
+		midnight.emit()

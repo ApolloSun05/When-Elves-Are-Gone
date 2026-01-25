@@ -1,5 +1,6 @@
-[gd_scene load_steps=22 format=3 uid="uid://c44ngvowp8cfx"]
+[gd_scene load_steps=23 format=3 uid="uid://c44ngvowp8cfx"]
 
+[ext_resource type="Script" uid="uid://ipdj4hmu6w6p" path="res://scripts/giftwrapping.gd" id="1_17t4r"]
 [ext_resource type="PackedScene" uid="uid://dnxe4s0b88ijk" path="res://scenes/canvas scenes/godeliver.tscn" id="1_a2xsj"]
 [ext_resource type="Texture2D" uid="uid://cevvgjieofa6s" path="res://assets/workbench.png" id="2_bogg1"]
 [ext_resource type="Texture2D" uid="uid://lt4lopbcdjnj" path="res://assets/64.png" id="3_bogg1"]
@@ -23,6 +24,7 @@
 [ext_resource type="Script" uid="uid://b31qd3mtxmvk6" path="res://scripts/wrap_gift.gd" id="15_g70a2"]
 
 [node name="packing" type="Node2D"]
+script = ExtResource("1_17t4r")
 
 [node name="godeliver" parent="." instance=ExtResource("1_a2xsj")]
 
