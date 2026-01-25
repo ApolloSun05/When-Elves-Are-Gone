@@ -1,7 +1,7 @@
 extends Control
 
 @onready var Grid = $GridContainer
-@onready var Santa_bag = $"../../Santas_Bag/MarginContainer"
+var Santa_bag
 
 func _ready() -> void:
 	Global.inventory_opened.connect(func ():
@@ -9,9 +9,7 @@ func _ready() -> void:
 		print("[LOG] Inventory Opened"))
 	Global.inventory_updated.connect(_on_inventory_updated)
 	_on_inventory_updated()
-
-func _process(delta: float) -> void:
-	pass
+	if get_parent().get_parent().name == "giftwrapping": Santa_bag = $"../../Santas_Bag/MarginContainer"
 
 func _on_inventory_updated():
 	print("[LOG] Inventory updated")

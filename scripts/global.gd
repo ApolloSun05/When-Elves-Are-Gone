@@ -32,13 +32,10 @@ func _ready() -> void:
 		nchildren = children.randi_range(2,10)
 
 func deliver(key: String) -> void:
-	for gift in inventory[key]:
-		for item in current_house:
-			if key == current_house[key]: #wait lng
-				faith += 100
-			#gift = current_house[item]
-			else:
-				faith -= 10
+	if Global.inventory[key] == Global.wishlists[key]: #wait lng
+		faith += 100
+	else:
+		faith -= 10
 	inventory.erase(key)
 	inventory_updated.emit()
 	print("DELIVERED")

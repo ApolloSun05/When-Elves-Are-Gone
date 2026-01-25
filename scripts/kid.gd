@@ -122,6 +122,6 @@ func _on_make_wish_pressed() -> void: #it should be put in the
 	Prev_wish.visible = false
 	Next_wish.visible = false
 	Make_wish.visible = false
-	Global.current_child = kid_name
+	Global.current_child = Global.wishlists.keys()[wish_index]
 	print(Global.current_child)
 	print(Global.current_toys)
