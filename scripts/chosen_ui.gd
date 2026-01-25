@@ -11,6 +11,10 @@ func _on_checkchosenwish_pressed() -> void:
 	chosenarray_text.text = "Checklist: \n> " + "\n> ".join(Global.current_toys)
 	check_wish.visible = false
 	chosen_wish.visible = true
+	if Global.naughty_children.find(Global.current_child) != -1:
+		chosenkid_text.add_theme_color_override("font_color", Color.RED) 
+	else:
+		chosenkid_text.add_theme_color_override("font_color", Color.from_rgba8(150, 75, 0))
 	
 	
 func _on_close_chosenwish_pressed() -> void:

@@ -11,6 +11,7 @@ signal night_start
 
 var children = RandomNumberGenerator.new()
 var nchildren: int
+var naughty_children: Array[String] = []
 var correct_children: int
 var correct_gifts: int
 
@@ -45,12 +46,22 @@ func _ready() -> void:
 
 func deliver(key: String) -> void:
 	if current_house == key:
+		print("tamang bahay")
 		faith += 100
 		correct_children += 1
-		if Global.inventory[key] == Global.wishlists[key]:
+		prints("Delivering to", key, naughty_children.find(key))
+		if naughty_children.find(key) == -1 and inventory[key] == wishlists[key]:
 			correct_gifts += len(wishlists[key])
+			print("MAY TAMA KA")
 			faith += 100
+		elif naughty_children.find(key) != -1 and inventory[key].find("Coal") == -1:
+			faith -= 50
+			print("mali mo yon")
+		else:
+			print("mali haha")
+			faith -= 10
 	else:
+		print("maling bahay")
 		faith -= 10
 	inventory.erase(key)
 	inventory_updated.emit()

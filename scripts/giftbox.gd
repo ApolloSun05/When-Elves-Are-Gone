@@ -86,4 +86,5 @@ func _on_finish_wish_pressed() -> void:
 	finishbutton.visible = false
 	inside.visible = false
 	box.visible = true
+	control.visible = false
 	print("HELLYEAHH")

@@ -3,7 +3,6 @@ extends Node2D
 
 @export var kid_name: String = ""
 @export var wishlist: String = ""
-@export var is_naughty = ""
 
 @onready var Open = $"Mail Open"
 @onready var kid = $kidmail
@@ -69,6 +68,8 @@ func add(name: String) -> void:
 	print("The Wishlist is: ")
 	print(wishlist)
 	Global.wishlists[kid_name] = array
+	var is_naughty = randf()
+	if is_naughty < 0.2: Global.naughty_children.append(name)
 
 func _on_open_pressed() -> void:
 	paper.play()
@@ -109,6 +110,10 @@ func mailprinter():
 	#print(wishes)
 	letter_wishlist.text = "I want " + ", ".join(wishes) + " for Christmas Please"
 	from_name.text = "From " + str(kid)
+	if Global.naughty_children.find(kid) != -1:
+		from_name.add_theme_color_override("font_color", Color.RED) 
+	else:
+		from_name.add_theme_color_override("font_color", Color.from_rgba8(150, 75, 0))
 
 
 func _on_cycle_wish_pressed(num: int) -> void:
