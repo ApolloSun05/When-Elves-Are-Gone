@@ -38,4 +38,4 @@ func clear_grid_container():
 
 func _on_close_bag_pressed() -> void:
 	self.visible = false
-	Santa_bag.visible = true
+	if Santa_bag: Santa_bag.visible = true

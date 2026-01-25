@@ -20,11 +20,16 @@ script = ExtResource("1_gsdo5")
 
 [node name="Gift_Desc" type="MarginContainer" parent="."]
 visible = false
+z_index = 60
 layout_mode = 0
 offset_left = 209.0
 offset_top = 1.0
 offset_right = 513.0
 offset_bottom = 198.0
+
+[node name="ColorRect" type="ColorRect" parent="Gift_Desc"]
+layout_mode = 2
+color = Color(0.3854925, 0.38549247, 0.38549247, 1)
 
 [node name="Panel" type="Panel" parent="Gift_Desc"]
 layout_mode = 2

@@ -68,11 +68,13 @@ func _on_exit_pressed() -> void:
 	box.visible = true
 
 func _on_finish_wish_pressed() -> void:
-	Global.inventory[Global.current_child] = Global.wrapped_toys
+	Global.inventory[Global.current_child] = Global.wrapped_toys.duplicate_deep()
 	kill_child()
 	Global.current_child = ""
-	Global.current_toys = []
-	Global.wrapped_toys = []
+	Global.current_toys.clear()
+	Global.wrapped_toys.clear()
+	Global.inventory_updated.emit()
 	finishbutton.visible = false
 	inside.visible = false
 	box.visible = true
+	print("HELLYEAHH")

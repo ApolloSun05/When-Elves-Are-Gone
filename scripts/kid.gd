@@ -91,7 +91,7 @@ func mailprinter():
 	
 	print("opening mail")
 	var kid = Global.wishlists.keys()[wish_index]
-	Global.current_child = kid
+	#Global.current_child = kid
 	var wishes = PackedStringArray(Global.wishlists[kid])
 	Global.current_toys = wishes
 	#print(kid)
@@ -117,6 +117,6 @@ func _on_make_wish_pressed() -> void: #it should be put in the
 	Prev_wish.visible = false
 	Next_wish.visible = false
 	Make_wish.visible = false
-
+	Global.current_child = kid_name
 	print(Global.current_child)
 	print(Global.current_toys)

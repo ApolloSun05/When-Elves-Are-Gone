@@ -21,7 +21,6 @@ func _process(delta: float) -> void:
 
 func _on_button_mouse_entered() -> void:
 	Gift_Desc.visible = true
-	gift_details.text = "> " + "\n> ".join(Global.wrapped_toys)
 	
 func _on_button_mouse_exited() -> void:
 	Gift_Desc.visible = false
@@ -32,10 +31,12 @@ func set_empty():
 	gift_details.text = ""
 
 func set_item(toys: Array, kid: String) -> void:
-	prints("[LOG] Toys in slot:", toys)
-	child_name.text = kid
+	prints("[LOG] Toys in slot:", ", ".join(PackedStringArray(toys)))
+	child_name.text = kid	
 	gift_style.texture = textures.pick_random()
-	gift_details.text = ", ".join(PackedStringArray(Global.wrapped_toys))
+	gift_details.text = "> " + "\n> ".join(toys)
+	prints("[LOG] Details Text:", gift_details.text)
+	
 
 func _on_button_pressed() -> void:
 	if get_parent().get_parent().get_parent().get_parent().name == "delivery":
