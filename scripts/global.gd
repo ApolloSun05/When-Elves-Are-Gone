@@ -23,7 +23,7 @@ var current_house: String
 var wrapped_toys: Array
 var inventory: Dictionary[String, Array] = {}
 
-var faith: int = 0
+var faith: int = 0 + (correct_children*100) + (correct_gifts*100)
 
 var current_time: float = 7
 var end_time: float = 12
@@ -46,8 +46,12 @@ func _ready() -> void:
 	add_child(timer)
 
 func deliver(key: String) -> void:
-	if current_house == key and Global.inventory[key] == Global.wishlists[key]: #wait lng
+	if current_house == key:
 		faith += 100
+		correct_children += 1
+		if Global.inventory[key] == Global.wishlists[key]:
+			correct_gifts += len(wishlists[key])
+			faith += 100
 	else:
 		faith -= 10
 	inventory.erase(key)
