@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://2k26x3cv2lju"]
+[gd_scene load_steps=9 format=3 uid="uid://2k26x3cv2lju"]
 
 [ext_resource type="Texture2D" uid="uid://bp201x7cktl73" path="res://assets/76mruwuqis431.png" id="1_dea0l"]
 [ext_resource type="Script" uid="uid://blxuqc1gtcq63" path="res://scripts/delivery.gd" id="1_vt7m1"]
 [ext_resource type="PackedScene" uid="uid://cnlmkcw38umd3" path="res://scenes/canvas scenes/inventory_ui.tscn" id="2_q5may"]
 [ext_resource type="PackedScene" uid="uid://5nsx44k1bct1" path="res://scenes/canvas scenes/santasleigh.tscn" id="2_s3hr3"]
 [ext_resource type="PackedScene" uid="uid://c80r1j8ys1f6a" path="res://scenes/house.tscn" id="3_4tiqj"]
+[ext_resource type="Texture2D" uid="uid://dmyhwncrppjnw" path="res://assets/button (1).png" id="6_sg546"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s3hr3"]
 size = Vector2(1948, 10)
@@ -55,3 +56,37 @@ position = Vector2(677, 803)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Inventory_UI" parent="CanvasLayer" instance=ExtResource("2_q5may")]
+
+[node name="ScoreBoardnext" type="TextureButton" parent="CanvasLayer"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -191.0
+offset_top = -113.0
+offset_right = 1729.0
+offset_bottom = 967.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("6_sg546")
+
+[node name="Label" type="Label" parent="CanvasLayer/ScoreBoardnext"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -646.6666
+offset_top = -153.33325
+offset_right = 654.3334
+offset_bottom = 102.66675
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.35729373, 0.2631689, 0.100866936, 1)
+theme_override_font_sizes/font_size = 256
+text = "Finish Delivery"
+
+[connection signal="pressed" from="CanvasLayer/ScoreBoardnext" to="." method="_on_score_boardnext_pressed"]

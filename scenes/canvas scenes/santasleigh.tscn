@@ -1,9 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://5nsx44k1bct1"]
+[gd_scene load_steps=5 format=3 uid="uid://5nsx44k1bct1"]
 
 [ext_resource type="Texture2D" uid="uid://c4j7k6su502wv" path="res://assets/sleigh.png" id="1_jci2s"]
 [ext_resource type="AudioStream" uid="uid://c78jwqu03aoco" path="res://assets/sounds/sfx/deer-steps-snow.mp3" id="2_nx3r4"]
-[ext_resource type="Texture2D" uid="uid://dmyhwncrppjnw" path="res://assets/button (1).png" id="3_48b47"]
-[ext_resource type="FontFile" uid="uid://b5ldnxio6sr28" path="res://assets/fonts/Chero.ttf" id="4_34g0w"]
 
 [sub_resource type="GDScript" id="GDScript_pp874"]
 resource_name = "santasleigh"
@@ -49,22 +47,3 @@ shape = SubResource("RectangleShape2D_h4iex")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_nx3r4")
-
-[node name="MarginContainer" type="MarginContainer" parent="."]
-offset_left = 497.0
-offset_top = 242.0
-offset_right = 617.0
-offset_bottom = 282.0
-
-[node name="Sprite2D" type="Sprite2D" parent="MarginContainer"]
-position = Vector2(53, 21)
-scale = Vector2(0.11, 0.07)
-texture = ExtResource("3_48b47")
-
-[node name="ScoreBoardnext" type="Button" parent="MarginContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_34g0w")
-theme_override_font_sizes/font_size = 23
-text = "Finish Deliver!"
-flat = true
