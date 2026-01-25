@@ -12,7 +12,7 @@ var correct_children: int
 var correct_gifts: int
 
 var is_dragging = false
-var nights: int = 1
+var nights: int = 0
 
 var wishlists: Dictionary[String, Array]
 var current_child: String
@@ -61,6 +61,7 @@ func deliver(key: String) -> void:
 func start_game() -> void:
 	# reset stuff
 	timer.start()
+	nights += 1
 	pass
 	
 func _start_timer() -> void:
@@ -69,4 +70,3 @@ func _start_timer() -> void:
 	if current_time == end_time:
 		print("TITE")
 	pass
-	
