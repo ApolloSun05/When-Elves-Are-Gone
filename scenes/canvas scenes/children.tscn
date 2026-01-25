@@ -1,15 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://de3tijif3sseg"]
+[gd_scene load_steps=4 format=3 uid="uid://de3tijif3sseg"]
 
 [ext_resource type="Script" uid="uid://d0jpwi0vr2jm2" path="res://scripts/children.gd" id="1_gflrx"]
 [ext_resource type="Texture2D" uid="uid://do06ps5wep05" path="res://assets/Wishing.png" id="2_3uvqi"]
-[ext_resource type="FontFile" uid="uid://bndsjh1qpflf2" path="res://assets/StardewValley.ttf" id="3_4bodp"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7rmxp"]
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0, 0, 0, 1)
+[ext_resource type="FontFile" uid="uid://b5ldnxio6sr28" path="res://assets/fonts/Chero.ttf" id="3_3uvqi"]
 
 [node name="main" type="CanvasLayer"]
 script = ExtResource("1_gflrx")
@@ -40,14 +33,9 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 6
 theme_override_colors/font_color = Color(0.5882353, 0.29411766, 0, 1)
-theme_override_fonts/font = ExtResource("3_4bodp")
-theme_override_font_sizes/font_size = 100
+theme_override_fonts/font = ExtResource("3_3uvqi")
+theme_override_font_sizes/font_size = 102
 text = "14"
-
-[node name="Panel" type="Panel" parent="textbox"]
-visible = false
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_7rmxp")
 
 [node name=">" type="Label" parent="."]
 offset_left = 17.0
@@ -57,8 +45,8 @@ offset_bottom = 74.0
 size_flags_horizontal = 4
 size_flags_vertical = 0
 theme_override_colors/font_color = Color(0.5882353, 0.29411766, 0, 1)
-theme_override_fonts/font = ExtResource("3_4bodp")
-theme_override_font_sizes/font_size = 24
+theme_override_fonts/font = ExtResource("3_3uvqi")
+theme_override_font_sizes/font_size = 26
 text = "Wishing Children: 
 "
 horizontal_alignment = 1

@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://c44ngvowp8cfx"]
+[gd_scene load_steps=22 format=3 uid="uid://c44ngvowp8cfx"]
 
 [ext_resource type="PackedScene" uid="uid://dnxe4s0b88ijk" path="res://scenes/canvas scenes/godeliver.tscn" id="1_a2xsj"]
 [ext_resource type="Texture2D" uid="uid://cevvgjieofa6s" path="res://assets/workbench.png" id="2_bogg1"]
@@ -18,6 +18,8 @@
 [ext_resource type="Texture2D" uid="uid://dftue2cuyrg41" path="res://assets/robot.png" id="10_qfk44"]
 [ext_resource type="PackedScene" uid="uid://cnlmkcw38umd3" path="res://scenes/canvas scenes/inventory_ui.tscn" id="11_7knws"]
 [ext_resource type="Texture2D" uid="uid://3yffb1b64gyi" path="res://assets/coal.png" id="12_6ks6j"]
+[ext_resource type="Texture2D" uid="uid://l7wuuf7wvsks" path="res://assets/claus plushie.png" id="12_lrfxm"]
+[ext_resource type="Texture2D" uid="uid://crq10iy22bnsn" path="res://assets/dino ver 4.png" id="13_17t4r"]
 [ext_resource type="Script" uid="uid://b31qd3mtxmvk6" path="res://scripts/wrap_gift.gd" id="15_g70a2"]
 
 [node name="packing" type="Node2D"]
@@ -105,14 +107,14 @@ toy_texture = ExtResource("10_qfk44")
 [node name="doll" parent="." instance=ExtResource("6_spqqv")]
 z_as_relative = false
 position = Vector2(866, 362)
-toy_name = "Dice"
-toy_texture = ExtResource("9_l3sa7")
+toy_name = "Doll"
+toy_texture = ExtResource("12_lrfxm")
 
 [node name="dino" parent="." instance=ExtResource("6_spqqv")]
 z_as_relative = false
 position = Vector2(675, 362)
-toy_name = "Dice"
-toy_texture = ExtResource("9_l3sa7")
+toy_name = "Dino"
+toy_texture = ExtResource("13_17t4r")
 
 [node name="Coal" parent="." instance=ExtResource("6_spqqv")]
 z_as_relative = false

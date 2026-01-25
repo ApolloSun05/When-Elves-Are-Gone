@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ciqgfmpundfrt" path="res://scripts/godeliver.gd" id="1_sd3eg"]
 [ext_resource type="Texture2D" uid="uid://dmyhwncrppjnw" path="res://assets/button (1).png" id="2_lfwpl"]
-[ext_resource type="FontFile" uid="uid://bndsjh1qpflf2" path="res://assets/StardewValley.ttf" id="3_oy2vq"]
+[ext_resource type="FontFile" uid="uid://b5ldnxio6sr28" path="res://assets/fonts/Chero.ttf" id="3_lfwpl"]
 
 [node name="godeliver" type="CanvasLayer"]
 script = ExtResource("1_sd3eg")
@@ -27,9 +27,9 @@ region_rect = Rect2(23, 0, 48, 15)
 
 [node name="deliver" type="Button" parent="next"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_oy2vq")
-theme_override_font_sizes/font_size = 48
+theme_override_colors/font_color = Color(0.5882353, 0.29411766, 0, 1)
+theme_override_fonts/font = ExtResource("3_lfwpl")
+theme_override_font_sizes/font_size = 42
 text = "Deliver"
 flat = true
 

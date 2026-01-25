@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://bhhr7pef25djb"]
 
 [ext_resource type="Script" uid="uid://q53d10tggbw3" path="res://scripts/kid.gd" id="1_844vu"]
+[ext_resource type="FontFile" uid="uid://b5ldnxio6sr28" path="res://assets/fonts/Chero.ttf" id="3_hsv3e"]
 [ext_resource type="Texture2D" uid="uid://c1w78paxojvw7" path="res://assets/mail_hands.png" id="4_5xe0b"]
 [ext_resource type="Texture2D" uid="uid://dmyhwncrppjnw" path="res://assets/button (1).png" id="4_hsv3e"]
-[ext_resource type="FontFile" uid="uid://bndsjh1qpflf2" path="res://assets/StardewValley.ttf" id="4_mnfw6"]
 [ext_resource type="Texture2D" uid="uid://buvpqqni6q0w5" path="res://assets/exit.png" id="5_5xe0b"]
 [ext_resource type="Texture2D" uid="uid://cc6rakyj2ur68" path="res://assets/arrow button.png" id="6_5xe0b"]
 [ext_resource type="AudioStream" uid="uid://bpwvwsacqgrob" path="res://assets/sounds/sfx/page flip (mp3cut.net).mp3" id="7_hsv3e"]
@@ -37,14 +37,14 @@ theme_override_constants/margin_bottom = 20
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_colors/font_color = Color(0.5882353, 0.29411766, 0, 1)
-theme_override_fonts/font = ExtResource("4_mnfw6")
+theme_override_fonts/font = ExtResource("3_hsv3e")
 theme_override_font_sizes/font_size = 36
 text = "Dear Santa,"
 
 [node name="wish" type="Label" parent="kidmail/mail"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.5882353, 0.29411766, 0, 1)
-theme_override_fonts/font = ExtResource("4_mnfw6")
+theme_override_fonts/font = ExtResource("3_hsv3e")
 theme_override_font_sizes/font_size = 36
 text = "a quick brown fox jumps over the lazy dog"
 autowrap_mode = 2
@@ -54,7 +54,7 @@ justification_flags = 139
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_colors/font_color = Color(0.5882353, 0.29411766, 0, 1)
-theme_override_fonts/font = ExtResource("4_mnfw6")
+theme_override_fonts/font = ExtResource("3_hsv3e")
 theme_override_font_sizes/font_size = 36
 text = "From Nian the Nerd"
 
@@ -76,9 +76,9 @@ region_rect = Rect2(195, 431, 1165, 434)
 
 [node name="Open" type="Button" parent="Mail Open"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_mnfw6")
-theme_override_font_sizes/font_size = 48
+theme_override_colors/font_color = Color(0.5882353, 0.29411766, 0, 1)
+theme_override_fonts/font = ExtResource("3_hsv3e")
+theme_override_font_sizes/font_size = 34
 text = "Mail"
 flat = true
 
@@ -120,9 +120,9 @@ texture = ExtResource("4_hsv3e")
 
 [node name="Make Wish" type="Button" parent="MakeWishContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_mnfw6")
-theme_override_font_sizes/font_size = 36
+theme_override_colors/font_color = Color(0.5882353, 0.29411766, 0, 1)
+theme_override_fonts/font = ExtResource("3_hsv3e")
+theme_override_font_sizes/font_size = 34
 text = "Make Wish"
 flat = true
 

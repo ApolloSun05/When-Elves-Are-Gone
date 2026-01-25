@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cu2l5x5psc05m" path="res://scripts/gotowrap.gd" id="1_t22gv"]
 [ext_resource type="Texture2D" uid="uid://dmyhwncrppjnw" path="res://assets/button (1).png" id="2_xlagy"]
-[ext_resource type="FontFile" uid="uid://bndsjh1qpflf2" path="res://assets/StardewValley.ttf" id="3_sxep7"]
+[ext_resource type="FontFile" uid="uid://b5ldnxio6sr28" path="res://assets/fonts/Chero.ttf" id="3_xlagy"]
 
 [node name="gotowrap" type="CanvasLayer"]
 script = ExtResource("1_t22gv")
@@ -28,9 +28,9 @@ region_rect = Rect2(44, 33, 184, 368)
 
 [node name="Wrap" type="Button" parent="Go"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_sxep7")
-theme_override_font_sizes/font_size = 48
+theme_override_colors/font_color = Color(0.5882353, 0.29411766, 0, 1)
+theme_override_fonts/font = ExtResource("3_xlagy")
+theme_override_font_sizes/font_size = 35
 text = "Wrap"
 flat = true
 

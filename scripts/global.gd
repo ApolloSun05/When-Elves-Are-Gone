@@ -16,7 +16,9 @@ var nights: int = 1
 var wishlists: Dictionary[String, Array]
 var current_child: String
 var current_toys: Array
-var current_house: Dictionary[String, Array] = {"Joms": [], "Nian": [], "Andrea": [], "Joshua": [], "Sonny": [], "Renz": [], "Bujoi": [], "Wheelson": [], "Marc": [], "Adrian": []}
+var current_house: String
+
+#{"Joms": [], "Nian": [], "Andrea": [], "Joshua": [], "Sonny": [], "Renz": [], "Bujoi": [], "Wheelson": [], "Marc": [], "Adrian": []}
 var wrapped_toys: Array
 var inventory: Dictionary[String, Array] = {}
 

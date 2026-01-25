@@ -21,7 +21,7 @@ var wish_index: int = 0
 
 var names = ["Joms", "Nian", "Andrea", "Joshua", "Sonny", "Renz", "Bujoi", "Wheelson", "Marc", "Adrian" ]
 
-var toys = [ "Bear", "Baseball", "Dice", "Basketball", "Robot", "Crayons"]
+var toys = [ "Bear", "Baseball", "Dice", "Basketball", "Robot", "Crayons", "Dino", "Doll"]
 
 
 func _ready():
