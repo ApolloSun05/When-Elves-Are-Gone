@@ -55,14 +55,6 @@ theme_override_fonts/font = ExtResource("3_olldk")
 theme_override_font_sizes/font_size = 47
 text = "Children:"
 
-[node name="Gifts" type="Label" parent="MarginContainer/MarginContainer"]
-layout_mode = 2
-size_flags_vertical = 8
-theme_override_colors/font_color = Color(0.5882353, 0.29411766, 0, 1)
-theme_override_fonts/font = ExtResource("3_olldk")
-theme_override_font_sizes/font_size = 47
-text = "GIfts:"
-
 [node name="MarginContainer2" type="MarginContainer" parent="."]
 offset_right = 40.0
 offset_bottom = 40.0

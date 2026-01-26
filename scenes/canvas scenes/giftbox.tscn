@@ -62,10 +62,10 @@ texture = ExtResource("4_43sw3")
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -68.0
-offset_top = -113.0
-offset_right = 79.0
-offset_bottom = -72.0
+offset_left = -322.0
+offset_top = -135.0
+offset_right = -175.0
+offset_bottom = -94.0
 grow_horizontal = 2
 
 [node name="Sprite2D2" type="Sprite2D" parent="MarginContainer"]

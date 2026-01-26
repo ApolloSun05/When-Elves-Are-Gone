@@ -2,12 +2,10 @@ extends CanvasLayer
 
 @onready var Total = $MarginContainer/Total
 @onready var Children = $MarginContainer/MarginContainer/Children
-@onready var Gifts  = $MarginContainer/MarginContainer/Gifts
 @onready var label: Label = $"Next Night/Label"
 
 func _ready() -> void: 
 	Children.text = "Children: " + str(Global.correct_children * 100)
-	Gifts.text = "Gifts: " + str(Global.correct_gifts * 100)
 	Total.text = "Faith: " + str(Global.faith)
 
 

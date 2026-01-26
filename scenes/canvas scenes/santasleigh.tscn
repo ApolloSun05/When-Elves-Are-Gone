@@ -1,22 +1,25 @@
-[gd_scene load_steps=5 format=3 uid="uid://5nsx44k1bct1"]
+[gd_scene load_steps=8 format=3 uid="uid://5nsx44k1bct1"]
 
 [ext_resource type="Texture2D" uid="uid://c4j7k6su502wv" path="res://assets/sleigh.png" id="1_jci2s"]
+[ext_resource type="Texture2D" uid="uid://c48rjl5v6hdg1" path="res://assets/sleigh down.png" id="2_48b47"]
 [ext_resource type="AudioStream" uid="uid://c78jwqu03aoco" path="res://assets/sounds/sfx/deer-steps-snow.mp3" id="2_nx3r4"]
+[ext_resource type="Texture2D" uid="uid://d2tysk8k7v3ox" path="res://assets/sleigh up.png" id="4_34g0w"]
 
 [sub_resource type="GDScript" id="GDScript_pp874"]
 resource_name = "santasleigh"
 script/source = "extends CharacterBody2D
 
-@onready var santa = $Sprite2D
 @onready var footsteps = $AudioStreamPlayer2D
+@onready var santa = $AnimatedSprite2D
 const SPEED = 200.0
-
-
+	
 func _physics_process(delta: float) -> void:
 	if velocity.x != 0 or velocity.y != 0:
+		santa.play(\"hopping\")
 		if not footsteps.playing:
 			footsteps.play()
 	else:
+		santa.play(\"idle\")
 		footsteps.stop()
 	if velocity.x < 0: 
 		santa.flip_h = true
@@ -32,14 +35,30 @@ func _physics_process(delta: float) -> void:
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h4iex"]
 size = Vector2(169, 63)
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_u46sh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_48b47")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_34g0w")
+}],
+"loop": true,
+"name": &"hopping",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_jci2s")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
 [node name="santasleigh" type="CharacterBody2D"]
 script = SubResource("GDScript_pp874")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(62, -14)
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("1_jci2s")
-region_rect = Rect2(34, 248, 868, 185)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-86, 38)
@@ -47,3 +66,9 @@ shape = SubResource("RectangleShape2D_h4iex")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_nx3r4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(58, 6)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_u46sh")
+animation = &"idle"

@@ -93,6 +93,7 @@ child = "Marc"
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Inventory_UI" parent="CanvasLayer" instance=ExtResource("2_q5may")]
+visible = false
 
 [node name="ScoreBoardnext" type="TextureButton" parent="CanvasLayer"]
 anchors_preset = 3
