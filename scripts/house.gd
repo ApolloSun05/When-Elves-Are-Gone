@@ -3,7 +3,10 @@ extends Node2D
 @onready var DelPanel = $DeliverPanel
 @onready var inventory_ui: Control = $"../CanvasLayer/Inventory_UI"
 @export var child: String
+@onready var Childname = $Child
 func _ready() -> void:
+	Childname.text = "Child: " + child
+	Childname.visible = false
 	DelPanel.visible = false
 
 func _input(event: InputEvent) -> void:
@@ -12,11 +15,13 @@ func _input(event: InputEvent) -> void:
 			inventory_ui.visible = not inventory_ui.visible
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
+	Childname.visible = true
 	DelPanel.visible = true
 	Global.current_house = child
 	print("im in")
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
+	Childname.visible = false
 	DelPanel.visible = false
 	Global.current_house = ""
 	print("im out")

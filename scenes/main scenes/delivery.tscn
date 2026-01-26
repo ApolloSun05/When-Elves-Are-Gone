@@ -1,9 +1,9 @@
 [gd_scene load_steps=9 format=3 uid="uid://2k26x3cv2lju"]
 
-[ext_resource type="Texture2D" uid="uid://bp201x7cktl73" path="res://assets/76mruwuqis431.png" id="1_dea0l"]
 [ext_resource type="Script" uid="uid://blxuqc1gtcq63" path="res://scripts/delivery.gd" id="1_vt7m1"]
 [ext_resource type="PackedScene" uid="uid://cnlmkcw38umd3" path="res://scenes/canvas scenes/inventory_ui.tscn" id="2_q5may"]
 [ext_resource type="PackedScene" uid="uid://5nsx44k1bct1" path="res://scenes/canvas scenes/santasleigh.tscn" id="2_s3hr3"]
+[ext_resource type="Texture2D" uid="uid://c1bwxxy5kctgb" path="res://assets/map.png" id="2_sg546"]
 [ext_resource type="PackedScene" uid="uid://c80r1j8ys1f6a" path="res://scenes/house.tscn" id="3_4tiqj"]
 [ext_resource type="Texture2D" uid="uid://dmyhwncrppjnw" path="res://assets/button (1).png" id="6_sg546"]
 
@@ -11,7 +11,7 @@
 size = Vector2(1948, 10)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ts0uv"]
-size = Vector2(29, 1761)
+size = Vector2(32, 769.5)
 
 [node name="delivery" type="Node2D"]
 script = ExtResource("1_vt7m1")
@@ -19,10 +19,10 @@ script = ExtResource("1_vt7m1")
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("1_dea0l")
+texture = ExtResource("2_sg546")
 
 [node name="santasleigh" parent="." instance=ExtResource("2_s3hr3")]
-position = Vector2(23, 875)
+position = Vector2(988, 23)
 
 [node name="Camera2D" type="Camera2D" parent="santasleigh"]
 limit_left = 0
@@ -39,55 +39,55 @@ position = Vector2(964, -5)
 shape = SubResource("RectangleShape2D_s3hr3")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(957, 1766)
+position = Vector2(964, 1087)
 shape = SubResource("RectangleShape2D_s3hr3")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(1934.5, 881.5)
+position = Vector2(1936, 549.5)
 shape = SubResource("RectangleShape2D_ts0uv")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-15, 873)
+position = Vector2(-15, 709.25)
 shape = SubResource("RectangleShape2D_ts0uv")
 
 [node name="Nian" parent="." instance=ExtResource("3_4tiqj")]
-position = Vector2(677, 803)
+position = Vector2(145, 164)
 child = "Nian"
 
 [node name="Sonny" parent="." instance=ExtResource("3_4tiqj")]
-position = Vector2(917, 954)
+position = Vector2(1672, 566)
 child = "Sonny"
 
 [node name="Joms" parent="." instance=ExtResource("3_4tiqj")]
-position = Vector2(700, 1091)
+position = Vector2(494, 167)
 child = "Joms"
 
 [node name="Joshua" parent="." instance=ExtResource("3_4tiqj")]
-position = Vector2(367, 1355)
+position = Vector2(1295, 573)
 child = "Joshua"
 
 [node name="Andrea" parent="." instance=ExtResource("3_4tiqj")]
-position = Vector2(980, 1282)
+position = Vector2(1304, 165)
 child = "Andrea"
 
 [node name="Wheelson" parent="." instance=ExtResource("3_4tiqj")]
-position = Vector2(171, 1299)
+position = Vector2(169, 718)
 child = "Wheelson"
 
 [node name="Renz" parent="." instance=ExtResource("3_4tiqj")]
-position = Vector2(1171, 1076)
+position = Vector2(854, 174)
 child = "Renz"
 
 [node name="Bujoi" parent="." instance=ExtResource("3_4tiqj")]
-position = Vector2(1541, 758)
+position = Vector2(570, 546)
 child = "Bujoi"
 
 [node name="Adrian" parent="." instance=ExtResource("3_4tiqj")]
-position = Vector2(935, 768)
+position = Vector2(1711, 161)
 child = "Adrian"
 
 [node name="Marc" parent="." instance=ExtResource("3_4tiqj")]
-position = Vector2(842, 258)
+position = Vector2(855, 815)
 child = "Marc"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]

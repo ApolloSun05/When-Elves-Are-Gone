@@ -20,6 +20,8 @@ expand_mode = 1
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(583, 324)
 
+[node name="Timer" parent="." instance=ExtResource("7_lm4p5")]
+
 [node name="no_ofchildren" parent="." instance=ExtResource("3_lm4p5")]
 
 [node name="kid" parent="." instance=ExtResource("5_af822")]
@@ -28,5 +30,3 @@ position = Vector2(585, 325)
 [node name="gotowrap" parent="." instance=ExtResource("5_bokdc")]
 
 [node name="Chosen_UI" parent="." instance=ExtResource("6_klmp1")]
-
-[node name="Timer" parent="." instance=ExtResource("7_lm4p5")]

@@ -31,6 +31,15 @@ theme_override_fonts/font = ExtResource("2_qtlar")
 theme_override_font_sizes/font_size = 34
 text = "Press F to Deliver"
 
+[node name="Child" type="Label" parent="."]
+offset_left = -50.0
+offset_top = -72.0
+offset_right = 13.0
+offset_bottom = -41.0
+theme_override_colors/font_color = Color(0.5882353, 0.29411766, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Child: "
+
 [connection signal="area_shape_entered" from="Area2D" to="." method="_on_area_2d_area_shape_entered"]
 [connection signal="area_shape_exited" from="Area2D" to="." method="_on_area_2d_area_shape_exited"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

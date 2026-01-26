@@ -37,7 +37,7 @@ script = SubResource("GDScript_pp874")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(62, -14)
-scale = Vector2(0.1, 0.1)
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("1_jci2s")
 region_rect = Rect2(34, 248, 868, 185)
 
