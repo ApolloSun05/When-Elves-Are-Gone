@@ -126,4 +126,6 @@ theme_override_colors/font_color = Color(0.35729373, 0.2631689, 0.100866936, 1)
 theme_override_font_sizes/font_size = 256
 text = "Finish Delivery"
 
+[connection signal="mouse_entered" from="CanvasLayer/ScoreBoardnext" to="." method="_on_score_boardnext_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/ScoreBoardnext" to="." method="_on_score_boardnext_mouse_exited"]
 [connection signal="pressed" from="CanvasLayer/ScoreBoardnext" to="." method="_on_score_boardnext_pressed"]
