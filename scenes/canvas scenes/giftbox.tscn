@@ -12,6 +12,8 @@ size = Vector2(128, 128.5)
 
 [node name="giftbox" type="StaticBody2D" groups=["dropable"]]
 script = ExtResource("1_8vt4o")
+metadata/_edit_vertical_guides_ = [-122.0, 120.0]
+metadata/_edit_horizontal_guides_ = [-373.0, -140.0]
 
 [node name="Control" type="Control" parent="."]
 visible = false

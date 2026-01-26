@@ -9,7 +9,7 @@ func _ready() -> void:
 		print("[LOG] Inventory Opened"))
 	Global.inventory_updated.connect(_on_inventory_updated)
 	_on_inventory_updated()
-	if get_parent().get_parent().name == "giftwrapping": Santa_bag = $"../../Santas_Bag/MarginContainer"
+	if get_parent().get_parent().name == "packing": Santa_bag = $"../../Santas_Bag/MarginContainer"
 
 func _on_inventory_updated():
 	print("[LOG] Inventory updated")
