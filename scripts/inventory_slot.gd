@@ -35,7 +35,6 @@ func set_item(toys: Array, kid: String) -> void:
 	gift_style.texture = textures.pick_random()
 	gift_details.text = "> " + "\n> ".join(toys)
 	prints("[LOG] Details Text:", gift_details.text)
-	
 
 func _on_button_pressed() -> void:
 	if get_parent().get_parent().get_parent().get_parent().name == "delivery":

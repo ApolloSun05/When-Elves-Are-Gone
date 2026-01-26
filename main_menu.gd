@@ -7,8 +7,6 @@ func _on_start_game_pressed() -> void:
 
 func _on_credits_pressed() -> void:
 	credits_ui.visible = true
-	pass # Replace with function body.
 
 func _on_button_pressed() -> void:
 	credits_ui.visible = false
-	pass # Replace with function body.
