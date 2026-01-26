@@ -66,3 +66,40 @@ text = "GIfts:"
 [node name="MarginContainer2" type="MarginContainer" parent="."]
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="Next Night" type="TextureButton" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -502.0
+offset_top = -163.0
+offset_right = 1418.0
+offset_bottom = 917.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.075, 0.075)
+texture_normal = ExtResource("1_e8nuh")
+
+[node name="Label" type="Label" parent="Next Night"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -646.6666
+offset_top = -153.33325
+offset_right = 654.3334
+offset_bottom = 102.66675
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.35729373, 0.2631689, 0.100866936, 1)
+theme_override_font_sizes/font_size = 256
+text = "Next Night"
+horizontal_alignment = 1
+
+[connection signal="mouse_entered" from="Next Night" to="." method="_on_next_night_mouse_entered"]
+[connection signal="mouse_exited" from="Next Night" to="." method="_on_next_night_mouse_exited"]
+[connection signal="pressed" from="Next Night" to="." method="_on_next_night_pressed"]

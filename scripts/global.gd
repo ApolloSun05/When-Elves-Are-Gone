@@ -16,7 +16,7 @@ var correct_children: int
 var correct_gifts: int
 
 var is_dragging = false
-var nights: int = 0
+var nights: int = 1
 
 var wishlists: Dictionary[String, Array]
 var current_child: String
@@ -82,7 +82,7 @@ func start_game() -> void:
 	current_time = 7.0
 	end_time = 12.0
 	timer.start()
-	nights += 1
+	#nights += 1
 	wishlists.clear()
 	inventory.clear()
 	current_toys.clear()
@@ -98,6 +98,9 @@ func end_game() -> void:
 	faith += (correct_children*100) + (correct_gifts*100)
 	started = false
 	night_end.emit()
+	
+func next_night() -> void:
+	nights += 1
 	
 func _update_timer() -> void:
 	current_time += 1.0/60.0

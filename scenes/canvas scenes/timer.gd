@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 @onready var time_label: Label = $"Time Label"
+@onready var night_label: Label = $"Night Label"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -13,4 +14,5 @@ func _update_timer() -> void:
 	var minutes_float = Global.current_time - hours
 	var minutes: int = minutes_float * 60
 	time_label.text = str(hours).pad_zeros(2) + ":" + str(minutes).pad_zeros(2) + " PM" if Global.current_time < Global.end_time else " AM"
+	night_label.text = "Night " + str(Global.nights)
 	pass
