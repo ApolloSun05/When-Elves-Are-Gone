@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://buvpqqni6q0w5" path="res://assets/exit.png" id="4_fcso0"]
 
 [node name="Inventory_UI" type="Control"]
-visible = false
 custom_minimum_size = Vector2(1000, 500)
 layout_mode = 3
 anchors_preset = 8
@@ -69,15 +68,15 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(999, -33)
+position = Vector2(-25.999878, -33)
 scale = Vector2(0.025, 0.024999999)
 texture = ExtResource("4_fcso0")
 
 [node name="Close_Bag" type="Button" parent="."]
 layout_mode = 0
-offset_left = 974.0
+offset_left = -51.0
 offset_top = -57.0
-offset_right = 1024.0
+offset_right = -1.0
 offset_bottom = -7.0
 flat = true
 

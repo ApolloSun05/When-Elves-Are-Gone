@@ -30,7 +30,7 @@ func _physics_process(delta: float) -> void:
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h4iex"]
-size = Vector2(87, 20)
+size = Vector2(169, 63)
 
 [node name="santasleigh" type="CharacterBody2D"]
 script = SubResource("GDScript_pp874")
@@ -42,7 +42,7 @@ texture = ExtResource("1_jci2s")
 region_rect = Rect2(34, 248, 868, 185)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(33.5, 0)
+position = Vector2(-86, 38)
 shape = SubResource("RectangleShape2D_h4iex")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
