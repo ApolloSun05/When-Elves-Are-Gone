@@ -11,17 +11,17 @@ config_version=5
 [application]
 
 config/name="Santa Game"
-run/main_scene="uid://cwif5nm1haqm8"
+run/main_scene="uid://c4uhk4h8kftn6"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Global="*res://scripts/global.gd"
+Bgm="*res://bgm.tscn"
 
 [display]
 
-window/size/mode=3
 window/stretch/mode="viewport"
 mouse_cursor/custom_image="uid://ccsfj5lf4i0il"
 mouse_cursor/tooltip_position_offset=Vector2(0, 0)

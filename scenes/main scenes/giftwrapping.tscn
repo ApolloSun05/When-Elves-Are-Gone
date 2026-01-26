@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://c44ngvowp8cfx"]
+[gd_scene load_steps=24 format=3 uid="uid://c44ngvowp8cfx"]
 
 [ext_resource type="Script" uid="uid://ipdj4hmu6w6p" path="res://scripts/giftwrapping.gd" id="1_17t4r"]
 [ext_resource type="PackedScene" uid="uid://dnxe4s0b88ijk" path="res://scenes/canvas scenes/godeliver.tscn" id="1_a2xsj"]
@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://l7wuuf7wvsks" path="res://assets/claus plushie.png" id="12_lrfxm"]
 [ext_resource type="Texture2D" uid="uid://crq10iy22bnsn" path="res://assets/dino ver 4.png" id="13_17t4r"]
 [ext_resource type="Script" uid="uid://b31qd3mtxmvk6" path="res://scripts/wrap_gift.gd" id="15_g70a2"]
+[ext_resource type="PackedScene" uid="uid://cnt6v88umedxd" path="res://scenes/canvas scenes/timer.tscn" id="23_twmjr"]
 
 [node name="packing" type="Node2D"]
 script = ExtResource("1_17t4r")
@@ -149,6 +150,8 @@ offset_bottom = 557.0
 theme_override_font_sizes/font_size = 32
 text = "WRAP GIFT"
 script = ExtResource("15_g70a2")
+
+[node name="Timer" parent="." instance=ExtResource("23_twmjr")]
 
 [connection signal="wrapped" from="bear" to="giftbox" method="_on_gifts_wrapped"]
 [connection signal="child_entered_tree" from="giftbox" to="giftbox" method="_on_child_entered_tree"]
