@@ -50,8 +50,45 @@ shape = SubResource("RectangleShape2D_ts0uv")
 position = Vector2(-15, 873)
 shape = SubResource("RectangleShape2D_ts0uv")
 
-[node name="house" parent="." instance=ExtResource("3_4tiqj")]
+[node name="Nian" parent="." instance=ExtResource("3_4tiqj")]
 position = Vector2(677, 803)
+child = "Nian"
+
+[node name="Sonny" parent="." instance=ExtResource("3_4tiqj")]
+position = Vector2(917, 954)
+child = "Sonny"
+
+[node name="Joms" parent="." instance=ExtResource("3_4tiqj")]
+position = Vector2(700, 1091)
+child = "Joms"
+
+[node name="Joshua" parent="." instance=ExtResource("3_4tiqj")]
+position = Vector2(367, 1355)
+child = "Joshua"
+
+[node name="Andrea" parent="." instance=ExtResource("3_4tiqj")]
+position = Vector2(980, 1282)
+child = "Andrea"
+
+[node name="Wheelson" parent="." instance=ExtResource("3_4tiqj")]
+position = Vector2(171, 1299)
+child = "Wheelson"
+
+[node name="Renz" parent="." instance=ExtResource("3_4tiqj")]
+position = Vector2(1171, 1076)
+child = "Renz"
+
+[node name="Bujoi" parent="." instance=ExtResource("3_4tiqj")]
+position = Vector2(1541, 758)
+child = "Bujoi"
+
+[node name="Adrian" parent="." instance=ExtResource("3_4tiqj")]
+position = Vector2(935, 768)
+child = "Adrian"
+
+[node name="Marc" parent="." instance=ExtResource("3_4tiqj")]
+position = Vector2(842, 258)
+child = "Marc"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
