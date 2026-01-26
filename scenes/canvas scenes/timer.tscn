@@ -7,15 +7,32 @@
 script = ExtResource("1_25uqr")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1022, 37)
-scale = Vector2(0.15, 0.1)
+position = Vector2(875.5, 37)
+scale = Vector2(0.30260414, 0.1)
 texture = ExtResource("1_ebkvt")
 
 [node name="Time Label" type="Label" parent="."]
-offset_left = 927.0
-offset_top = 12.0
-offset_right = 1120.0
-offset_bottom = 76.0
+offset_left = 869.0
+offset_top = 8.0
+offset_right = 1080.0
+offset_bottom = 72.0
 theme_override_font_sizes/font_size = 64
 text = "07:00 PM"
 horizontal_alignment = 2
+
+[node name="-" type="Label" parent="."]
+offset_left = 808.0
+offset_top = 9.0
+offset_right = 893.0
+offset_bottom = 73.0
+theme_override_font_sizes/font_size = 64
+text = "-"
+horizontal_alignment = 1
+
+[node name="Night Label" type="Label" parent="."]
+offset_left = 661.0
+offset_top = 8.0
+offset_right = 846.0
+offset_bottom = 72.0
+theme_override_font_sizes/font_size = 64
+text = "Night 1"

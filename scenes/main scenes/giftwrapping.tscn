@@ -131,10 +131,6 @@ toy_texture = ExtResource("12_6ks6j")
 
 [node name="Back_to_Mails" parent="." instance=ExtResource("9_eexhd")]
 
-[node name="Inven" type="CanvasLayer" parent="."]
-
-[node name="Inventory_UI" parent="Inven" instance=ExtResource("11_7knws")]
-
 [node name="giftbox" parent="." instance=ExtResource("5_iovqx")]
 position = Vector2(602, 600)
 
@@ -150,6 +146,10 @@ text = "WRAP GIFT"
 script = ExtResource("15_g70a2")
 
 [node name="Timer" parent="." instance=ExtResource("23_twmjr")]
+
+[node name="Inven" type="CanvasLayer" parent="."]
+
+[node name="Inventory_UI" parent="Inven" instance=ExtResource("11_7knws")]
 
 [node name="Santas_Bag" parent="." instance=ExtResource("10_6nylu")]
 
