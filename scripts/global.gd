@@ -34,6 +34,8 @@ var end_time: float = 12
 
 var timer: Timer
 
+var started: bool = false
+
 @onready var slot_scene = preload("res://scenes/canvas scenes/inventory_slot.tscn")
 
 func _ready() -> void:
@@ -68,6 +70,7 @@ func deliver(key: String) -> void:
 	print("DELIVERED")
 
 func start_game() -> void:
+	if started: return
 	# reset stuff
 	timer.stop()
 	children.randomize()
@@ -88,10 +91,12 @@ func start_game() -> void:
 	current_house = ""
 	correct_children = 0
 	correct_gifts = 0
+	started = true
 	night_start.emit()
 
 func end_game() -> void:
 	faith += (correct_children*100) + (correct_gifts*100)
+	started = false
 	night_end.emit()
 	
 func _update_timer() -> void:
