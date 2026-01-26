@@ -54,7 +54,7 @@ func deliver(key: String) -> void:
 			correct_gifts += len(wishlists[key])
 			print("MAY TAMA KA")
 			faith += 100
-		elif naughty_children.find(key) != -1 and inventory[key].find("Coal") == -1:
+		elif naughty_children.find(key) != -1 and inventory[key] != ["Coal"]:
 			faith -= 50
 			print("mali mo yon")
 		else:
